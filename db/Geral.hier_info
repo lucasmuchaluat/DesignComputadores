@@ -1,0 +1,104 @@
+|Geral
+SW[0] => somadorGenerico:somador2Y.entradaA[0]
+SW[0] => somadorGenerico:somador2Y.entradaB[0]
+SW[0] => somadorGenerico:somador3Y.entradaB[0]
+SW[1] => somadorGenerico:somador2Y.entradaA[1]
+SW[1] => somadorGenerico:somador2Y.entradaB[1]
+SW[1] => somadorGenerico:somador3Y.entradaB[1]
+SW[2] => somadorGenerico:somador2Y.entradaA[2]
+SW[2] => somadorGenerico:somador2Y.entradaB[2]
+SW[2] => somadorGenerico:somador3Y.entradaB[2]
+SW[3] => somadorGenerico:somador2Y.entradaA[3]
+SW[3] => somadorGenerico:somador2Y.entradaB[3]
+SW[3] => somadorGenerico:somador3Y.entradaB[3]
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => somadorGenerico:somador2X.entradaA[0]
+SW[6] => somadorGenerico:somador2X.entradaB[0]
+SW[7] => somadorGenerico:somador2X.entradaA[1]
+SW[7] => somadorGenerico:somador2X.entradaB[1]
+SW[8] => somadorGenerico:somador2X.entradaA[2]
+SW[8] => somadorGenerico:somador2X.entradaB[2]
+SW[9] => somadorGenerico:somador2X.entradaA[3]
+SW[9] => somadorGenerico:somador2X.entradaB[3]
+LEDR[0] << somadorGenerico:somadorFinal.saida[0]
+LEDR[1] << somadorGenerico:somadorFinal.saida[1]
+LEDR[2] << somadorGenerico:somadorFinal.saida[2]
+LEDR[3] << somadorGenerico:somadorFinal.saida[3]
+
+
+|Geral|somadorGenerico:somador2X
+entradaA[0] => Add0.IN4
+entradaA[1] => Add0.IN3
+entradaA[2] => Add0.IN2
+entradaA[3] => Add0.IN1
+entradaB[0] => Add0.IN8
+entradaB[1] => Add0.IN7
+entradaB[2] => Add0.IN6
+entradaB[3] => Add0.IN5
+saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Geral|somadorGenerico:somador2Y
+entradaA[0] => Add0.IN4
+entradaA[1] => Add0.IN3
+entradaA[2] => Add0.IN2
+entradaA[3] => Add0.IN1
+entradaB[0] => Add0.IN8
+entradaB[1] => Add0.IN7
+entradaB[2] => Add0.IN6
+entradaB[3] => Add0.IN5
+saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Geral|somadorGenerico:somador3Y
+entradaA[0] => Add0.IN4
+entradaA[1] => Add0.IN3
+entradaA[2] => Add0.IN2
+entradaA[3] => Add0.IN1
+entradaB[0] => Add0.IN8
+entradaB[1] => Add0.IN7
+entradaB[2] => Add0.IN6
+entradaB[3] => Add0.IN5
+saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Geral|subtratorGenerico:subtrator2X3Y
+entradaA[0] => Add0.IN8
+entradaA[1] => Add0.IN7
+entradaA[2] => Add0.IN6
+entradaA[3] => Add0.IN5
+entradaB[0] => Add0.IN4
+entradaB[1] => Add0.IN3
+entradaB[2] => Add0.IN2
+entradaB[3] => Add0.IN1
+saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Geral|somadorGenerico:somadorFinal
+entradaA[0] => Add0.IN4
+entradaA[1] => Add0.IN3
+entradaA[2] => Add0.IN2
+entradaA[3] => Add0.IN1
+entradaB[0] => Add0.IN8
+entradaB[1] => Add0.IN7
+entradaB[2] => Add0.IN6
+entradaB[3] => Add0.IN5
+saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
