@@ -13,6 +13,7 @@ entity Geral is
         SW: in STD_LOGIC_VECTOR(9 downto 0);
 		  KEY: in STD_LOGIC_VECTOR(3 downto 0);
 		  FPGA_RESET: in  STD_LOGIC;
+		  CLOCK_50: in  STD_LOGIC;
         LEDR:  out STD_LOGIC_VECTOR(9 downto 0)
 --		  entrada7: in STD_LOGIC_VECTOR((larguraDados-1) downto 0):= x"7";
     );
@@ -21,6 +22,8 @@ end entity;
 architecture comportamento of Geral is
 
 	 signal saidaRegA, saidaRegB, outMUX : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+	 signal edgeClock, edgeRstb, edgeRsta : std_logic;
+
 	 signal resultadoULA : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
 	 
 	 component ULA is
@@ -46,25 +49,50 @@ architecture comportamento of Geral is
 			  ENABLE : in std_logic;
 			  CLK,RST : in std_logic
 		  );
-    end component;
+	end component;
 
+	component edgeDetector is
+        port (
+			  clk : in  std_logic;
+			  entrada : in  std_logic;
+			  saida : out std_logic
+		  );
+	end component;
 
-    begin
+	begin
+		
+		  detectorCLK: work.edgeDetector(bordaSubida) port map (
+			  clk => CLOCK_50,
+			  entrada => FPGA_RESET,
+			  saida => edgeClock
+		  );
+
+		  detectorRSTA: work.edgeDetector(bordaSubida) port map (
+			  clk => CLOCK_50,
+			  entrada => KEY(1),
+			  saida => edgeRsta
+		  );
+
+		  detectorRSTB: work.edgeDetector(bordaSubida) port map (
+			  clk => CLOCK_50,
+			  entrada => KEY(0),
+			  saida => edgeRstb
+		  );
 		  
 		  regA: registradorGenerico port map (
 				DIN => outMUX,
 				DOUT => saidaRegA,
 				ENABLE => KEY(3),
-				CLK => FPGA_RESET,
-				RST => KEY(1)
+				CLK => edgeClock,
+				RST => edgeRsta
 		  );
 		  
 		  regB: registradorGenerico port map (
 				DIN => SW(7 downto 0),
 				DOUT => saidaRegB,
 				ENABLE => KEY(2),
-				CLK => FPGA_RESET,
-				RST => KEY(0)
+				CLK => edgeClock,
+				RST => edgeRstb
 		  );
 		  
 		  mux: muxGenerico2x1 port map (

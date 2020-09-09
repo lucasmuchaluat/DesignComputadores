@@ -19,12 +19,14 @@ SW[8] => muxGenerico2x1:mux.seletor_MUX
 SW[8] => LEDR[8].DATAIN
 SW[9] => ULA:ula_dif.operacao
 SW[9] => LEDR[9].DATAIN
-KEY[0] => registradorGenerico:regB.RST
-KEY[1] => registradorGenerico:regA.RST
+KEY[0] => edgedetector:detectorRSTB.entrada
+KEY[1] => edgedetector:detectorRSTA.entrada
 KEY[2] => registradorGenerico:regB.ENABLE
 KEY[3] => registradorGenerico:regA.ENABLE
-FPGA_RESET => registradorGenerico:regA.CLK
-FPGA_RESET => registradorGenerico:regB.CLK
+FPGA_RESET => edgedetector:detectorCLK.entrada
+CLOCK_50 => edgedetector:detectorCLK.clk
+CLOCK_50 => edgedetector:detectorRSTA.clk
+CLOCK_50 => edgedetector:detectorRSTB.clk
 LEDR[0] <= ULA:ula_dif.saida[0]
 LEDR[1] <= ULA:ula_dif.saida[1]
 LEDR[2] <= ULA:ula_dif.saida[2]
@@ -35,6 +37,27 @@ LEDR[6] <= ULA:ula_dif.saida[6]
 LEDR[7] <= ULA:ula_dif.saida[7]
 LEDR[8] <= SW[8].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[9] <= SW[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Geral|edgeDetector:detectorCLK
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Geral|edgeDetector:detectorRSTA
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Geral|edgeDetector:detectorRSTB
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Geral|registradorGenerico:regA
