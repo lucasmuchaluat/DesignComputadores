@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Sep 02 19:59:59 2020
+Analysis & Synthesis Status : Successful - Wed Sep 09 00:24:13 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Geral
 Top-level Entity Name : Geral
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 14
+Total registers : 16
+Total pins : 25
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

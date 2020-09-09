@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Geral
-Wed Sep 02 19:59:59 2020
+Wed Sep 09 00:24:13 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -15,15 +15,13 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: Top-level Entity: |Geral
- 10. Parameter Settings for User Entity Instance: somadorGenerico:somador2X
- 11. Parameter Settings for User Entity Instance: somadorGenerico:somador2Y
- 12. Parameter Settings for User Entity Instance: somadorGenerico:somador3Y
- 13. Parameter Settings for User Entity Instance: subtratorGenerico:subtrator2X3Y
- 14. Parameter Settings for User Entity Instance: somadorGenerico:somadorFinal
- 15. Port Connectivity Checks: "somadorGenerico:somadorFinal"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: registradorGenerico:regA
+ 11. Parameter Settings for User Entity Instance: registradorGenerico:regB
+ 12. Parameter Settings for User Entity Instance: muxGenerico2x1:mux
+ 13. Parameter Settings for User Entity Instance: ULA:ula_dif
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -50,14 +48,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 02 19:59:59 2020       ;
+; Analysis & Synthesis Status     ; Successful - Wed Sep 09 00:24:13 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Geral                                       ;
 ; Top-level Entity Name           ; Geral                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 14                                          ;
+; Total registers                 ; 16                                          ;
+; Total pins                      ; 25                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -166,60 +164,63 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------+---------+
-; geral.vhd                        ; yes             ; Auto-Found VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd             ;         ;
-; somadorgenerico.vhd              ; yes             ; Auto-Found VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somadorgenerico.vhd   ;         ;
-; subtratorgenerico.vhd            ; yes             ; Auto-Found VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/subtratorgenerico.vhd ;         ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------------------------+---------+
+; registradorGenerico.vhd          ; yes             ; User VHDL File        ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File        ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd                 ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File        ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd      ;         ;
+; geral.vhd                        ; yes             ; Auto-Found VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd               ;         ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 3           ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 5           ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 0           ;
-;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 1           ;
-;     -- <=3 input functions                  ; 4           ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 14          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; SW[0]~input ;
-; Maximum fan-out                             ; 4           ;
-; Total fan-out                               ; 34          ;
-; Average fan-out                             ; 1.03        ;
-+---------------------------------------------+-------------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimate of Logic utilization (ALMs needed) ; 9                ;
+;                                             ;                  ;
+; Combinational ALUT usage for logic          ; 9                ;
+;     -- 7 input functions                    ; 0                ;
+;     -- 6 input functions                    ; 0                ;
+;     -- 5 input functions                    ; 0                ;
+;     -- 4 input functions                    ; 0                ;
+;     -- <=3 input functions                  ; 9                ;
+;                                             ;                  ;
+; Dedicated logic registers                   ; 16               ;
+;                                             ;                  ;
+; I/O pins                                    ; 25               ;
+;                                             ;                  ;
+; Total DSP Blocks                            ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; FPGA_RESET~input ;
+; Maximum fan-out                             ; 16               ;
+; Total fan-out                               ; 148              ;
+; Average fan-out                             ; 1.97             ;
++---------------------------------------------+------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name       ; Library Name ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+-------------------+--------------+
-; |Geral                               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 14   ; 0            ; |Geral                                 ; Geral             ; work         ;
-;    |somadorGenerico:somador3Y|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|somadorGenerico:somador3Y       ; somadorGenerico   ; work         ;
-;    |subtratorGenerico:subtrator2X3Y| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|subtratorGenerico:subtrator2X3Y ; subtratorGenerico ; work         ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+-------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name         ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------------+--------------+
+; |Geral                        ; 9 (0)               ; 16 (0)                    ; 0                 ; 0          ; 25   ; 0            ; |Geral                          ; Geral               ; work         ;
+;    |ULA:ula_dif|              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|ULA:ula_dif              ; ULA                 ; work         ;
+;    |registradorGenerico:regA| ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|registradorGenerico:regA ; registradorGenerico ; work         ;
+;    |registradorGenerico:regB| ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|registradorGenerico:regB ; registradorGenerico ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -228,12 +229,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 16    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -243,69 +244,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+----------------------------------------------+
 ; Parameter Name ; Value ; Type                                         ;
 +----------------+-------+----------------------------------------------+
-; larguraDados   ; 4     ; Signed Integer                               ;
+; larguraDados   ; 8     ; Signed Integer                               ;
 +----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: somadorGenerico:somador2X ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; larguraDados   ; 4     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:regA ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguraDados   ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: somadorGenerico:somador2Y ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; larguraDados   ; 4     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:regB ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguraDados   ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: somadorGenerico:somador3Y ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; larguraDados   ; 4     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: subtratorGenerico:subtrator2X3Y ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; larguraDados   ; 4     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: somadorGenerico:somadorFinal ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; larguraDados   ; 4     ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:mux ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; larguraDados   ; 8     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------+
-; Port Connectivity Checks: "somadorGenerico:somadorFinal" ;
-+----------------+-------+----------+----------------------+
-; Port           ; Type  ; Severity ; Details              ;
-+----------------+-------+----------+----------------------+
-; entradab[2..0] ; Input ; Info     ; Stuck at VCC         ;
-; entradab[3]    ; Input ; Info     ; Stuck at GND         ;
-+----------------+-------+----------+----------------------+
+; Parameter Settings for User Entity Instance: ULA:ula_dif ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; larguraDados   ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -313,18 +294,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 7                           ;
-;     arith             ; 3                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 4                           ;
-;         1 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-; boundary_port         ; 14                          ;
+; arriav_ff             ; 16                          ;
+;     ENA CLR           ; 8                           ;
+;     ENA CLR SLD       ; 8                           ;
+; arriav_lcell_comb     ; 9                           ;
+;     arith             ; 9                           ;
+;         1 data inputs ; 1                           ;
+;         3 data inputs ; 8                           ;
+; boundary_port         ; 25                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.10                        ;
-; Average LUT depth     ; 2.51                        ;
+; Max LUT depth         ; 1.80                        ;
+; Average LUT depth     ; 1.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -333,7 +313,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -343,7 +323,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Sep 02 19:59:43 2020
+    Info: Processing started: Wed Sep 09 00:23:58 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Geral -c Geral
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -356,33 +336,31 @@ Info (12021): Found 2 design units, including 1 entities, in source file registr
 Info (12021): Found 2 design units, including 1 entities, in source file aula1ativ2.vhd
     Info (12022): Found design unit 1: aula1Ativ2-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ2.vhd Line: 19
     Info (12023): Found entity 1: aula1Ativ2 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ2.vhd Line: 5
+Info (12021): Found 0 design units, including 0 entities, in source file aula2ativ1.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ULA-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd Line: 14
+    Info (12023): Found entity 1: ULA File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 4
 Warning (12125): Using design file geral.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Geral-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 19
+    Info (12022): Found design unit 1: Geral-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 21
     Info (12023): Found entity 1: Geral File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 5
 Info (12127): Elaborating entity "Geral" for the top level hierarchy
-Warning (12125): Using design file somadorgenerico.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somadorgenerico.vhd Line: 17
-    Info (12023): Found entity 1: somadorGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somadorgenerico.vhd Line: 5
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somador2X" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 45
-Warning (12125): Using design file subtratorgenerico.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: subtratorGenerico-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/subtratorgenerico.vhd Line: 17
-    Info (12023): Found entity 1: subtratorGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/subtratorgenerico.vhd Line: 5
-Info (12128): Elaborating entity "subtratorGenerico" for hierarchy "subtratorGenerico:subtrator2X3Y" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 63
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:regA" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 54
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:mux" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 70
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula_dif" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 78
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[4]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[5]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[9]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 13
-Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Wed Sep 02 19:59:59 2020
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:26
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Wed Sep 09 00:24:13 2020
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:30
 
 

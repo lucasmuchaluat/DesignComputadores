@@ -5,74 +5,87 @@ use ieee.numeric_std.all;           -- Biblioteca IEEE para funções aritmétic
 entity Geral is
     generic
     (
-        larguraDados : natural := 4
+        larguraDados : natural := 8
     );
     port
     (
 	 
         SW: in STD_LOGIC_VECTOR(9 downto 0);
-        LEDR:  out STD_LOGIC_VECTOR((larguraDados-1) downto 0)
+		  KEY: in STD_LOGIC_VECTOR(3 downto 0);
+		  FPGA_RESET: in  STD_LOGIC;
+        LEDR:  out STD_LOGIC_VECTOR(9 downto 0)
 --		  entrada7: in STD_LOGIC_VECTOR((larguraDados-1) downto 0):= x"7";
     );
 end entity;
 
 architecture comportamento of Geral is
 
-	 signal saida2X : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-	 signal saida2Y : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-	 signal saida3Y : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-	 signal saida2X3Y : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-
-	 signal resultado : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+	 signal saidaRegA, saidaRegB, outMUX : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+	 signal resultadoULA : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
 	 
-	 component somadorGenerico is
+	 component ULA is
         port (
 			  entradaA, entradaB: in STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+			  operacao: in STD_LOGIC;
 			  saida:  out STD_LOGIC_VECTOR((larguraDados-1) downto 0)
 		  );
     end component;
 	 
-	 component subtratorGenerico is
+	 component muxGenerico2x1 is
         port (
-			  entradaA, entradaB: in STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-			  saida:  out STD_LOGIC_VECTOR((larguraDados-1) downto 0)
+			  entradaA_MUX, entradaB_MUX : in std_logic_vector((larguraDados-1) downto 0);
+			  seletor_MUX : in std_logic;
+			  saida_MUX : out std_logic_vector((larguraDados-1) downto 0)
+		  );
+    end component;
+	 
+	 component registradorGenerico is
+        port (
+			  DIN : in std_logic_vector(larguraDados-1 downto 0);
+			  DOUT : out std_logic_vector(larguraDados-1 downto 0);
+			  ENABLE : in std_logic;
+			  CLK,RST : in std_logic
 		  );
     end component;
 
 
     begin
 		  
-		  somador2X: somadorGenerico port map (
-				entradaA => SW(9 downto 6),
-				entradaB => SW(9 downto 6),
-				saida => saida2X
-		  );  
-		  
-		  somador2Y: somadorGenerico port map (
-				entradaA => SW(3 downto 0),
-				entradaB => SW(3 downto 0),
-				saida => saida2Y
+		  regA: registradorGenerico port map (
+				DIN => outMUX,
+				DOUT => saidaRegA,
+				ENABLE => KEY(3),
+				CLK => FPGA_RESET,
+				RST => KEY(1)
 		  );
 		  
-		  somador3Y: somadorGenerico port map (
-				entradaA => saida2Y,
-				entradaB => SW(3 downto 0),
-				saida => saida3Y
+		  regB: registradorGenerico port map (
+				DIN => SW(7 downto 0),
+				DOUT => saidaRegB,
+				ENABLE => KEY(2),
+				CLK => FPGA_RESET,
+				RST => KEY(0)
 		  );
 		  
-		  subtrator2X3Y: subtratorGenerico port map (
-				entradaA => saida2X,	
-				entradaB => saida3Y,
-				saida => saida2X3Y
+		  mux: muxGenerico2x1 port map (
+				entradaA_MUX => SW(7 downto 0),
+				entradaB_MUX => resultadoULA,
+				seletor_MUX => SW(8),
+				saida_MUX => outMux
+				
 		  );
 		  
-		  somadorFinal: somadorGenerico port map (
-				entradaA => saida2X3Y,
-				entradaB => x"7",
-				saida => resultado
+		  ula_dif: ULA port map (
+				entradaA => saidaRegA,
+				entradaB => saidaRegB,
+				operacao => SW(9),
+				saida => resultadoULA
 		  );
 		  
-		  LEDR(3 downto 0) <= resultado;
+		  
+		  LEDR(7 downto 0) <= resultadoULA;
+		  LEDR(8) <= SW(8);
+		  LEDR(9) <= SW(9);
 		  
 
 end architecture;
