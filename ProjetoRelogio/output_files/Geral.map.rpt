@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Geral
-Wed Sep 09 09:12:32 2020
+Sun Oct 18 16:44:15 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,15 +13,34 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |Geral
- 10. Parameter Settings for User Entity Instance: registradorGenerico:regA
- 11. Parameter Settings for User Entity Instance: registradorGenerico:regB
- 12. Parameter Settings for User Entity Instance: muxGenerico2x1:mux
- 13. Parameter Settings for User Entity Instance: ULA:ula_dif
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |Geral
+ 14. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo
+ 15. Parameter Settings for User Entity Instance: interfaceSwitches:interfaceSwitches
+ 16. Parameter Settings for User Entity Instance: interfaceDisplays:interfaceDisplays
+ 17. Parameter Settings for User Entity Instance: interfaceBotao:interfaceBotoes
+ 18. Parameter Settings for User Entity Instance: processador:processador
+ 19. Parameter Settings for User Entity Instance: processador:processador|somaConstante:somaConstante
+ 20. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxProxPC
+ 21. Parameter Settings for User Entity Instance: processador:processador|registradorGenerico:PC
+ 22. Parameter Settings for User Entity Instance: processador:processador|memoriaROM:ROM
+ 23. Parameter Settings for User Entity Instance: processador:processador|bancoRegistradoresArqRegReg:bancoReg
+ 24. Parameter Settings for User Entity Instance: processador:processador|ULA:ULA
+ 25. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxImediatoRam
+ 26. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxULAImediatoRam
+ 27. Parameter Settings for User Entity Instance: processador:processador|Unidade_Controle:UC
+ 28. Parameter Settings for User Entity Instance: decodificador:decodificador
+ 29. Port Connectivity Checks: "processador:processador|registradorGenerico:PC"
+ 30. Port Connectivity Checks: "processador:processador|flipflop:flipflop"
+ 31. Port Connectivity Checks: "processador:processador"
+ 32. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo"
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -48,14 +67,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 09 09:12:32 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 18 16:44:15 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Geral                                       ;
 ; Top-level Entity Name           ; Geral                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 19                                          ;
-; Total pins                      ; 26                                          ;
+; Total registers                 ; 20                                          ;
+; Total pins                      ; 55                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -168,64 +187,309 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                             ; Library ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------------------------+---------+
-; registradorGenerico.vhd          ; yes             ; User VHDL File        ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File        ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd                 ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File        ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd      ;         ;
-; edgeDetector.vhd                 ; yes             ; User VHDL File        ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/edgeDetector.vhd        ;         ;
-; geral.vhd                        ; yes             ; Auto-Found VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd               ;         ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; Geral.vhd                        ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd                       ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd         ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd                         ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd              ;         ;
+; bancoRegistradoresArqRegReg.vhd  ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/bancoRegistradoresArqRegReg.vhd ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/memoriaROM.vhd                  ;         ;
+; processador.vhd                  ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd                 ;         ;
+; Unidade_Controle.vhd             ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Unidade_Controle.vhd            ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd            ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico.vhd             ;         ;
+; divisorGenerico_e_Interface.vhd  ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd ;         ;
+; flipflop.vhd                     ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/flipflop.vhd                    ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somaConstante.vhd               ;         ;
+; decodificador.vhd                ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/decodificador.vhd               ;         ;
+; interfaceSwitches.vhd            ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceSwitches.vhd           ;         ;
+; interfaceDisplays.vhd            ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceDisplays.vhd           ;         ;
+; interfaceBotao.vhd               ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceBotao.vhd              ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                  ;
-+---------------------------------------------+--------------------------------+
-; Resource                                    ; Usage                          ;
-+---------------------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 11                             ;
-;                                             ;                                ;
-; Combinational ALUT usage for logic          ; 12                             ;
-;     -- 7 input functions                    ; 0                              ;
-;     -- 6 input functions                    ; 0                              ;
-;     -- 5 input functions                    ; 0                              ;
-;     -- 4 input functions                    ; 0                              ;
-;     -- <=3 input functions                  ; 12                             ;
-;                                             ;                                ;
-; Dedicated logic registers                   ; 19                             ;
-;                                             ;                                ;
-; I/O pins                                    ; 26                             ;
-;                                             ;                                ;
-; Total DSP Blocks                            ; 0                              ;
-;                                             ;                                ;
-; Maximum fan-out node                        ; edgeDetector:detectorCLK|saida ;
-; Maximum fan-out                             ; 16                             ;
-; Total fan-out                               ; 161                            ;
-; Average fan-out                             ; 1.94                           ;
-+---------------------------------------------+--------------------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 61             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 105            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 16             ;
+;     -- 5 input functions                    ; 12             ;
+;     -- 4 input functions                    ; 17             ;
+;     -- <=3 input functions                  ; 60             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 20             ;
+;                                             ;                ;
+; I/O pins                                    ; 55             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 20             ;
+; Total fan-out                               ; 529            ;
+; Average fan-out                             ; 2.25           ;
++---------------------------------------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name         ; Library Name ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+---------------------+--------------+
-; |Geral                         ; 12 (0)              ; 19 (0)                    ; 0                 ; 0          ; 26   ; 0            ; |Geral                           ; Geral               ; work         ;
-;    |ULA:ula_dif|               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|ULA:ula_dif               ; ULA                 ; work         ;
-;    |edgeDetector:detectorCLK|  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|edgeDetector:detectorCLK  ; edgeDetector        ; work         ;
-;    |edgeDetector:detectorRSTA| ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|edgeDetector:detectorRSTA ; edgeDetector        ; work         ;
-;    |edgeDetector:detectorRSTB| ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|edgeDetector:detectorRSTB ; edgeDetector        ; work         ;
-;    |registradorGenerico:regA|  ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|registradorGenerico:regA  ; registradorGenerico ; work         ;
-;    |registradorGenerico:regB|  ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|registradorGenerico:regB  ; registradorGenerico ; work         ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Entity Name                 ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------------------+--------------+
+; |Geral                                       ; 105 (0)             ; 20 (0)                    ; 0                 ; 0          ; 55   ; 0            ; |Geral                                                               ; Geral                       ; work         ;
+;    |decodificador:decodificador|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|decodificador:decodificador                                   ; decodificador               ; work         ;
+;    |interfaceDisplays:interfaceDisplays|     ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays                           ; interfaceDisplays           ; work         ;
+;       |conversorHex7Seg:DISPLAY0|            ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0 ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY1|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1 ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY2|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2 ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY3|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3 ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY4|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4 ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY5|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5 ; conversorHex7Seg            ; work         ;
+;    |processador:processador|                 ; 48 (0)              ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador                                       ; processador                 ; work         ;
+;       |ULA:ULA|                              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|ULA:ULA                               ; ULA                         ; work         ;
+;       |Unidade_Controle:UC|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|Unidade_Controle:UC                   ; Unidade_Controle            ; work         ;
+;       |bancoRegistradoresArqRegReg:bancoReg| ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|bancoRegistradoresArqRegReg:bancoReg  ; bancoRegistradoresArqRegReg ; work         ;
+;       |memoriaROM:ROM|                       ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|memoriaROM:ROM                        ; memoriaROM                  ; work         ;
+;       |muxGenerico2x1:muxULAImediatoRam|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam      ; muxGenerico2x1              ; work         ;
+;       |registradorGenerico:PC|               ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|registradorGenerico:PC                ; registradorGenerico         ; work         ;
+;       |somaConstante:somaConstante|          ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|somaConstante:somaConstante           ; somaConstante               ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                             ;
++----------------------------------------------------------------------------+-------------------------------------------+------------------------+
+; Latch Name                                                                 ; Latch Enable Signal                       ; Free of Timing Hazards ;
++----------------------------------------------------------------------------+-------------------------------------------+------------------------+
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[0] ; decodificador:decodificador|habDisplay[0] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[1] ; decodificador:decodificador|habDisplay[0] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[2] ; decodificador:decodificador|habDisplay[0] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[3] ; decodificador:decodificador|habDisplay[0] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[4] ; decodificador:decodificador|habDisplay[0] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[5] ; decodificador:decodificador|habDisplay[0] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[6] ; decodificador:decodificador|habDisplay[0] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[0] ; decodificador:decodificador|habDisplay[1] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[1] ; decodificador:decodificador|habDisplay[1] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[2] ; decodificador:decodificador|habDisplay[1] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[3] ; decodificador:decodificador|habDisplay[1] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[4] ; decodificador:decodificador|habDisplay[1] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[5] ; decodificador:decodificador|habDisplay[1] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[6] ; decodificador:decodificador|habDisplay[1] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[0] ; decodificador:decodificador|habDisplay[2] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[1] ; decodificador:decodificador|habDisplay[2] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[2] ; decodificador:decodificador|habDisplay[2] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[3] ; decodificador:decodificador|habDisplay[2] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[4] ; decodificador:decodificador|habDisplay[2] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[5] ; decodificador:decodificador|habDisplay[2] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[6] ; decodificador:decodificador|habDisplay[2] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[0] ; decodificador:decodificador|habDisplay[3] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[1] ; decodificador:decodificador|habDisplay[3] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[2] ; decodificador:decodificador|habDisplay[3] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[3] ; decodificador:decodificador|habDisplay[3] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[4] ; decodificador:decodificador|habDisplay[3] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[5] ; decodificador:decodificador|habDisplay[3] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[6] ; decodificador:decodificador|habDisplay[3] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[0] ; decodificador:decodificador|habDisplay[4] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[1] ; decodificador:decodificador|habDisplay[4] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[2] ; decodificador:decodificador|habDisplay[4] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[3] ; decodificador:decodificador|habDisplay[4] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[4] ; decodificador:decodificador|habDisplay[4] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[5] ; decodificador:decodificador|habDisplay[4] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[6] ; decodificador:decodificador|habDisplay[4] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[0] ; decodificador:decodificador|habDisplay[5] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[1] ; decodificador:decodificador|habDisplay[5] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[2] ; decodificador:decodificador|habDisplay[5] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[3] ; decodificador:decodificador|habDisplay[5] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[4] ; decodificador:decodificador|habDisplay[5] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[5] ; decodificador:decodificador|habDisplay[5] ; yes                    ;
+; interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[6] ; decodificador:decodificador|habDisplay[5] ; yes                    ;
+; Number of user-specified and inferred latches = 42                         ;                                           ;                        ;
++----------------------------------------------------------------------------+-------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                     ;
++------------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                            ; Reason for Removal                          ;
++------------------------------------------------------------------------------------------+---------------------------------------------+
+; processador:processador|flipflop:flipflop|DOUT                                           ; Stuck at GND due to stuck port clock_enable ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo|DOUT           ; Stuck at VCC due to stuck port data_in      ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0..7]  ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick            ; Lost fanout                                 ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8..24] ; Lost fanout                                 ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~22              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~30              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~38              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~46              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~54              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~62              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~70              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~78              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~86              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~94              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~102             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~110             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~118             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~126             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~134             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~23              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~31              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~39              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~47              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~55              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~63              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~71              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~79              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~87              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~95              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~103             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~111             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~119             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~127             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~135             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~21              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~29              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~37              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~45              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~53              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~61              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~69              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~77              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~85              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~93              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~101             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~109             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~117             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~125             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~133             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~24              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~32              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~40              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~48              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~56              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~64              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~72              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~80              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~88              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~96              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~104             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~112             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~120             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~128             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~136             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~25              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~33              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~41              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~49              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~57              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~65              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~73              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~81              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~89              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~97              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~105             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~113             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~121             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~129             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~137             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~26              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~34              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~42              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~50              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~58              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~66              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~74              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~82              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~90              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~98              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~106             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~114             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~122             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~130             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~138             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~27              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~35              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~43              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~51              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~59              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~67              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~75              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~83              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~91              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~99              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~107             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~115             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~123             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~131             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~139             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~28              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~36              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~44              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~52              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~60              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~68              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~76              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~84              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~92              ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~100             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~108             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~116             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~124             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~132             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~140             ; Stuck at GND due to stuck port data_in      ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~17              ; Lost fanout                                 ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~18              ; Lost fanout                                 ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~19              ; Lost fanout                                 ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~20              ; Lost fanout                                 ;
+; Total Number of Removed Registers = 152                                                  ;                                             ;
++------------------------------------------------------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                               ;
++--------------------------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
+; Register name                                                                        ; Reason for Removal        ; Registers Removed due to This Register                                                 ;
++--------------------------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
+; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[7] ; Lost Fanouts              ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[6],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[5],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[4],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[3],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[2],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[1],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[9],  ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[10], ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[11], ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[12]  ;
+; divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo|DOUT       ; Stuck at VCC              ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick,         ;
+;                                                                                      ; due to stuck port data_in ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[13], ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[14], ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[15], ;
+;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[16]  ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~25          ; Stuck at GND              ; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~17            ;
+;                                                                                      ; due to stuck port data_in ;                                                                                        ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~26          ; Stuck at GND              ; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~18            ;
+;                                                                                      ; due to stuck port data_in ;                                                                                        ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~27          ; Stuck at GND              ; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~19            ;
+;                                                                                      ; due to stuck port data_in ;                                                                                        ;
+; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~28          ; Stuck at GND              ; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~20            ;
+;                                                                                      ; due to stuck port data_in ;                                                                                        ;
++--------------------------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -233,14 +497,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 19    ;
+; Total registers                              ; 20    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle                    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam|saida_MUX[0]          ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|rascSaida7seg[0] ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|rascSaida7seg[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -248,49 +524,206 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+----------------------------------------------+
 ; Parameter Name ; Value ; Type                                         ;
 +----------------+-------+----------------------------------------------+
-; larguraDados   ; 8     ; Signed Integer                               ;
+; DATA_WIDTH     ; 8     ; Signed Integer                               ;
+; ADDR_WIDTH     ; 8     ; Signed Integer                               ;
 +----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo ;
++----------------+----------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                                      ;
++----------------+----------+-------------------------------------------------------------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                                                                            ;
++----------------+----------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceSwitches:interfaceSwitches ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceDisplays:interfaceDisplays ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; data_width     ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceBotao:interfaceBotoes ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; datawidth      ; 4     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; data_width     ; 8     ; Signed Integer                              ;
+; rom_data_width ; 32    ; Signed Integer                              ;
+; rom_addr_width ; 16    ; Signed Integer                              ;
+; incrementopc   ; 1     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|somaConstante:somaConstante ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; larguradados   ; 16    ; Signed Integer                                                          ;
+; constante      ; 1     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxProxPC ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; larguradados   ; 16    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|registradorGenerico:PC ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; larguradados   ; 16    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|memoriaROM:ROM ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; datawidth      ; 32    ; Signed Integer                                             ;
+; addrwidth      ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|bancoRegistradoresArqRegReg:bancoReg ;
++---------------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                                        ;
++---------------------+-------+-----------------------------------------------------------------------------+
+; larguradados        ; 8     ; Signed Integer                                                              ;
+; larguraendbancoregs ; 4     ; Signed Integer                                                              ;
++---------------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|ULA:ULA ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxImediatoRam ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; larguraDados   ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxULAImediatoRam ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; larguraDados   ; 8     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|Unidade_Controle:UC ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                  ;
+; addr_width     ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decodificador:decodificador ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                  ;
+; addr_width     ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "processador:processador|registradorGenerico:PC" ;
++--------+-------+----------+------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                        ;
++--------+-------+----------+------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                   ;
+; rst    ; Input ; Info     ; Stuck at GND                                   ;
++--------+-------+----------+------------------------------------------------+
 
 
 +-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registradorGenerico:regA ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; larguraDados   ; 8     ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+; Port Connectivity Checks: "processador:processador|flipflop:flipflop" ;
++------+-------+----------+---------------------------------------------+
+; Port ; Type  ; Severity ; Details                                     ;
++------+-------+----------+---------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                ;
++------+-------+----------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registradorGenerico:regB ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; larguraDados   ; 8     ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processador:processador"                                                                        ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; saidadados[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxGenerico2x1:mux ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; larguraDados   ; 8     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULA:ula_dif ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; larguraDados   ; 8     ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo" ;
++--------+-------+----------+---------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                   ;
++--------+-------+----------+---------------------------------------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                                              ;
+; enable ; Input ; Info     ; Stuck at VCC                                                              ;
++--------+-------+----------+---------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -298,20 +731,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 19                          ;
-;     ENA CLR           ; 8                           ;
-;     ENA CLR SLD       ; 8                           ;
-;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 12                          ;
-;     arith             ; 9                           ;
-;         1 data inputs ; 1                           ;
-;         3 data inputs ; 8                           ;
-;     normal            ; 3                           ;
-;         2 data inputs ; 3                           ;
-; boundary_port         ; 26                          ;
+; arriav_ff             ; 20                          ;
+;     ENA               ; 4                           ;
+;     plain             ; 16                          ;
+; arriav_lcell_comb     ; 105                         ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 16                          ;
+;         4 data inputs ; 4                           ;
+;     normal            ; 85                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 42                          ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 16                          ;
+; boundary_port         ; 55                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.80                        ;
-; Average LUT depth     ; 1.08                        ;
+; Max LUT depth         ; 4.30                        ;
+; Average LUT depth     ; 2.97                        ;
 +-----------------------+-----------------------------+
 
 
@@ -320,7 +756,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -330,22 +766,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Sep 09 09:12:17 2020
+    Info: Processing started: Sun Oct 18 16:43:54 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Geral -c Geral
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /mucha/documents/insper/6osemestre/designcomputadores/memoria.vhd
-    Info (12022): Found design unit 1: memoria-assincrona File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Memoria.vhd Line: 15
-    Info (12023): Found entity 1: memoria File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Memoria.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file subtratorgenerico.vhd
+    Info (12022): Found design unit 1: subtratorGenerico-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/subtratorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: subtratorGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/subtratorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somadorgenerico.vhd
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somadorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file geral.vhd
+    Info (12022): Found design unit 1: Geral-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 22
+    Info (12023): Found entity 1: Geral File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file aula1ativ1.vhd
+    Info (12022): Found design unit 1: aula1Ativ1-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ1.vhd Line: 19
+    Info (12023): Found entity 1: aula1Ativ1 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ1.vhd Line: 5
+Warning (12019): Can't analyze file -- file ../Memoria.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
     Info (12022): Found design unit 1: registradorGenerico-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 13
     Info (12023): Found entity 1: registradorGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file aula1ativ2.vhd
     Info (12022): Found design unit 1: aula1Ativ2-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ2.vhd Line: 19
     Info (12023): Found entity 1: aula1Ativ2 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ2.vhd Line: 5
-Info (12021): Found 0 design units, including 0 entities, in source file aula2ativ1.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file aula2ativ1.vhd
+    Info (12022): Found design unit 1: aula2Ativ1-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula2Ativ1.vhd Line: 22
+    Info (12023): Found entity 1: aula2Ativ1 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula2Ativ1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd Line: 14
+    Info (12022): Found design unit 1: ULA-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd Line: 19
     Info (12023): Found entity 1: ULA File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
     Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 14
@@ -354,25 +802,197 @@ Info (12021): Found 3 design units, including 1 entities, in source file edgedet
     Info (12022): Found design unit 1: edgeDetector-bordaSubida File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/edgeDetector.vhd Line: 10
     Info (12022): Found design unit 2: edgeDetector-bordaDescida File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/edgeDetector.vhd Line: 23
     Info (12023): Found entity 1: edgeDetector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/edgeDetector.vhd Line: 4
-Warning (12125): Using design file geral.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Geral-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 22
-    Info (12023): Found entity 1: Geral File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregreg.vhd
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegReg-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/bancoRegistradoresArqRegReg.vhd Line: 26
+    Info (12023): Found entity 1: bancoRegistradoresArqRegReg File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/bancoRegistradoresArqRegReg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/memoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/memoriaROM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
+    Info (12022): Found design unit 1: processador-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 26
+    Info (12023): Found entity 1: processador File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
+    Info (12022): Found design unit 1: Unidade_Controle-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Unidade_Controle.vhd Line: 21
+    Info (12023): Found entity 1: Unidade_Controle File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Unidade_Controle.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 15
+    Info (12023): Found entity 1: conversorHex7Seg File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: divisorGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico_e_interface.vhd
+    Info (12022): Found design unit 1: divisorGenerico_e_Interface-interface File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd Line: 13
+    Info (12023): Found entity 1: divisorGenerico_e_Interface File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
+    Info (12022): Found design unit 1: flipflop-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/flipflop.vhd Line: 12
+    Info (12023): Found entity 1: flipflop File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/flipflop.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somaConstante.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fluxodados.vhd
+    Info (12022): Found design unit 1: fluxoDados-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/fluxoDados.vhd Line: 26
+    Info (12023): Found entity 1: fluxoDados File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/fluxoDados.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
+    Info (12022): Found design unit 1: decodificador-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/decodificador.vhd Line: 24
+    Info (12023): Found entity 1: decodificador File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/decodificador.vhd Line: 5
+Warning (12019): Can't analyze file -- file BaseTempo.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceswitches.vhd
+    Info (12022): Found design unit 1: interfaceSwitches-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceSwitches.vhd Line: 15
+    Info (12023): Found entity 1: interfaceSwitches File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceSwitches.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interfacedisplays.vhd
+    Info (12022): Found design unit 1: interfaceDisplays-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceDisplays.vhd Line: 17
+    Info (12023): Found entity 1: interfaceDisplays File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceDisplays.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file interfacebotao.vhd
+    Info (12022): Found design unit 1: interfaceBotao-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceBotao.vhd Line: 15
+    Info (12023): Found entity 1: interfaceBotao File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceBotao.vhd Line: 4
 Info (12127): Elaborating entity "Geral" for the top level hierarchy
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorCLK" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 64
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:regA" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 82
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:mux" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 98
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula_dif" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/geral.vhd Line: 106
+Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 41
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd Line: 18
+Info (12128): Elaborating entity "flipflop" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd Line: 22
+Info (12128): Elaborating entity "interfaceSwitches" for hierarchy "interfaceSwitches:interfaceSwitches" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 49
+Info (12128): Elaborating entity "interfaceDisplays" for hierarchy "interfaceDisplays:interfaceDisplays" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 56
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceDisplays.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at conversorHex7Seg.vhd(51): signal "habilita" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 51
+Warning (10492): VHDL Process Statement warning at conversorHex7Seg.vhd(52): signal "rascSaida7seg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 52
+Warning (10631): VHDL Process Statement warning at conversorHex7Seg.vhd(49): inferring latch(es) for signal or variable "saida7seg", which holds its previous value in one or more paths through the process File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+Info (10041): Inferred latch for "saida7seg[0]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+Info (10041): Inferred latch for "saida7seg[1]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+Info (10041): Inferred latch for "saida7seg[2]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+Info (10041): Inferred latch for "saida7seg[3]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+Info (10041): Inferred latch for "saida7seg[4]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+Info (10041): Inferred latch for "saida7seg[5]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+Info (10041): Inferred latch for "saida7seg[6]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+Info (12128): Elaborating entity "interfaceBotao" for hierarchy "interfaceBotao:interfaceBotoes" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 69
+Info (12128): Elaborating entity "processador" for hierarchy "processador:processador" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 76
+Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:processador|somaConstante:somaConstante" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 73
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:processador|muxGenerico2x1:muxProxPC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 76
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:processador|registradorGenerico:PC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 79
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:processador|memoriaROM:ROM" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 82
+Info (12128): Elaborating entity "bancoRegistradoresArqRegReg" for hierarchy "processador:processador|bancoRegistradoresArqRegReg:bancoReg" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 85
+Info (12128): Elaborating entity "ULA" for hierarchy "processador:processador|ULA:ULA" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 95
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:processador|muxGenerico2x1:muxImediatoRam" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 98
+Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "processador:processador|Unidade_Controle:UC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 104
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decodificador" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 87
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador" is uninferred due to asynchronous read logic File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/bancoRegistradoresArqRegReg.vhd Line: 32
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "EntradaDados[7]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "EntradaDados[6]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "EntradaDados[5]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "EntradaDados[4]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "EntradaDados[3]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "EntradaDados[2]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "EntradaDados[1]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "EntradaDados[0]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 30 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 31 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4853 megabytes
-    Info: Processing ended: Wed Sep 09 09:12:32 2020
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:27
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
+    Warning (15610): No output dependent on input pin "SW[1]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
+    Warning (15610): No output dependent on input pin "KEY[0]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 16
+Info (21057): Implemented 160 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 105 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 112 warnings
+    Info: Peak virtual memory: 4904 megabytes
+    Info: Processing ended: Sun Oct 18 16:44:15 2020
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:39
 
 

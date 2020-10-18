@@ -6,7 +6,7 @@ entity divisorGenerico_e_Interface is
    port(clk      :   in std_logic;
       habilitaLeitura : in std_logic;
       limpaLeitura : in std_logic;
-      leituraUmSegundo :   out std_logic
+      leituraUmSegundo :   out std_logic_vector(7 downto 0)
    );
 end entity;
 
@@ -16,15 +16,15 @@ architecture interface of divisorGenerico_e_Interface is
 begin
 
 baseTempo: entity work.divisorGenerico
-           generic map (divisor => 5)   -- divide por 10.
+           generic map (divisor => 25000000)   -- divide por 25.000.000 para passar 1 sec.
            port map (clk => clk, saida_clk => saidaclk_reg1seg);
 
-registraUmSegundo: entity work.flipflopGenerico
+registraUmSegundo: entity work.flipflop
    port map (DIN => '1', DOUT => sinalUmSegundo,
          ENABLE => '1', CLK => saidaclk_reg1seg,
          RST => limpaLeitura);
 
 -- Faz o tristate de saida:
-leituraUmSegundo <= sinalUmSegundo when habilitaLeitura = '1' else 'Z';
+leituraUmSegundo <= "0000000" & sinalUmSegundo when habilitaLeitura = '1' else (others => 'Z');
 
 end architecture interface;
