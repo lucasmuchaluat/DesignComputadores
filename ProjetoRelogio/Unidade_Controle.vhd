@@ -47,9 +47,9 @@ architecture arch_name of Unidade_Controle is
     --                 LOAD   STORE   MOVR   MOVC   CMP   ADD   AND   SUB   JMP   JE
     -- je                0      0       0      0     0     0     0     0     0     1
     -- jmp               0      0       0      0     0     0     0     0     1     0
-    -- muxImedUla        0      0       1      0     1     1     1     1     0     0
+    -- muxImedUla        0      0       1      0    N/D    1     1     1     0     0
     -- muxImedRam        0      0      N/D     1    N/D   N/D   N/D   N/D    0     0
-    -- operacao         N/D    N/D     001    N/D   N/D   000   110   100   N/D   N/D
+    -- operacao         N/D    N/D     011    N/D   N/D   000   110   001   N/D   N/D
     -- habEscritaReg     1      0       1      1     0     1     1     1     0     0
     -- habLeituraMem     1      0       0      0     0     0     0     0     0     0
     -- habEscritaMem     0      1       0      0     0     0     0     0     0     0
@@ -62,13 +62,13 @@ architecture arch_name of Unidade_Controle is
 					 
 	 palavraControle <= "00000001100" when opCode = LOAD else 	   --  LOAD
 				    "00000000010" when opCode = STORE else 				--  STORE
-					 "00100011000" when opCode = MOVR else					--  MOVR
+					 "00100111000" when opCode = MOVR else					--  MOVR
 					 "00010001000" when opCode = MOVC else 			   --  MOVC
 					 "00101110001" when opCode = CMP else 					--  CMP
 					 "00100001000" when opCode = ADD else 					--  ADD
 					 "00101101000" when opCode = opAND else 				--  AND		
-					 "00101001000" when opCode = SUB   else 			   --  SUB		
-					 "01000000000" when opCode = opJMP else 		         --  JMP		
+					 "00100011000" when opCode = SUB   else 			   --  SUB		
+					 "01000000000" when opCode = opJMP else 		      --  JMP		
 					 "10000000000";                                    --  JE	 
 
 

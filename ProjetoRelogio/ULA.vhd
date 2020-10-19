@@ -36,7 +36,6 @@ architecture comportamento of ULA is
 
       saida <= soma when (seletor = "000") else
           subtracao when (seletor = "001") else
-          entradaA when  (seletor = "010") else
           entradaB when  (seletor = "011") else
           op_xor when    (seletor = "100") else
           op_not when    (seletor = "101") else

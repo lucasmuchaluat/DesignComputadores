@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Geral
-Sun Oct 18 16:44:15 2020
+Sun Oct 18 21:26:00 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,33 +14,31 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: Top-level Entity: |Geral
- 14. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo
- 15. Parameter Settings for User Entity Instance: interfaceSwitches:interfaceSwitches
- 16. Parameter Settings for User Entity Instance: interfaceDisplays:interfaceDisplays
- 17. Parameter Settings for User Entity Instance: interfaceBotao:interfaceBotoes
- 18. Parameter Settings for User Entity Instance: processador:processador
- 19. Parameter Settings for User Entity Instance: processador:processador|somaConstante:somaConstante
- 20. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxProxPC
- 21. Parameter Settings for User Entity Instance: processador:processador|registradorGenerico:PC
- 22. Parameter Settings for User Entity Instance: processador:processador|memoriaROM:ROM
- 23. Parameter Settings for User Entity Instance: processador:processador|bancoRegistradoresArqRegReg:bancoReg
- 24. Parameter Settings for User Entity Instance: processador:processador|ULA:ULA
- 25. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxImediatoRam
- 26. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxULAImediatoRam
- 27. Parameter Settings for User Entity Instance: processador:processador|Unidade_Controle:UC
- 28. Parameter Settings for User Entity Instance: decodificador:decodificador
- 29. Port Connectivity Checks: "processador:processador|registradorGenerico:PC"
- 30. Port Connectivity Checks: "processador:processador|flipflop:flipflop"
- 31. Port Connectivity Checks: "processador:processador"
- 32. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Geral
+ 12. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo
+ 13. Parameter Settings for User Entity Instance: interfaceSwitches:interfaceSwitches
+ 14. Parameter Settings for User Entity Instance: interfaceDisplays:interfaceDisplays
+ 15. Parameter Settings for User Entity Instance: interfaceBotao:interfaceBotoes
+ 16. Parameter Settings for User Entity Instance: processador:processador
+ 17. Parameter Settings for User Entity Instance: processador:processador|somaConstante:somaConstante
+ 18. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxProxPC
+ 19. Parameter Settings for User Entity Instance: processador:processador|registradorGenerico:PC
+ 20. Parameter Settings for User Entity Instance: processador:processador|memoriaROM:ROM
+ 21. Parameter Settings for User Entity Instance: processador:processador|bancoRegistradoresArqRegReg:bancoReg
+ 22. Parameter Settings for User Entity Instance: processador:processador|ULA:ULA
+ 23. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxImediatoRam
+ 24. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxULAImediatoRam
+ 25. Parameter Settings for User Entity Instance: processador:processador|Unidade_Controle:UC
+ 26. Parameter Settings for User Entity Instance: decodificador:decodificador
+ 27. Port Connectivity Checks: "processador:processador|registradorGenerico:PC"
+ 28. Port Connectivity Checks: "processador:processador|flipflop:flipflop"
+ 29. Port Connectivity Checks: "processador:processador"
+ 30. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -67,13 +65,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Oct 18 16:44:15 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 18 21:26:00 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Geral                                       ;
 ; Top-level Entity Name           ; Geral                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 20                                          ;
+; Total registers                 ; 172                                         ;
 ; Total pins                      ; 55                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -221,51 +219,57 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 61             ;
+; Estimate of Logic utilization (ALMs needed) ; 271            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 105            ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 16             ;
-;     -- 5 input functions                    ; 12             ;
-;     -- 4 input functions                    ; 17             ;
-;     -- <=3 input functions                  ; 60             ;
+; Combinational ALUT usage for logic          ; 369            ;
+;     -- 7 input functions                    ; 2              ;
+;     -- 6 input functions                    ; 157            ;
+;     -- 5 input functions                    ; 41             ;
+;     -- 4 input functions                    ; 35             ;
+;     -- <=3 input functions                  ; 134            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 20             ;
+; Dedicated logic registers                   ; 172            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 55             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 20             ;
-; Total fan-out                               ; 529            ;
-; Average fan-out                             ; 2.25           ;
+; Maximum fan-out                             ; 171            ;
+; Total fan-out                               ; 2261           ;
+; Average fan-out                             ; 3.47           ;
 +---------------------------------------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Entity Name                 ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------------------+--------------+
-; |Geral                                       ; 105 (0)             ; 20 (0)                    ; 0                 ; 0          ; 55   ; 0            ; |Geral                                                               ; Geral                       ; work         ;
-;    |decodificador:decodificador|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|decodificador:decodificador                                   ; decodificador               ; work         ;
-;    |interfaceDisplays:interfaceDisplays|     ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays                           ; interfaceDisplays           ; work         ;
-;       |conversorHex7Seg:DISPLAY0|            ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0 ; conversorHex7Seg            ; work         ;
-;       |conversorHex7Seg:DISPLAY1|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1 ; conversorHex7Seg            ; work         ;
-;       |conversorHex7Seg:DISPLAY2|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2 ; conversorHex7Seg            ; work         ;
-;       |conversorHex7Seg:DISPLAY3|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3 ; conversorHex7Seg            ; work         ;
-;       |conversorHex7Seg:DISPLAY4|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4 ; conversorHex7Seg            ; work         ;
-;       |conversorHex7Seg:DISPLAY5|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5 ; conversorHex7Seg            ; work         ;
-;    |processador:processador|                 ; 48 (0)              ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador                                       ; processador                 ; work         ;
-;       |ULA:ULA|                              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|ULA:ULA                               ; ULA                         ; work         ;
-;       |Unidade_Controle:UC|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|Unidade_Controle:UC                   ; Unidade_Controle            ; work         ;
-;       |bancoRegistradoresArqRegReg:bancoReg| ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|bancoRegistradoresArqRegReg:bancoReg  ; bancoRegistradoresArqRegReg ; work         ;
-;       |memoriaROM:ROM|                       ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|memoriaROM:ROM                        ; memoriaROM                  ; work         ;
-;       |muxGenerico2x1:muxULAImediatoRam|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam      ; muxGenerico2x1              ; work         ;
-;       |registradorGenerico:PC|               ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|registradorGenerico:PC                ; registradorGenerico         ; work         ;
-;       |somaConstante:somaConstante|          ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|somaConstante:somaConstante           ; somaConstante               ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
++-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name                 ; Library Name ;
++-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+-----------------------------+--------------+
+; |Geral                                              ; 369 (12)            ; 172 (0)                   ; 0                 ; 0          ; 55   ; 0            ; |Geral                                                                           ; Geral                       ; work         ;
+;    |decodificador:decodificador|                    ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|decodificador:decodificador                                               ; decodificador               ; work         ;
+;    |divisorGenerico_e_Interface:interfaceBaseTempo| ; 31 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Geral|divisorGenerico_e_Interface:interfaceBaseTempo                            ; divisorGenerico_e_Interface ; work         ;
+;       |divisorGenerico:baseTempo|                   ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo  ; divisorGenerico             ; work         ;
+;       |flipflop:registraUmSegundo|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo ; flipflop                    ; work         ;
+;    |interfaceBotao:interfaceBotoes|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceBotao:interfaceBotoes                                            ; interfaceBotao              ; work         ;
+;    |interfaceDisplays:interfaceDisplays|            ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays                                       ; interfaceDisplays           ; work         ;
+;       |conversorHex7Seg:DISPLAY0|                   ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0             ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY1|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1             ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY2|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2             ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY3|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3             ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY4|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4             ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DISPLAY5|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5             ; conversorHex7Seg            ; work         ;
+;    |processador:processador|                        ; 261 (1)             ; 145 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador                                                   ; processador                 ; work         ;
+;       |ULA:ULA|                                     ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|ULA:ULA                                           ; ULA                         ; work         ;
+;       |Unidade_Controle:UC|                         ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|Unidade_Controle:UC                               ; Unidade_Controle            ; work         ;
+;       |bancoRegistradoresArqRegReg:bancoReg|        ; 98 (98)             ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|bancoRegistradoresArqRegReg:bancoReg              ; bancoRegistradoresArqRegReg ; work         ;
+;       |flipflop:flipflop|                           ; 5 (5)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|flipflop:flipflop                                 ; flipflop                    ; work         ;
+;       |memoriaROM:ROM|                              ; 89 (89)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|memoriaROM:ROM                                    ; memoriaROM                  ; work         ;
+;       |muxGenerico2x1:muxProxPC|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|muxGenerico2x1:muxProxPC                          ; muxGenerico2x1              ; work         ;
+;       |muxGenerico2x1:muxULAImediatoRam|            ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam                  ; muxGenerico2x1              ; work         ;
+;       |registradorGenerico:PC|                      ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|registradorGenerico:PC                            ; registradorGenerico         ; work         ;
+;       |somaConstante:somaConstante|                 ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|somaConstante:somaConstante                       ; somaConstante               ; work         ;
++-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -321,188 +325,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                     ;
-+------------------------------------------------------------------------------------------+---------------------------------------------+
-; Register name                                                                            ; Reason for Removal                          ;
-+------------------------------------------------------------------------------------------+---------------------------------------------+
-; processador:processador|flipflop:flipflop|DOUT                                           ; Stuck at GND due to stuck port clock_enable ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo|DOUT           ; Stuck at VCC due to stuck port data_in      ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0..7]  ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick            ; Lost fanout                                 ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8..24] ; Lost fanout                                 ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~22              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~30              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~38              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~46              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~54              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~62              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~70              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~78              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~86              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~94              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~102             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~110             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~118             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~126             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~134             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~23              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~31              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~39              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~47              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~55              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~63              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~71              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~79              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~87              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~95              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~103             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~111             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~119             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~127             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~135             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~21              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~29              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~37              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~45              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~53              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~61              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~69              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~77              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~85              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~93              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~101             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~109             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~117             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~125             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~133             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~24              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~32              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~40              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~48              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~56              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~64              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~72              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~80              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~88              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~96              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~104             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~112             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~120             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~128             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~136             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~25              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~33              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~41              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~49              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~57              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~65              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~73              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~81              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~89              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~97              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~105             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~113             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~121             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~129             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~137             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~26              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~34              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~42              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~50              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~58              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~66              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~74              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~82              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~90              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~98              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~106             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~114             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~122             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~130             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~138             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~27              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~35              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~43              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~51              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~59              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~67              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~75              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~83              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~91              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~99              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~107             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~115             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~123             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~131             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~139             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~28              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~36              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~44              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~52              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~60              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~68              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~76              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~84              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~92              ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~100             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~108             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~116             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~124             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~132             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~140             ; Stuck at GND due to stuck port data_in      ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~17              ; Lost fanout                                 ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~18              ; Lost fanout                                 ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~19              ; Lost fanout                                 ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~20              ; Lost fanout                                 ;
-; Total Number of Removed Registers = 152                                                  ;                                             ;
-+------------------------------------------------------------------------------------------+---------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                               ;
-+--------------------------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
-; Register name                                                                        ; Reason for Removal        ; Registers Removed due to This Register                                                 ;
-+--------------------------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
-; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[7] ; Lost Fanouts              ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[6],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[5],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[4],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[3],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[2],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[1],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[0],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[8],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[9],  ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[10], ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[11], ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[12]  ;
-; divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo|DOUT       ; Stuck at VCC              ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|tick,         ;
-;                                                                                      ; due to stuck port data_in ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[13], ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[14], ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[15], ;
-;                                                                                      ;                           ; divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo|contador[16]  ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~25          ; Stuck at GND              ; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~17            ;
-;                                                                                      ; due to stuck port data_in ;                                                                                        ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~26          ; Stuck at GND              ; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~18            ;
-;                                                                                      ; due to stuck port data_in ;                                                                                        ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~27          ; Stuck at GND              ; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~19            ;
-;                                                                                      ; due to stuck port data_in ;                                                                                        ;
-; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~28          ; Stuck at GND              ; processador:processador|bancoRegistradoresArqRegReg:bancoReg|registrador~20            ;
-;                                                                                      ; due to stuck port data_in ;                                                                                        ;
-+--------------------------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 20    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 172   ;
+; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 128   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -512,9 +345,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle                    ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam|saida_MUX[0]          ;
-; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|rascSaida7seg[0] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle[7]                 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle[3]                 ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam|saida_MUX[4]          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle[9]                 ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|rascSaida7seg[5] ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|rascSaida7seg[4] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 
@@ -731,23 +566,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 20                          ;
-;     ENA               ; 4                           ;
-;     plain             ; 16                          ;
-; arriav_lcell_comb     ; 105                         ;
-;     arith             ; 20                          ;
-;         1 data inputs ; 16                          ;
-;         4 data inputs ; 4                           ;
-;     normal            ; 85                          ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 42                          ;
-;         4 data inputs ; 13                          ;
-;         5 data inputs ; 12                          ;
-;         6 data inputs ; 16                          ;
+; arriav_ff             ; 172                         ;
+;     CLR               ; 1                           ;
+;     ENA               ; 128                         ;
+;     SCLR              ; 34                          ;
+;     plain             ; 9                           ;
+; arriav_lcell_comb     ; 369                         ;
+;     arith             ; 50                          ;
+;         1 data inputs ; 42                          ;
+;         3 data inputs ; 8                           ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 317                         ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 76                          ;
+;         4 data inputs ; 35                          ;
+;         5 data inputs ; 41                          ;
+;         6 data inputs ; 157                         ;
 ; boundary_port         ; 55                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 2.97                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 5.07                        ;
 +-----------------------+-----------------------------+
 
 
@@ -756,7 +595,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -766,7 +605,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 18 16:43:54 2020
+    Info: Processing started: Sun Oct 18 21:25:07 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Geral -c Geral
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -885,114 +724,100 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "EntradaDados[1]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
     Warning (13048): Converted tri-state node "EntradaDados[0]" into a selector File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd Line: 10
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY1|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY2|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[0] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[1] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[2] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[3] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[4] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[5] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5|saida7seg[6] has unsafe behavior File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[15] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processador:processador|registradorGenerico:PC|DOUT[7] File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd Line: 28
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 30 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
-    Warning (15610): No output dependent on input pin "SW[1]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
-    Warning (15610): No output dependent on input pin "SW[2]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
-    Warning (15610): No output dependent on input pin "SW[3]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
-    Warning (15610): No output dependent on input pin "SW[4]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
-    Warning (15610): No output dependent on input pin "SW[5]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
-    Warning (15610): No output dependent on input pin "SW[6]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
-    Warning (15610): No output dependent on input pin "SW[7]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 15
-    Warning (15610): No output dependent on input pin "KEY[0]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 16
-    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 16
-    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 16
-    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 16
-Info (21057): Implemented 160 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 553 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 105 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 112 warnings
-    Info: Peak virtual memory: 4904 megabytes
-    Info: Processing ended: Sun Oct 18 16:44:15 2020
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:39
+    Info (21061): Implemented 498 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 99 warnings
+    Info: Peak virtual memory: 4950 megabytes
+    Info: Processing ended: Sun Oct 18 21:26:00 2020
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:01:46
 
 
