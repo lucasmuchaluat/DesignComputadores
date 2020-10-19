@@ -1,8 +1,4 @@
-# Relógio 
-
-*Repositório para entrega do projeto de um relógio da disciplina Design de Computadores*
-
-### Projeto 1: Relógio Utilizando um Processador Personalizado
+# Projeto 1: Relógio Utilizando um Processador Personalizado
 
 ### Hardware:
  
