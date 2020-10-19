@@ -1,0 +1,40 @@
+Quartus Prime Archive log --	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.qarlog
+
+Archive:	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.qar
+Date:		Mon Oct 19 00:22:09 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.qpf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.qsf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/ULA.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Unidade_Controle.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ1.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ2.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula2Ativ1.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/bancoRegistradoresArqRegReg.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/decodificador.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/edgeDetector.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/flipflop.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/fluxoDados.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceBotao.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceDisplays.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceSwitches.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/memoriaROM.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/mux1Bit.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/muxGenerico2x1.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/output_files/Chain1.cdf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/registradorGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somaConstante.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somadorGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/subtratorGenerico.vhd
+d:/mucha/documents/insper/6osemestre/designcomputadores/quartus/bin64/assignment_defaults.qdf
+	======= Total: 29 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
