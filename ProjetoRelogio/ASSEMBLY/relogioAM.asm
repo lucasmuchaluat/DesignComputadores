@@ -6,6 +6,7 @@ INIT:
     Movc $5, %FIVE
     Movc $2, %TWO
     Movc $3, %THREE
+    Jmp MAIN
 
 MAIN:
     #Zera flag 12
@@ -23,25 +24,29 @@ MAIN:
     #Segundos
     Movc $0, %SS
     Movc $0, %ss
+    Jmp NORMAL
 
 NORMAL:
 
     Cmp %HH, %ONE
     Je CHECK_hh
+    Jmp NORMAL2
 
 NORMAL2:
     #Coloca os valores temporais nos displays
     Store $14, %ss
     Store $15, %SS
-    Store $16, %mn
     Store $17, %MN
+    Store $16, %mn
 
     #Observa o valor do SW[2]
     #Caso acionado vai para o looping AM
     Load $2, %INTER
     Cmp %ONE, %INTER
     Je AM
+    Jmp NORMAL3
 
+NORMAL3:
     Store $18, %hh
     Store $19, %HH
     
@@ -58,7 +63,7 @@ AM:
     Cmp %FLAG, %ONE
     Je PASS12
 
-    Jmp COUNTER
+    Jmp NORMAL3
 
 PASS12:
     Cmp %HH, %ONE
@@ -71,10 +76,8 @@ AM1319:
     Store $18, %INTER
     Jmp COUNTER
     
-
-
 AM2024:
-    Jmp COUNTER
+    Jmp NORMAL3
 
 CHECK_hh:
     Cmp %hh, %THREE
