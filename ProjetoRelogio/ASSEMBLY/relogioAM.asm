@@ -49,7 +49,9 @@ NORMAL2:
 NORMAL3:
     Store $18, %hh
     Store $19, %HH
-    
+    Jmp NORMAL4
+
+NORMAL4:
     #Observa o valor do SW[3]
     #Caso acionado vai para o looping que ajusta o tempo
     Load $3, %INTER
@@ -74,10 +76,10 @@ AM1319:
     Store $19, %ZERO
     Sub %hh, %TWO, %INTER
     Store $18, %INTER
-    Jmp COUNTER
+    Jmp NORMAL4
     
 AM2024:
-    Jmp NORMAL3
+    Jmp NORMAL4
 
 CHECK_hh:
     Cmp %hh, %THREE
@@ -109,7 +111,7 @@ CHANGE_TIME:
         Cmp %ZERO, %INTER
         Je BUT1_R
 
-Jmp NORMAL
+Jmp NORMAL3
 
     BUT1_R:
         #Observa o valor do BUT[1]
