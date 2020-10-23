@@ -149,7 +149,8 @@ class Line_Assemble:
                  'ZERO': '6', 'TWO': '7',
                  'THREE': '8', 'FIVE': '9',
                  'NINE': '10','INTER':'11',
-                 'SECOND': '12', 'ONE':'13'}
+                 'SECOND': '12', 'ONE':'13',
+                 'FLAG':'14'}
 
         r = bindigits(int(table[register], 10), 4)
         logging.debug('register: {}'.format(r))
