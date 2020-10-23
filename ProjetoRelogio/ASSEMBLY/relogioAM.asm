@@ -111,7 +111,7 @@ CHANGE_TIME:
         Cmp %ZERO, %INTER
         Je BUT1_R
 
-Jmp NORMAL3
+Jmp NORMAL2
 
     BUT1_R:
         #Observa o valor do BUT[1]
