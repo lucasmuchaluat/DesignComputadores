@@ -233,6 +233,33 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7]
+#============================================================
+# LED
+#============================================================
+
+set_location_assignment PIN_AA2 -to LEDR[0]
+set_location_assignment PIN_AA1 -to LEDR[1]
+set_location_assignment PIN_W2 -to LEDR[2]
+set_location_assignment PIN_Y3 -to LEDR[3]
+set_location_assignment PIN_N2 -to LEDR[4]
+set_location_assignment PIN_N1 -to LEDR[5]
+set_location_assignment PIN_U2 -to LEDR[6]
+set_location_assignment PIN_U1 -to LEDR[7]
+set_location_assignment PIN_L2 -to LEDR[8]
+set_location_assignment PIN_L1 -to LEDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9]
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW DEFAULT -to LEDR
+set_instance_assignment -name SLEW_RATE 1 -to LEDR
 
 #====================================================================
 # Fim da configuraÃ§Ã£o dos pinos utilizados em Design de Computadores.

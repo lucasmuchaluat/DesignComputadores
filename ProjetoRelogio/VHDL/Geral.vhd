@@ -15,7 +15,8 @@ entity Geral is
 		  SW       : in std_logic_vector(7 downto 0);
 		  KEY      : in std_logic_vector(3 downto 0);
 		  -- Output ports
-		  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
+		  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
+		  LEDR : out std_logic_vector(9 downto 0)
     );
 end entity;
 
@@ -33,10 +34,27 @@ architecture comportamento of Geral is
 	signal habDisplay : std_logic_vector(5 downto 0);
 	signal habSW : std_logic_vector(7 downto 0);
 	signal habKey : std_logic_vector(3 downto 0);
+	signal habLED : std_logic;
+	
+	signal valorLED : std_logic;
 	
 	
 	 
 	begin
+	
+		flipflop : entity work.flipflop   
+          port map (DIN => SaidaDados(0), DOUT => valorLED, ENABLE => habLED, CLK => CLOCK_50, RST => '0');
+			 
+		LEDR(0) <= valorLED;
+		LEDR(1) <= valorLED;
+		LEDR(2) <= valorLED;
+		LEDR(3) <= valorLED;
+		LEDR(4) <= valorLED;
+		LEDR(5) <= valorLED;
+		LEDR(6) <= valorLED;
+		LEDR(7) <= valorLED;
+		LEDR(8) <= valorLED;
+		LEDR(9) <= valorLED;
 		
 		interfaceBaseTempo : entity work.divisorGenerico_e_Interface
 		 port map(
@@ -91,6 +109,7 @@ architecture comportamento of Geral is
 			store => habEscrita,
 			load => habLeitura,
 			habDisplay => habDisplay,
+			habLED => habLED,
 			habSW => habSW,
 			habBUT => habKey,
 			habBaseTempo => habBaseTempo,

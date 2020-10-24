@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Geral
-Mon Oct 19 00:13:55 2020
+Fri Oct 23 23:18:30 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,9 +38,10 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  30. Port Connectivity Checks: "processador:processador|flipflop:flipflop"
  31. Port Connectivity Checks: "processador:processador"
  32. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 33. Port Connectivity Checks: "flipflop:flipflop"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -67,14 +68,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 19 00:13:55 2020       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 23 23:18:30 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Geral                                       ;
 ; Top-level Entity Name           ; Geral                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 188                                         ;
-; Total pins                      ; 55                                          ;
+; Total registers                 ; 189                                         ;
+; Total pins                      ; 65                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -187,7 +188,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -222,25 +225,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 286            ;
+; Estimate of Logic utilization (ALMs needed) ; 289            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 395            ;
-;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 161            ;
-;     -- 5 input functions                    ; 42             ;
-;     -- 4 input functions                    ; 44             ;
-;     -- <=3 input functions                  ; 147            ;
+; Combinational ALUT usage for logic          ; 384            ;
+;     -- 7 input functions                    ; 3              ;
+;     -- 6 input functions                    ; 176            ;
+;     -- 5 input functions                    ; 24             ;
+;     -- 4 input functions                    ; 23             ;
+;     -- <=3 input functions                  ; 158            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 188            ;
+; Dedicated logic registers                   ; 189            ;
 ;                                             ;                ;
-; I/O pins                                    ; 55             ;
+; I/O pins                                    ; 65             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 187            ;
-; Total fan-out                               ; 2392           ;
-; Average fan-out                             ; 3.45           ;
+; Maximum fan-out                             ; 188            ;
+; Total fan-out                               ; 2377           ;
+; Average fan-out                             ; 3.38           ;
 +---------------------------------------------+----------------+
 
 
@@ -249,13 +252,14 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Entity Name                 ; Library Name ;
 +-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+-----------------------------+--------------+
-; |Geral                                              ; 395 (11)            ; 188 (0)                   ; 0                 ; 0          ; 55   ; 0            ; |Geral                                                                                ; Geral                       ; work         ;
-;    |decodificador:decodificador|                    ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|decodificador:decodificador                                                    ; decodificador               ; work         ;
+; |Geral                                              ; 384 (0)             ; 189 (0)                   ; 0                 ; 0          ; 65   ; 0            ; |Geral                                                                                ; Geral                       ; work         ;
+;    |decodificador:decodificador|                    ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|decodificador:decodificador                                                    ; decodificador               ; work         ;
 ;    |divisorGenerico_e_Interface:interfaceBaseTempo| ; 52 (0)              ; 43 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Geral|divisorGenerico_e_Interface:interfaceBaseTempo                                 ; divisorGenerico_e_Interface ; work         ;
 ;       |divisorGenerico:baseTempoRapida|             ; 20 (20)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempoRapida ; divisorGenerico             ; work         ;
 ;       |divisorGenerico:baseTempo|                   ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo       ; divisorGenerico             ; work         ;
 ;       |flipflop:registraUmSegundo|                  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo      ; flipflop                    ; work         ;
 ;       |mux1Bit:muxSeletorBaseTempo|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|divisorGenerico_e_Interface:interfaceBaseTempo|mux1Bit:muxSeletorBaseTempo     ; mux1Bit                     ; work         ;
+;    |flipflop:flipflop|                              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|flipflop:flipflop                                                              ; flipflop                    ; work         ;
 ;    |interfaceBotao:interfaceBotoes|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceBotao:interfaceBotoes                                                 ; interfaceBotao              ; work         ;
 ;    |interfaceDisplays:interfaceDisplays|            ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays                                            ; interfaceDisplays           ; work         ;
 ;       |conversorHex7Seg:DISPLAY0|                   ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0                  ; conversorHex7Seg            ; work         ;
@@ -264,14 +268,15 @@ https://fpgasoftware.intel.com/eula.
 ;       |conversorHex7Seg:DISPLAY3|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY3                  ; conversorHex7Seg            ; work         ;
 ;       |conversorHex7Seg:DISPLAY4|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY4                  ; conversorHex7Seg            ; work         ;
 ;       |conversorHex7Seg:DISPLAY5|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY5                  ; conversorHex7Seg            ; work         ;
-;    |processador:processador|                        ; 265 (1)             ; 145 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador                                                        ; processador                 ; work         ;
-;       |ULA:ULA|                                     ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|ULA:ULA                                                ; ULA                         ; work         ;
-;       |Unidade_Controle:UC|                         ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|Unidade_Controle:UC                                    ; Unidade_Controle            ; work         ;
-;       |bancoRegistradoresArqRegReg:bancoReg|        ; 98 (98)             ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|bancoRegistradoresArqRegReg:bancoReg                   ; bancoRegistradoresArqRegReg ; work         ;
-;       |flipflop:flipflop|                           ; 5 (5)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|flipflop:flipflop                                      ; flipflop                    ; work         ;
-;       |memoriaROM:ROM|                              ; 91 (91)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|memoriaROM:ROM                                         ; memoriaROM                  ; work         ;
+;    |interfaceSwitches:interfaceSwitches|            ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|interfaceSwitches:interfaceSwitches                                            ; interfaceSwitches           ; work         ;
+;    |processador:processador|                        ; 258 (1)             ; 145 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador                                                        ; processador                 ; work         ;
+;       |ULA:ULA|                                     ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|ULA:ULA                                                ; ULA                         ; work         ;
+;       |Unidade_Controle:UC|                         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|Unidade_Controle:UC                                    ; Unidade_Controle            ; work         ;
+;       |bancoRegistradoresArqRegReg:bancoReg|        ; 96 (96)             ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|bancoRegistradoresArqRegReg:bancoReg                   ; bancoRegistradoresArqRegReg ; work         ;
+;       |flipflop:flipflop|                           ; 4 (4)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|flipflop:flipflop                                      ; flipflop                    ; work         ;
+;       |memoriaROM:ROM|                              ; 84 (84)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|memoriaROM:ROM                                         ; memoriaROM                  ; work         ;
 ;       |muxGenerico2x1:muxProxPC|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|muxGenerico2x1:muxProxPC                               ; muxGenerico2x1              ; work         ;
-;       |muxGenerico2x1:muxULAImediatoRam|            ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam                       ; muxGenerico2x1              ; work         ;
+;       |muxGenerico2x1:muxULAImediatoRam|            ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam                       ; muxGenerico2x1              ; work         ;
 ;       |registradorGenerico:PC|                      ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|registradorGenerico:PC                                 ; registradorGenerico         ; work         ;
 ;       |somaConstante:somaConstante|                 ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Geral|processador:processador|somaConstante:somaConstante                            ; somaConstante               ; work         ;
 +-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+-----------------------------+--------------+
@@ -335,7 +340,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 188   ;
+; Total registers                              ; 189   ;
 ; Number of registers using Synchronous Clear  ; 49    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 1     ;
@@ -350,12 +355,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle[5]                 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle[8]                 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle[7]                 ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle[0]                 ;
 ; 8:1                ; 6 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Geral|processador:processador|muxGenerico2x1:muxULAImediatoRam|saida_MUX[6]          ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Geral|processador:processador|Unidade_Controle:UC|palavraControle[10]                ;
 ; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|rascSaida7seg[1] ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|rascSaida7seg[4] ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Geral|interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0|rascSaida7seg[6] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 
 
@@ -586,32 +591,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+---------------------------------------------------------------------------+
 
 
++-----------------------------------------------+
+; Port Connectivity Checks: "flipflop:flipflop" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; rst  ; Input ; Info     ; Stuck at GND        ;
++------+-------+----------+---------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 188                         ;
+; arriav_ff             ; 189                         ;
 ;     CLR               ; 1                           ;
 ;     ENA               ; 128                         ;
 ;     SCLR              ; 49                          ;
-;     plain             ; 10                          ;
-; arriav_lcell_comb     ; 395                         ;
+;     plain             ; 11                          ;
+; arriav_lcell_comb     ; 384                         ;
 ;     arith             ; 65                          ;
 ;         1 data inputs ; 57                          ;
 ;         3 data inputs ; 8                           ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 329                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 316                         ;
 ;         2 data inputs ; 5                           ;
-;         3 data inputs ; 77                          ;
-;         4 data inputs ; 44                          ;
-;         5 data inputs ; 42                          ;
-;         6 data inputs ; 161                         ;
-; boundary_port         ; 55                          ;
+;         3 data inputs ; 88                          ;
+;         4 data inputs ; 23                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 176                         ;
+; boundary_port         ; 65                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.92                        ;
+; Average LUT depth     ; 4.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -620,7 +634,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -630,7 +644,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 19 00:13:26 2020
+    Info: Processing started: Fri Oct 23 23:18:06 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Geral -c Geral
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -641,7 +655,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file somador
     Info (12022): Found design unit 1: somadorGenerico-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somadorGenerico.vhd Line: 17
     Info (12023): Found entity 1: somadorGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/somadorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file geral.vhd
-    Info (12022): Found design unit 1: Geral-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 22
+    Info (12022): Found design unit 1: Geral-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 23
     Info (12023): Found entity 1: Geral File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file aula1ativ1.vhd
     Info (12022): Found design unit 1: aula1Ativ1-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/aula1Ativ1.vhd Line: 19
@@ -697,7 +711,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file fluxoda
     Info (12022): Found design unit 1: fluxoDados-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/fluxoDados.vhd Line: 26
     Info (12023): Found entity 1: fluxoDados File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/fluxoDados.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
-    Info (12022): Found design unit 1: decodificador-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/decodificador.vhd Line: 24
+    Info (12022): Found design unit 1: decodificador-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/decodificador.vhd Line: 25
     Info (12023): Found entity 1: decodificador File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/decodificador.vhd Line: 5
 Warning (12019): Can't analyze file -- file BaseTempo.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file interfaceswitches.vhd
@@ -713,13 +727,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux1bit
     Info (12022): Found design unit 1: mux1Bit-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/mux1Bit.vhd Line: 14
     Info (12023): Found entity 1: mux1Bit File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/mux1Bit.vhd Line: 4
 Info (12127): Elaborating entity "Geral" for the top level hierarchy
-Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 41
+Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:flipflop" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 45
+Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 59
 Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd Line: 21
 Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempoRapida" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd Line: 25
 Info (12128): Elaborating entity "mux1Bit" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|mux1Bit:muxSeletorBaseTempo" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd Line: 29
-Info (12128): Elaborating entity "flipflop" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/divisorGenerico_e_Interface.vhd Line: 35
-Info (12128): Elaborating entity "interfaceSwitches" for hierarchy "interfaceSwitches:interfaceSwitches" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 50
-Info (12128): Elaborating entity "interfaceDisplays" for hierarchy "interfaceDisplays:interfaceDisplays" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 57
+Info (12128): Elaborating entity "interfaceSwitches" for hierarchy "interfaceSwitches:interfaceSwitches" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 68
+Info (12128): Elaborating entity "interfaceDisplays" for hierarchy "interfaceDisplays:interfaceDisplays" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 75
 Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISPLAY0" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/interfaceDisplays.vhd Line: 21
 Warning (10492): VHDL Process Statement warning at conversorHex7Seg.vhd(51): signal "habilita" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 51
 Warning (10492): VHDL Process Statement warning at conversorHex7Seg.vhd(52): signal "rascSaida7seg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 52
@@ -731,8 +745,8 @@ Info (10041): Inferred latch for "saida7seg[3]" at conversorHex7Seg.vhd(49) File
 Info (10041): Inferred latch for "saida7seg[4]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
 Info (10041): Inferred latch for "saida7seg[5]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
 Info (10041): Inferred latch for "saida7seg[6]" at conversorHex7Seg.vhd(49) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/conversorHex7Seg.vhd Line: 49
-Info (12128): Elaborating entity "interfaceBotao" for hierarchy "interfaceBotao:interfaceBotoes" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 70
-Info (12128): Elaborating entity "processador" for hierarchy "processador:processador" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 77
+Info (12128): Elaborating entity "interfaceBotao" for hierarchy "interfaceBotao:interfaceBotoes" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 88
+Info (12128): Elaborating entity "processador" for hierarchy "processador:processador" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 95
 Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:processador|somaConstante:somaConstante" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 73
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:processador|muxGenerico2x1:muxProxPC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 76
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:processador|registradorGenerico:PC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 79
@@ -741,7 +755,7 @@ Info (12128): Elaborating entity "bancoRegistradoresArqRegReg" for hierarchy "pr
 Info (12128): Elaborating entity "ULA" for hierarchy "processador:processador|ULA:ULA" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 95
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:processador|muxGenerico2x1:muxImediatoRam" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 98
 Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "processador:processador|Unidade_Controle:UC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/processador.vhd Line: 104
-Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decodificador" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 88
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decodificador" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/Geral.vhd Line: 106
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer divisorGenerico_e_Interface:interfaceBaseTempo|mux1Bit:muxSeletorBaseTempo|saida_MUX File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Projetos/mux1Bit.vhd Line: 10
 Info (276014): Found 1 instances of uninferred RAM logic
@@ -842,14 +856,14 @@ Warning (13012): Latch interfaceDisplays:interfaceDisplays|conversorHex7Seg:DISP
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 579 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 578 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 524 logic cells
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 513 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
-    Info: Peak virtual memory: 4941 megabytes
-    Info: Processing ended: Mon Oct 19 00:13:55 2020
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Peak virtual memory: 4924 megabytes
+    Info: Processing ended: Fri Oct 23 23:18:30 2020
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:38
 
 

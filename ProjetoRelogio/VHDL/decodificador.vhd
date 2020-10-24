@@ -16,6 +16,7 @@ entity decodificador is
     -- Output ports
     habDisplay    : out std_logic_vector(5 downto 0);
     habSW     : out std_logic_vector(7 downto 0);
+	 habLED    : out std_logic;
 	 habBUT    : out std_logic_vector(3 downto 0);
     habBaseTempo : out std_logic;
     limpaBasetempo    : out std_logic
@@ -40,7 +41,7 @@ begin
   '0';
   habSW(7) <= '1' when (DataIN = x"0007" AND load = '1') else -- SW7
   '0';
-
+  
   
   habBUT(0) <= '1' when (DataIN = x"0008" AND load = '1') else -- BUT0
   '0';
@@ -69,6 +70,10 @@ begin
   habDisplay(4) <= '1' when (DataIN = x"0012" AND store = '1') else -- Display hora unidade
   '0';
   habDisplay(5) <= '1' when (DataIN = x"0013" AND store = '1') else -- Display hora dezena
+  '0';
+  
+  
+  habLED <= '1' when (DataIN = x"0014" AND store = '1') else -- LED0
   '0';
 
 end architecture;

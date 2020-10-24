@@ -1,5 +1,5 @@
 Timing Analyzer report for Geral
-Mon Oct 19 00:15:16 2020
+Fri Oct 23 23:19:42 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -102,14 +102,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.35        ;
+; Average used               ; 1.34        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  11.9%      ;
-;     Processor 3            ;  11.7%      ;
-;     Processor 4            ;  11.5%      ;
+;     Processor 2            ;  11.5%      ;
+;     Processor 3            ;  11.4%      ;
+;     Processor 4            ;  11.3%      ;
 +----------------------------+-------------+
 
 
@@ -129,8 +129,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------+-----------------+--------------------------------------------------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name                                             ; Note ;
 +-----------+-----------------+--------------------------------------------------------+------+
-; 58.17 MHz ; 58.17 MHz       ; processador:processador|registradorGenerico:PC|DOUT[0] ;      ;
-; 86.3 MHz  ; 86.3 MHz        ; CLOCK_50                                               ;      ;
+; 66.19 MHz ; 66.19 MHz       ; processador:processador|registradorGenerico:PC|DOUT[0] ;      ;
+; 89.57 MHz ; 89.57 MHz       ; CLOCK_50                                               ;      ;
 +-----------+-----------------+--------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -146,8 +146,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------+---------+---------------+
 ; Clock                                                  ; Slack   ; End Point TNS ;
 +--------------------------------------------------------+---------+---------------+
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -11.701 ; -464.487      ;
-; CLOCK_50                                               ; -10.587 ; -1531.735     ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -10.193 ; -375.123      ;
+; CLOCK_50                                               ; -10.164 ; -1475.829     ;
 +--------------------------------------------------------+---------+---------------+
 
 
@@ -156,8 +156,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; CLOCK_50                                               ; -1.679 ; -27.994       ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -1.062 ; -9.384        ;
+; CLOCK_50                                               ; -1.380 ; -3.611        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -0.538 ; -7.634        ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -166,7 +166,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; SW[0] ; -7.400 ; -7.400                ;
+; SW[0] ; -5.373 ; -5.373                ;
 +-------+--------+-----------------------+
 
 
@@ -175,7 +175,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; SW[0] ; -1.120 ; -1.120               ;
+; SW[0] ; -2.053 ; -2.053               ;
 +-------+--------+----------------------+
 
 
@@ -184,9 +184,9 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -2.741 ; -674.565      ;
-; SW[0]                                                  ; -0.539 ; -1.077        ;
-; CLOCK_50                                               ; -0.538 ; -169.732      ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -1.793 ; -454.129      ;
+; SW[0]                                                  ; -0.731 ; -1.319        ;
+; CLOCK_50                                               ; -0.538 ; -173.181      ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -201,8 +201,8 @@ No synchronizer chains to report.
 +-----------+-----------------+--------------------------------------------------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name                                             ; Note ;
 +-----------+-----------------+--------------------------------------------------------+------+
-; 58.13 MHz ; 58.13 MHz       ; processador:processador|registradorGenerico:PC|DOUT[0] ;      ;
-; 86.57 MHz ; 86.57 MHz       ; CLOCK_50                                               ;      ;
+; 63.87 MHz ; 63.87 MHz       ; processador:processador|registradorGenerico:PC|DOUT[0] ;      ;
+; 89.08 MHz ; 89.08 MHz       ; CLOCK_50                                               ;      ;
 +-----------+-----------------+--------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -212,8 +212,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------+---------+---------------+
 ; Clock                                                  ; Slack   ; End Point TNS ;
 +--------------------------------------------------------+---------+---------------+
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -11.852 ; -470.133      ;
-; CLOCK_50                                               ; -10.552 ; -1533.844     ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -10.507 ; -389.310      ;
+; CLOCK_50                                               ; -10.226 ; -1491.881     ;
 +--------------------------------------------------------+---------+---------------+
 
 
@@ -222,8 +222,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; CLOCK_50                                               ; -1.841 ; -31.737       ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -1.102 ; -11.848       ;
+; CLOCK_50                                               ; -1.468 ; -4.966        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -0.776 ; -10.679       ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -232,7 +232,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; SW[0] ; -7.408 ; -7.408               ;
+; SW[0] ; -5.447 ; -5.447               ;
 +-------+--------+----------------------+
 
 
@@ -241,7 +241,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------------+
 ; Clock ; Slack  ; End Point TNS       ;
 +-------+--------+---------------------+
-; SW[0] ; -1.139 ; -1.139              ;
+; SW[0] ; -1.912 ; -1.912              ;
 +-------+--------+---------------------+
 
 
@@ -250,9 +250,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -2.741 ; -695.102      ;
-; CLOCK_50                                               ; -0.538 ; -152.143      ;
-; SW[0]                                                  ; -0.538 ; -1.072        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -1.944 ; -511.573      ;
+; SW[0]                                                  ; -0.722 ; -1.302        ;
+; CLOCK_50                                               ; -0.538 ; -155.252      ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -267,8 +267,8 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -5.941 ; -231.247      ;
-; CLOCK_50                                               ; -5.312 ; -709.607      ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -5.029 ; -179.846      ;
+; CLOCK_50                                               ; -4.981 ; -674.654      ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -277,8 +277,8 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; CLOCK_50                                               ; -0.868 ; -14.808       ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -0.612 ; -6.710        ;
+; CLOCK_50                                               ; -0.746 ; -2.458        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -0.307 ; -5.863        ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -287,7 +287,7 @@ No synchronizer chains to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; SW[0] ; -3.958 ; -3.958                ;
+; SW[0] ; -2.721 ; -2.721                ;
 +-------+--------+-----------------------+
 
 
@@ -296,7 +296,7 @@ No synchronizer chains to report.
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; SW[0] ; -0.377 ; -0.377               ;
+; SW[0] ; -0.976 ; -0.976               ;
 +-------+--------+----------------------+
 
 
@@ -305,9 +305,9 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -1.294 ; -241.298      ;
-; SW[0]                                                  ; -0.663 ; -1.850        ;
-; CLOCK_50                                               ; -0.406 ; -87.392       ;
+; SW[0]                                                  ; -0.751 ; -2.014        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -0.683 ; -99.917       ;
+; CLOCK_50                                               ; -0.404 ; -88.902       ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -322,8 +322,8 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -5.382 ; -211.011      ;
-; CLOCK_50                                               ; -4.664 ; -622.416      ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -4.512 ; -163.991      ;
+; CLOCK_50                                               ; -4.352 ; -589.336      ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -332,8 +332,8 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; CLOCK_50                                               ; -0.901 ; -19.349       ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -0.550 ; -6.620        ;
+; CLOCK_50                                               ; -0.762 ; -3.611        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -0.279 ; -4.850        ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -342,7 +342,7 @@ No synchronizer chains to report.
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; SW[0] ; -3.504 ; -3.504               ;
+; SW[0] ; -2.424 ; -2.424               ;
 +-------+--------+----------------------+
 
 
@@ -351,7 +351,7 @@ No synchronizer chains to report.
 +-------+--------+---------------------+
 ; Clock ; Slack  ; End Point TNS       ;
 +-------+--------+---------------------+
-; SW[0] ; -0.405 ; -0.405              ;
+; SW[0] ; -0.913 ; -0.913              ;
 +-------+--------+---------------------+
 
 
@@ -360,9 +360,9 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; processador:processador|registradorGenerico:PC|DOUT[0] ; -1.110 ; -204.431      ;
-; SW[0]                                                  ; -0.685 ; -2.002        ;
-; CLOCK_50                                               ; -0.445 ; -105.325      ;
+; SW[0]                                                  ; -0.757 ; -2.120        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; -0.569 ; -77.939       ;
+; CLOCK_50                                               ; -0.444 ; -107.256      ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -377,14 +377,14 @@ No synchronizer chains to report.
 +---------------------------------------------------------+-----------+---------+----------+---------+---------------------+
 ; Clock                                                   ; Setup     ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------------------------------+-----------+---------+----------+---------+---------------------+
-; Worst-case Slack                                        ; -11.852   ; -1.841  ; -7.408   ; -1.139  ; -2.741              ;
-;  CLOCK_50                                               ; -10.587   ; -1.841  ; N/A      ; N/A     ; -0.538              ;
-;  SW[0]                                                  ; N/A       ; N/A     ; -7.408   ; -1.139  ; -0.685              ;
-;  processador:processador|registradorGenerico:PC|DOUT[0] ; -11.852   ; -1.102  ; N/A      ; N/A     ; -2.741              ;
-; Design-wide TNS                                         ; -2003.977 ; -43.585 ; -7.408   ; -1.139  ; -848.317            ;
-;  CLOCK_50                                               ; -1533.844 ; -31.737 ; N/A      ; N/A     ; -169.732            ;
-;  SW[0]                                                  ; N/A       ; N/A     ; -7.408   ; -1.139  ; -2.002              ;
-;  processador:processador|registradorGenerico:PC|DOUT[0] ; -470.133  ; -11.848 ; N/A      ; N/A     ; -695.102            ;
+; Worst-case Slack                                        ; -10.507   ; -1.468  ; -5.447   ; -2.053  ; -1.944              ;
+;  CLOCK_50                                               ; -10.226   ; -1.468  ; N/A      ; N/A     ; -0.538              ;
+;  SW[0]                                                  ; N/A       ; N/A     ; -5.447   ; -2.053  ; -0.757              ;
+;  processador:processador|registradorGenerico:PC|DOUT[0] ; -10.507   ; -0.776  ; N/A      ; N/A     ; -1.944              ;
+; Design-wide TNS                                         ; -1881.191 ; -15.645 ; -5.447   ; -2.053  ; -668.127            ;
+;  CLOCK_50                                               ; -1491.881 ; -4.966  ; N/A      ; N/A     ; -173.181            ;
+;  SW[0]                                                  ; N/A       ; N/A     ; -5.447   ; -2.053  ; -2.120              ;
+;  processador:processador|registradorGenerico:PC|DOUT[0] ; -389.310  ; -10.679 ; N/A      ; N/A     ; -511.573            ;
 +---------------------------------------------------------+-----------+---------+----------+---------+---------------------+
 
 
@@ -435,6 +435,16 @@ No synchronizer chains to report.
 ; HEX5[4] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX5[5] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX5[6] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[2] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[3] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[4] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[5] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[6] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[7] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[8] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[9] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
@@ -444,18 +454,18 @@ No synchronizer chains to report.
 ; Pin      ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +----------+--------------+-----------------+-----------------+
 ; CLOCK_50 ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[4]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[6]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[7]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[3]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[5]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[0]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[1]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[2]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[2]   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[3]   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[0]   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; KEY[1]   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[7]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[5]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[6]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[3]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[4]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[1]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[2]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[0]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 +----------+--------------+-----------------+-----------------+
 
 
@@ -506,6 +516,16 @@ No synchronizer chains to report.
 ; HEX5[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.132 V                              ; 0.377 V                              ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.132 V                             ; 0.377 V                             ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
 ; HEX5[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.131 V                              ; 0.38 V                               ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.131 V                             ; 0.38 V                              ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
 ; HEX5[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-07 V                    ; 3.12 V              ; -0.169 V            ; 0.165 V                              ; 0.384 V                              ; 4.57e-10 s                  ; 1.75e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.1e-07 V                   ; 3.12 V             ; -0.169 V           ; 0.165 V                             ; 0.384 V                             ; 4.57e-10 s                 ; 1.75e-10 s                 ; Yes                       ; No                        ;
+; LEDR[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.131 V                              ; 0.38 V                               ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.131 V                             ; 0.38 V                              ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
+; LEDR[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.132 V                              ; 0.377 V                              ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.132 V                             ; 0.377 V                             ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
+; LEDR[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.58e-07 V                   ; 3.09 V              ; -0.13 V             ; 0.032 V                              ; 0.298 V                              ; 4.39e-10 s                  ; 1.69e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 1.58e-07 V                  ; 3.09 V             ; -0.13 V            ; 0.032 V                             ; 0.298 V                             ; 4.39e-10 s                 ; 1.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-07 V                    ; 3.12 V              ; -0.169 V            ; 0.165 V                              ; 0.384 V                              ; 4.57e-10 s                  ; 1.75e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.1e-07 V                   ; 3.12 V             ; -0.169 V           ; 0.165 V                             ; 0.384 V                             ; 4.57e-10 s                 ; 1.75e-10 s                 ; Yes                       ; No                        ;
+; LEDR[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.131 V                              ; 0.38 V                               ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.131 V                             ; 0.38 V                              ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
+; LEDR[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.132 V                              ; 0.377 V                              ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.132 V                             ; 0.377 V                             ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
+; LEDR[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-07 V                    ; 3.12 V              ; -0.169 V            ; 0.165 V                              ; 0.384 V                              ; 4.57e-10 s                  ; 1.75e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.1e-07 V                   ; 3.12 V             ; -0.169 V           ; 0.165 V                             ; 0.384 V                             ; 4.57e-10 s                 ; 1.75e-10 s                 ; Yes                       ; No                        ;
+; LEDR[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.58e-07 V                   ; 3.09 V              ; -0.13 V             ; 0.032 V                              ; 0.298 V                              ; 4.39e-10 s                  ; 1.69e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 1.58e-07 V                  ; 3.09 V             ; -0.13 V            ; 0.032 V                             ; 0.298 V                             ; 4.39e-10 s                 ; 1.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.131 V                              ; 0.38 V                               ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.131 V                             ; 0.38 V                              ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
+; LEDR[9] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.01e-07 V                   ; 3.13 V              ; -0.229 V            ; 0.132 V                              ; 0.377 V                              ; 4.37e-10 s                  ; 1.58e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.01e-07 V                  ; 3.13 V             ; -0.229 V           ; 0.132 V                             ; 0.377 V                             ; 4.37e-10 s                 ; 1.58e-10 s                 ; Yes                       ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -556,6 +576,16 @@ No synchronizer chains to report.
 ; HEX5[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.148 V                              ; 5.31e-10 s                  ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.148 V                             ; 5.31e-10 s                 ; 3.14e-10 s                 ; Yes                       ; No                        ;
 ; HEX5[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.147 V                              ; 5.3e-10 s                   ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.147 V                             ; 5.3e-10 s                  ; 3.14e-10 s                 ; Yes                       ; No                        ;
 ; HEX5[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-05 V                    ; 3.11 V              ; -0.0931 V           ; 0.115 V                              ; 0.142 V                              ; 5.74e-10 s                  ; 3.17e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.1e-05 V                   ; 3.11 V             ; -0.0931 V          ; 0.115 V                             ; 0.142 V                             ; 5.74e-10 s                 ; 3.17e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.147 V                              ; 5.3e-10 s                   ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.147 V                             ; 5.3e-10 s                  ; 3.14e-10 s                 ; Yes                       ; No                        ;
+; LEDR[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.148 V                              ; 5.31e-10 s                  ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.148 V                             ; 5.31e-10 s                 ; 3.14e-10 s                 ; Yes                       ; No                        ;
+; LEDR[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.66e-05 V                   ; 3.09 V              ; -0.0542 V           ; 0.04 V                               ; 0.089 V                              ; 5.35e-10 s                  ; 3.01e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 1.66e-05 V                  ; 3.09 V             ; -0.0542 V          ; 0.04 V                              ; 0.089 V                             ; 5.35e-10 s                 ; 3.01e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-05 V                    ; 3.11 V              ; -0.0931 V           ; 0.115 V                              ; 0.142 V                              ; 5.74e-10 s                  ; 3.17e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.1e-05 V                   ; 3.11 V             ; -0.0931 V          ; 0.115 V                             ; 0.142 V                             ; 5.74e-10 s                 ; 3.17e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.147 V                              ; 5.3e-10 s                   ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.147 V                             ; 5.3e-10 s                  ; 3.14e-10 s                 ; Yes                       ; No                        ;
+; LEDR[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.148 V                              ; 5.31e-10 s                  ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.148 V                             ; 5.31e-10 s                 ; 3.14e-10 s                 ; Yes                       ; No                        ;
+; LEDR[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.1e-05 V                    ; 3.11 V              ; -0.0931 V           ; 0.115 V                              ; 0.142 V                              ; 5.74e-10 s                  ; 3.17e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.1e-05 V                   ; 3.11 V             ; -0.0931 V          ; 0.115 V                             ; 0.142 V                             ; 5.74e-10 s                 ; 3.17e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.66e-05 V                   ; 3.09 V              ; -0.0542 V           ; 0.04 V                               ; 0.089 V                              ; 5.35e-10 s                  ; 3.01e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 1.66e-05 V                  ; 3.09 V             ; -0.0542 V          ; 0.04 V                              ; 0.089 V                             ; 5.35e-10 s                 ; 3.01e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.147 V                              ; 5.3e-10 s                   ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.147 V                             ; 5.3e-10 s                  ; 3.14e-10 s                 ; Yes                       ; No                        ;
+; LEDR[9] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.02e-05 V                   ; 3.11 V              ; -0.117 V            ; 0.087 V                              ; 0.148 V                              ; 5.31e-10 s                  ; 3.14e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.02e-05 V                  ; 3.11 V             ; -0.117 V           ; 0.087 V                             ; 0.148 V                             ; 5.31e-10 s                 ; 3.14e-10 s                 ; Yes                       ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -606,6 +636,16 @@ No synchronizer chains to report.
 ; HEX5[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; HEX5[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; HEX5[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; LEDR[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
+; LEDR[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
+; LEDR[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
+; LEDR[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; LEDR[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
+; LEDR[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
+; LEDR[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; LEDR[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
+; LEDR[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
+; LEDR[9] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -656,6 +696,16 @@ No synchronizer chains to report.
 ; HEX5[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; HEX5[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; HEX5[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; LEDR[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
+; LEDR[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
+; LEDR[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
+; LEDR[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; LEDR[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
+; LEDR[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
+; LEDR[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; LEDR[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
+; LEDR[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
+; LEDR[9] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -664,11 +714,11 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                             ; To Clock                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                               ; CLOCK_50                                               ; 506713   ; 0        ; 0        ; 0        ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; CLOCK_50                                               ; 48654    ; 48654    ; 0        ; 0        ;
+; CLOCK_50                                               ; CLOCK_50                                               ; 501143   ; 0        ; 0        ; 0        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; CLOCK_50                                               ; 53737    ; 53737    ; 0        ; 0        ;
 ; SW[0]                                                  ; CLOCK_50                                               ; 32       ; 16       ; 0        ; 0        ;
-; CLOCK_50                                               ; processador:processador|registradorGenerico:PC|DOUT[0] ; 89376    ; 0        ; 89376    ; 0        ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; processador:processador|registradorGenerico:PC|DOUT[0] ; 9240     ; 9240     ; 9240     ; 9240     ;
+; CLOCK_50                                               ; processador:processador|registradorGenerico:PC|DOUT[0] ; 72576    ; 0        ; 72576    ; 0        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; processador:processador|registradorGenerico:PC|DOUT[0] ; 6720     ; 6720     ; 6720     ; 6720     ;
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -678,11 +728,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                             ; To Clock                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                               ; CLOCK_50                                               ; 506713   ; 0        ; 0        ; 0        ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; CLOCK_50                                               ; 48654    ; 48654    ; 0        ; 0        ;
+; CLOCK_50                                               ; CLOCK_50                                               ; 501143   ; 0        ; 0        ; 0        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; CLOCK_50                                               ; 53737    ; 53737    ; 0        ; 0        ;
 ; SW[0]                                                  ; CLOCK_50                                               ; 32       ; 16       ; 0        ; 0        ;
-; CLOCK_50                                               ; processador:processador|registradorGenerico:PC|DOUT[0] ; 89376    ; 0        ; 89376    ; 0        ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; processador:processador|registradorGenerico:PC|DOUT[0] ; 9240     ; 9240     ; 9240     ; 9240     ;
+; CLOCK_50                                               ; processador:processador|registradorGenerico:PC|DOUT[0] ; 72576    ; 0        ; 72576    ; 0        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; processador:processador|registradorGenerico:PC|DOUT[0] ; 6720     ; 6720     ; 6720     ; 6720     ;
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -692,8 +742,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------------------+----------+----------+----------+----------+----------+
 ; From Clock                                             ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------+----------+----------+----------+----------+----------+
-; CLOCK_50                                               ; SW[0]    ; 181      ; 0        ; 0        ; 0        ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; SW[0]    ; 18       ; 18       ; 0        ; 0        ;
+; CLOCK_50                                               ; SW[0]    ; 167      ; 0        ; 0        ; 0        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; SW[0]    ; 21       ; 21       ; 0        ; 0        ;
 +--------------------------------------------------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -703,8 +753,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------------------+----------+----------+----------+----------+----------+
 ; From Clock                                             ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------+----------+----------+----------+----------+----------+
-; CLOCK_50                                               ; SW[0]    ; 181      ; 0        ; 0        ; 0        ;
-; processador:processador|registradorGenerico:PC|DOUT[0] ; SW[0]    ; 18       ; 18       ; 0        ; 0        ;
+; CLOCK_50                                               ; SW[0]    ; 167      ; 0        ; 0        ; 0        ;
+; processador:processador|registradorGenerico:PC|DOUT[0] ; SW[0]    ; 21       ; 21       ; 0        ; 0        ;
 +--------------------------------------------------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -730,8 +780,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 11    ; 11   ;
 ; Unconstrained Input Port Paths  ; 176   ; 176  ;
-; Unconstrained Output Ports      ; 42    ; 42   ;
-; Unconstrained Output Port Paths ; 42    ; 42   ;
+; Unconstrained Output Ports      ; 52    ; 52   ;
+; Unconstrained Output Port Paths ; 52    ; 52   ;
 +---------------------------------+-------+------+
 
 
@@ -812,6 +862,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX5[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[8]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[9]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -881,6 +941,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX5[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[8]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[9]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -890,7 +960,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 19 00:15:08 2020
+    Info: Processing started: Fri Oct 23 23:19:35 2020
 Info: Command: quartus_sta Geral -c Geral
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -905,197 +975,217 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name SW[0] SW[0]
     Info (332105): create_clock -period 1.000 -name processador:processador|registradorGenerico:PC|DOUT[0] processador:processador|registradorGenerico:PC|DOUT[0]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: interfaceBaseTempo|muxSeletorBaseTempo|saida_MUX  from: datae  to: combout
-    Info (332098): Cell: processador|ROM|memROM~23  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~25  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~69  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~70  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~71  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~73  from: datab  to: combout
-    Info (332098): Cell: processador|ROM|memROM~74  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~76  from: dataa  to: combout
-    Info (332098): Cell: processador|ROM|memROM~77  from: dataa  to: combout
-    Info (332098): Cell: processador|ROM|memROM~79  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~80  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~82  from: datae  to: combout
-    Info (332098): Cell: processador|ROM|memROM~83  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~85  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~86  from: dataf  to: combout
+    Info (332098): Cell: interfaceBaseTempo|muxSeletorBaseTempo|saida_MUX  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~44  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~45  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~46  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~48  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~49  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~51  from: datac  to: combout
+    Info (332098): Cell: processador|ROM|memROM~52  from: datae  to: combout
+    Info (332098): Cell: processador|ROM|memROM~54  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~55  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~57  from: datac  to: combout
+    Info (332098): Cell: processador|ROM|memROM~58  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~60  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~61  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~63  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~66  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~67  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~69  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~70  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~72  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~73  from: datad  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.701
+Info (332146): Worst-case setup slack is -10.193
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.701            -464.487 processador:processador|registradorGenerico:PC|DOUT[0] 
-    Info (332119):   -10.587           -1531.735 CLOCK_50 
-Info (332146): Worst-case hold slack is -1.679
+    Info (332119):   -10.193            -375.123 processador:processador|registradorGenerico:PC|DOUT[0] 
+    Info (332119):   -10.164           -1475.829 CLOCK_50 
+Info (332146): Worst-case hold slack is -1.380
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.679             -27.994 CLOCK_50 
-    Info (332119):    -1.062              -9.384 processador:processador|registradorGenerico:PC|DOUT[0] 
-Info (332146): Worst-case recovery slack is -7.400
+    Info (332119):    -1.380              -3.611 CLOCK_50 
+    Info (332119):    -0.538              -7.634 processador:processador|registradorGenerico:PC|DOUT[0] 
+Info (332146): Worst-case recovery slack is -5.373
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.400              -7.400 SW[0] 
-Info (332146): Worst-case removal slack is -1.120
+    Info (332119):    -5.373              -5.373 SW[0] 
+Info (332146): Worst-case removal slack is -2.053
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.120              -1.120 SW[0] 
-Info (332146): Worst-case minimum pulse width slack is -2.741
+    Info (332119):    -2.053              -2.053 SW[0] 
+Info (332146): Worst-case minimum pulse width slack is -1.793
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.741            -674.565 processador:processador|registradorGenerico:PC|DOUT[0] 
-    Info (332119):    -0.539              -1.077 SW[0] 
-    Info (332119):    -0.538            -169.732 CLOCK_50 
+    Info (332119):    -1.793            -454.129 processador:processador|registradorGenerico:PC|DOUT[0] 
+    Info (332119):    -0.731              -1.319 SW[0] 
+    Info (332119):    -0.538            -173.181 CLOCK_50 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: interfaceBaseTempo|muxSeletorBaseTempo|saida_MUX  from: datae  to: combout
-    Info (332098): Cell: processador|ROM|memROM~23  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~25  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~69  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~70  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~71  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~73  from: datab  to: combout
-    Info (332098): Cell: processador|ROM|memROM~74  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~76  from: dataa  to: combout
-    Info (332098): Cell: processador|ROM|memROM~77  from: dataa  to: combout
-    Info (332098): Cell: processador|ROM|memROM~79  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~80  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~82  from: datae  to: combout
-    Info (332098): Cell: processador|ROM|memROM~83  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~85  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~86  from: dataf  to: combout
+    Info (332098): Cell: interfaceBaseTempo|muxSeletorBaseTempo|saida_MUX  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~44  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~45  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~46  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~48  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~49  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~51  from: datac  to: combout
+    Info (332098): Cell: processador|ROM|memROM~52  from: datae  to: combout
+    Info (332098): Cell: processador|ROM|memROM~54  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~55  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~57  from: datac  to: combout
+    Info (332098): Cell: processador|ROM|memROM~58  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~60  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~61  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~63  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~66  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~67  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~69  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~70  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~72  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~73  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.852
+Info (332146): Worst-case setup slack is -10.507
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.852            -470.133 processador:processador|registradorGenerico:PC|DOUT[0] 
-    Info (332119):   -10.552           -1533.844 CLOCK_50 
-Info (332146): Worst-case hold slack is -1.841
+    Info (332119):   -10.507            -389.310 processador:processador|registradorGenerico:PC|DOUT[0] 
+    Info (332119):   -10.226           -1491.881 CLOCK_50 
+Info (332146): Worst-case hold slack is -1.468
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.841             -31.737 CLOCK_50 
-    Info (332119):    -1.102             -11.848 processador:processador|registradorGenerico:PC|DOUT[0] 
-Info (332146): Worst-case recovery slack is -7.408
+    Info (332119):    -1.468              -4.966 CLOCK_50 
+    Info (332119):    -0.776             -10.679 processador:processador|registradorGenerico:PC|DOUT[0] 
+Info (332146): Worst-case recovery slack is -5.447
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.408              -7.408 SW[0] 
-Info (332146): Worst-case removal slack is -1.139
+    Info (332119):    -5.447              -5.447 SW[0] 
+Info (332146): Worst-case removal slack is -1.912
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.139              -1.139 SW[0] 
-Info (332146): Worst-case minimum pulse width slack is -2.741
+    Info (332119):    -1.912              -1.912 SW[0] 
+Info (332146): Worst-case minimum pulse width slack is -1.944
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.741            -695.102 processador:processador|registradorGenerico:PC|DOUT[0] 
-    Info (332119):    -0.538            -152.143 CLOCK_50 
-    Info (332119):    -0.538              -1.072 SW[0] 
+    Info (332119):    -1.944            -511.573 processador:processador|registradorGenerico:PC|DOUT[0] 
+    Info (332119):    -0.722              -1.302 SW[0] 
+    Info (332119):    -0.538            -155.252 CLOCK_50 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: interfaceBaseTempo|muxSeletorBaseTempo|saida_MUX  from: datae  to: combout
-    Info (332098): Cell: processador|ROM|memROM~23  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~25  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~69  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~70  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~71  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~73  from: datab  to: combout
-    Info (332098): Cell: processador|ROM|memROM~74  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~76  from: dataa  to: combout
-    Info (332098): Cell: processador|ROM|memROM~77  from: dataa  to: combout
-    Info (332098): Cell: processador|ROM|memROM~79  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~80  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~82  from: datae  to: combout
-    Info (332098): Cell: processador|ROM|memROM~83  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~85  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~86  from: dataf  to: combout
+    Info (332098): Cell: interfaceBaseTempo|muxSeletorBaseTempo|saida_MUX  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~44  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~45  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~46  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~48  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~49  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~51  from: datac  to: combout
+    Info (332098): Cell: processador|ROM|memROM~52  from: datae  to: combout
+    Info (332098): Cell: processador|ROM|memROM~54  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~55  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~57  from: datac  to: combout
+    Info (332098): Cell: processador|ROM|memROM~58  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~60  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~61  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~63  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~66  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~67  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~69  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~70  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~72  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~73  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.941
+Info (332146): Worst-case setup slack is -5.029
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.941            -231.247 processador:processador|registradorGenerico:PC|DOUT[0] 
-    Info (332119):    -5.312            -709.607 CLOCK_50 
-Info (332146): Worst-case hold slack is -0.868
+    Info (332119):    -5.029            -179.846 processador:processador|registradorGenerico:PC|DOUT[0] 
+    Info (332119):    -4.981            -674.654 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.746
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.868             -14.808 CLOCK_50 
-    Info (332119):    -0.612              -6.710 processador:processador|registradorGenerico:PC|DOUT[0] 
-Info (332146): Worst-case recovery slack is -3.958
+    Info (332119):    -0.746              -2.458 CLOCK_50 
+    Info (332119):    -0.307              -5.863 processador:processador|registradorGenerico:PC|DOUT[0] 
+Info (332146): Worst-case recovery slack is -2.721
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.958              -3.958 SW[0] 
-Info (332146): Worst-case removal slack is -0.377
+    Info (332119):    -2.721              -2.721 SW[0] 
+Info (332146): Worst-case removal slack is -0.976
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.377              -0.377 SW[0] 
-Info (332146): Worst-case minimum pulse width slack is -1.294
+    Info (332119):    -0.976              -0.976 SW[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.751
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.294            -241.298 processador:processador|registradorGenerico:PC|DOUT[0] 
-    Info (332119):    -0.663              -1.850 SW[0] 
-    Info (332119):    -0.406             -87.392 CLOCK_50 
+    Info (332119):    -0.751              -2.014 SW[0] 
+    Info (332119):    -0.683             -99.917 processador:processador|registradorGenerico:PC|DOUT[0] 
+    Info (332119):    -0.404             -88.902 CLOCK_50 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: interfaceBaseTempo|muxSeletorBaseTempo|saida_MUX  from: datae  to: combout
-    Info (332098): Cell: processador|ROM|memROM~23  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~25  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~69  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~70  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~71  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~73  from: datab  to: combout
-    Info (332098): Cell: processador|ROM|memROM~74  from: datac  to: combout
-    Info (332098): Cell: processador|ROM|memROM~76  from: dataa  to: combout
-    Info (332098): Cell: processador|ROM|memROM~77  from: dataa  to: combout
-    Info (332098): Cell: processador|ROM|memROM~79  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~80  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~82  from: datae  to: combout
-    Info (332098): Cell: processador|ROM|memROM~83  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~85  from: dataf  to: combout
-    Info (332098): Cell: processador|ROM|memROM~86  from: dataf  to: combout
+    Info (332098): Cell: interfaceBaseTempo|muxSeletorBaseTempo|saida_MUX  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~44  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~45  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~46  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~48  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~49  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~51  from: datac  to: combout
+    Info (332098): Cell: processador|ROM|memROM~52  from: datae  to: combout
+    Info (332098): Cell: processador|ROM|memROM~54  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~55  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~57  from: datac  to: combout
+    Info (332098): Cell: processador|ROM|memROM~58  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~60  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~61  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~63  from: dataf  to: combout
+    Info (332098): Cell: processador|ROM|memROM~66  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~67  from: datab  to: combout
+    Info (332098): Cell: processador|ROM|memROM~69  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~70  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~72  from: datad  to: combout
+    Info (332098): Cell: processador|ROM|memROM~73  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.382
+Info (332146): Worst-case setup slack is -4.512
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.382            -211.011 processador:processador|registradorGenerico:PC|DOUT[0] 
-    Info (332119):    -4.664            -622.416 CLOCK_50 
-Info (332146): Worst-case hold slack is -0.901
+    Info (332119):    -4.512            -163.991 processador:processador|registradorGenerico:PC|DOUT[0] 
+    Info (332119):    -4.352            -589.336 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.762
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.901             -19.349 CLOCK_50 
-    Info (332119):    -0.550              -6.620 processador:processador|registradorGenerico:PC|DOUT[0] 
-Info (332146): Worst-case recovery slack is -3.504
+    Info (332119):    -0.762              -3.611 CLOCK_50 
+    Info (332119):    -0.279              -4.850 processador:processador|registradorGenerico:PC|DOUT[0] 
+Info (332146): Worst-case recovery slack is -2.424
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.504              -3.504 SW[0] 
-Info (332146): Worst-case removal slack is -0.405
+    Info (332119):    -2.424              -2.424 SW[0] 
+Info (332146): Worst-case removal slack is -0.913
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.405              -0.405 SW[0] 
-Info (332146): Worst-case minimum pulse width slack is -1.110
+    Info (332119):    -0.913              -0.913 SW[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.757
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.110            -204.431 processador:processador|registradorGenerico:PC|DOUT[0] 
-    Info (332119):    -0.685              -2.002 SW[0] 
-    Info (332119):    -0.445            -105.325 CLOCK_50 
+    Info (332119):    -0.757              -2.120 SW[0] 
+    Info (332119):    -0.569             -77.939 processador:processador|registradorGenerico:PC|DOUT[0] 
+    Info (332119):    -0.444            -107.256 CLOCK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5087 megabytes
-    Info: Processing ended: Mon Oct 19 00:15:16 2020
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 5088 megabytes
+    Info: Processing ended: Fri Oct 23 23:19:42 2020
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:09
 
 

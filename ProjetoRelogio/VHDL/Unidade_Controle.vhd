@@ -62,7 +62,7 @@ architecture arch_name of Unidade_Controle is
 				    "00000000010" when opCode = STORE else 				--  STORE
 					 "00100111000" when opCode = MOVR else					--  MOVR
 					 "00010001000" when opCode = MOVC else 			   --  MOVC
-					 "00101110001" when opCode = CMP else 					--  CMP
+					 "00000000001" when opCode = CMP else 					--  CMP
 					 "00100001000" when opCode = ADD else 					--  ADD
 					 "00101101000" when opCode = opAND else 				--  AND		
 					 "00100011000" when opCode = SUB   else 			   --  SUB		

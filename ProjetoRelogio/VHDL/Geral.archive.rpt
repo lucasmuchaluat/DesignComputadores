@@ -1,5 +1,5 @@
 Archive Project report for Geral
-Mon Oct 19 00:22:10 2020
+Fri Oct 23 23:26:19 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Mon Oct 19 00:22:10 2020 ;
+; Archive Project Status ; Successful - Fri Oct 23 23:26:19 2020 ;
 ; Revision Name          ; Geral                                 ;
 ; Top-level Entity Name  ; Geral                                 ;
 ; Family                 ; Cyclone V                             ;
@@ -60,9 +60,9 @@ Info: ----------------------------------------------------------
 Info: Generated report 'Geral.archive.rpt'
 Info (23030): Evaluation of Tcl script d:/mucha/documents/insper/6osemestre/designcomputadores/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Mon Oct 19 00:22:10 2020
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Fri Oct 23 23:26:19 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -25,7 +25,7 @@
     
 - **Extras**
 
-    - [ ] Indicação do horário com base em 12 horas -AM/PM
+    - [x] Indicação do horário com base em 12 horas -AM/PM
     - [ ] Sistema de despertador
     - [ ] Temporizador com contagem regressiva
     - [x] Montador (assembler) para o processador criado:
