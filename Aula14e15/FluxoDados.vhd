@@ -13,13 +13,18 @@ entity FluxoDados is
 
   port   (
     -- Input ports
-    CLOCK_50     		:  in  std_logic;
+    clk     		   :  in  std_logic;
 	 DadoLido		   :  in  std_logic_vector(DATA_WIDTH-1 downto 0);
 	 -- Output ports
 	 Endereco         :  out std_logic_vector(DATA_WIDTH-1 downto 0);
 	 DadoEscrito      :  out std_logic_vector(DATA_WIDTH-1 downto 0);
 	 habLeitura       :  out std_logic;
-    habEscrita       :  out std_logic
+    habEscrita       :  out std_logic;
+	 
+	 
+	 --testando proximo PC no WaveForms
+	 proxPC           :  out std_logic_vector(DATA_WIDTH-1 downto 0)
+	 
     );
 end entity;
 
@@ -81,7 +86,7 @@ begin
         port map( entrada => saidaPC, saida => saidaSomaCtePC);
 
 	PC : entity work.registradorGenerico   generic map (larguraDados => ROM_ADDR_WIDTH)
-        port map (DIN => saidaMuxJMP, DOUT => saidaPC, ENABLE => '1', CLK => CLOCK_50, RST => '0');
+        port map (DIN => saidaMuxJMP, DOUT => saidaPC, ENABLE => '1', CLK => clk, RST => '0');
 
 	ROM : entity work.ROMMIPS   generic map (dataWidth => ROM_DATA_WIDTH, addrWidth => ROM_ADDR_WIDTH, memoryAddrWidth => 6)
           port map (Endereco => saidaPC, Dado => instrucao);
@@ -90,7 +95,7 @@ begin
         port map( entradaA_MUX => enderecoRt, entradaB_MUX => enderecoRd, seletor_MUX => muxRtRd, saida_MUX => saidaMuxRomBanco);
 	
 	bancoReg : entity work.bancoRegistradores   generic map (larguraDados => DATA_WIDTH, larguraEndBancoRegs => 5)
-          port map ( clk => CLOCK_50,
+          port map ( clk => clk,
               enderecoA => enderecoRs,
               enderecoB => enderecoRt,
               enderecoC => saidaMuxRomBanco,
@@ -126,11 +131,14 @@ begin
 	muxJMP :  entity work.muxGenerico2x1  generic map (larguraDados => DATA_WIDTH)
         port map( entradaA_MUX => saidaMuxBEQ, entradaB_MUX => concatJMP, seletor_MUX => andE, saida_MUX => saidaMuxJMP);
 			 
-	UC : entity work.UnidadeControle port map( clk => CLOCK_50, opCode => opCode, funct => funct, palavraControle => palavraControle);
+	UC : entity work.UnidadeControle port map( clk => clk, opCode => opCode, funct => funct, palavraControle => palavraControle);
  	
 	Endereco <= saidaULA;
 	DadoEscrito <= RC;
 	habLeitura <= habLeituraMEM;
 	habEscrita <= habEscritaMEM;
+	
+	-- para fins de teste apenas
+	proxPC <= saidaPC;
 	
 end architecture;
