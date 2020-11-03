@@ -21,8 +21,8 @@ entity FluxoDados is
 	 habLeitura       :  out std_logic;
     habEscrita       :  out std_logic;
 	 
-	 
 	 --testando proximo PC no WaveForms
+	 outMuxBEQ        :  out std_logic_vector(DATA_WIDTH-1 downto 0);
 	 proxPC           :  out std_logic_vector(DATA_WIDTH-1 downto 0)
 	 
     );
@@ -78,8 +78,7 @@ alias imediato: std_logic_vector(15 DOWNTO 0) is instrucao(15 downto 0);
 -- INSTRUCAO TIPO J
 alias addressJMP: std_logic_vector(25 downto 0) is instrucao(25 downto 0);
 
-	
-  
+
 begin
 	
 	PCIncremento : entity work.somaConstante  generic map (larguraDados => ROM_ADDR_WIDTH, constante => IncrementoPC)
@@ -123,13 +122,13 @@ begin
 	saidaSomaCteShift <= std_logic_vector(unsigned(shiftBEQ) + unsigned(saidaSomaCtePC));
 	
 	muxBEQ :  entity work.muxGenerico2x1  generic map (larguraDados => DATA_WIDTH)
-        port map( entradaA_MUX => saidaSomaCtePC, entradaB_MUX => saidaSomaCteShift, seletor_MUX => JMP, saida_MUX => saidaMuxBEQ);
+        port map( entradaA_MUX => saidaSomaCtePC, entradaB_MUX => saidaSomaCteShift, seletor_MUX => andE, saida_MUX => saidaMuxBEQ);
 		  
 	
 	concatJMP <= saidaSomaCtePC(31 downto 28) & addressJMP & b"00";
 	
 	muxJMP :  entity work.muxGenerico2x1  generic map (larguraDados => DATA_WIDTH)
-        port map( entradaA_MUX => saidaMuxBEQ, entradaB_MUX => concatJMP, seletor_MUX => andE, saida_MUX => saidaMuxJMP);
+        port map( entradaA_MUX => saidaMuxBEQ, entradaB_MUX => concatJMP, seletor_MUX => JMP, saida_MUX => saidaMuxJMP);
 			 
 	UC : entity work.UnidadeControle port map( clk => clk, opCode => opCode, funct => funct, palavraControle => palavraControle);
  	
@@ -140,5 +139,6 @@ begin
 	
 	-- para fins de teste apenas
 	proxPC <= saidaPC;
+	outMuxBEQ <= saidaMuxBEQ;
 	
 end architecture;

@@ -1,0 +1,28 @@
+Quartus Prime Archive log --	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.qarlog
+
+Archive:	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.qar
+Date:		Tue Nov 03 16:01:51 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.qpf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.qsf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMcontent.mif
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/ROMMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/ROMcontent.mif
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/ULA.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/UnidadeControle.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Waveform1.vwf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/bancoRegistradores.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/estendeSinalGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/muxGenerico2x1.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/registradorGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/somaConstante.vhd
+d:/mucha/documents/insper/6osemestre/designcomputadores/quartus/bin64/assignment_defaults.qdf
+	======= Total: 17 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

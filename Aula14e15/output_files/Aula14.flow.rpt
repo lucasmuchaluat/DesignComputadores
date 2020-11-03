@@ -1,5 +1,5 @@
 Flow report for Aula14
-Fri Oct 30 20:58:49 2020
+Tue Nov 03 16:01:21 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,25 +41,25 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Oct 30 20:58:49 2020       ;
+; Flow Status                     ; Successful - Tue Nov 03 16:01:21 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula14                                      ;
 ; Top-level Entity Name           ; Aula14                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,378 / 18,480 ( 7 % )                      ;
-; Total registers                 ; 2637                                        ;
-; Total pins                      ; 129 / 224 ( 58 % )                          ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 2590                                        ;
+; Total pins                      ; 161                                         ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 4 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
 +---------------------------------+---------------------------------------------+
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/30/2020 20:51:47 ;
+; Start date & time ; 11/03/2020 16:01:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Aula14              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 180649685764018.160410190727932        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 180649685764018.160443006901356        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --         ;
@@ -99,15 +99,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4862 MB             ; 00:00:31                           ;
-; Fitter               ; 00:01:54     ; 1.1                     ; 6230 MB             ; 00:03:26                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4853 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:16     ; 2.0                     ; 5144 MB             ; 00:00:25                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4735 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4750 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4735 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4750 MB             ; 00:00:02                           ;
-; Total                ; 00:02:46     ; --                      ; --                  ; 00:04:37                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4865 MB             ; 00:00:27                           ;
+; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -117,13 +110,6 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; LUCAS-BOT        ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LUCAS-BOT        ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LUCAS-BOT        ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LUCAS-BOT        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LUCAS-BOT        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LUCAS-BOT        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LUCAS-BOT        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LUCAS-BOT        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -131,13 +117,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Aula14 -c Aula14
-quartus_fit --read_settings_files=off --write_settings_files=off Aula14 -c Aula14
-quartus_asm --read_settings_files=off --write_settings_files=off Aula14 -c Aula14
-quartus_sta Aula14 -c Aula14
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula14 -c Aula14 --vector_source=D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Waveform.vwf --testbench_file=D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/simulation/qsim/ Aula14 -c Aula14
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula14 -c Aula14 --vector_source=D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Waveform.vwf --testbench_file=D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/simulation/qsim/ Aula14 -c Aula14
 
 
 

@@ -11,7 +11,9 @@ entity RAMMIPS IS
           Endereco : IN  STD_LOGIC_VECTOR (addrWidth-1 DOWNTO 0);
           Dado_in  : in std_logic_vector(dataWidth-1 downto 0);
           Dado_out : out std_logic_vector(dataWidth-1 downto 0);
-          we : in std_logic := '0'
+          wr       : in std_logic := '0';
+			 rd       : in std_logic := '0'
+			 
         );
 end entity;
 
@@ -35,13 +37,13 @@ begin
   process(clk)
   begin
       if(rising_edge(clk)) then
-          if(we = '1') then
+          if(wr = '1') then
               memRAM(to_integer(unsigned(EnderecoLocal))) <= Dado_in;
           end if;
       end if;
   end process;
 
   -- A leitura deve ser sempre assincrona:
-  Dado_out <= memRAM(to_integer(unsigned(EnderecoLocal)));
+  Dado_out <= memRAM(to_integer(unsigned(EnderecoLocal))) when rd = '1' else (others => 'Z');
 
 end architecture;

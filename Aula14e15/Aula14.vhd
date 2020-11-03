@@ -18,7 +18,8 @@ entity Aula14 is
 	 OUTEndereco    : out std_logic_vector(DATA_WIDTH-1 downto 0);
 	 outPC          : out std_logic_vector(DATA_WIDTH-1 downto 0);
 	 outDadoLido    : out std_logic_vector(DATA_WIDTH-1 downto 0);
-	 outDadoEscrito : out std_logic_vector(DATA_WIDTH-1 downto 0)
+	 outDadoEscrito : out std_logic_vector(DATA_WIDTH-1 downto 0);
+	 testeSaidaMux  : out std_logic_vector(DATA_WIDTH-1 downto 0)
     );
 end entity;
 
@@ -31,15 +32,16 @@ architecture arch_name of Aula14 is
   signal  habilitaEscrita: std_logic;
 
   signal  proximoPC: std_logic_vector(DATA_WIDTH-1 downto 0);
+  
    
 begin
 
   FD : entity work.FluxoDados
     port map(
-      clk => CLOCK_50, DadoLido => dadoLido, Endereco => endereco, DadoEscrito => dadoEscrito, habLeitura => habilitaLeitura, habEscrita => habilitaEscrita, proxPC => proximoPC );
+      clk => CLOCK_50, DadoLido => dadoLido, Endereco => endereco, DadoEscrito => dadoEscrito, habLeitura => habilitaLeitura, habEscrita => habilitaEscrita, proxPC => proximoPC, outMuxBEQ => testeSaidaMux );
 	 
   RAM : entity work.RAMMIPS  generic map (dataWidth => DATA_WIDTH, addrWidth => DATA_WIDTH, memoryAddrWidth => 6)
-          port map (clk => CLOCK_50, Endereco => endereco, Dado_in => dadoEscrito, Dado_out => dadoLido, we => habilitaEscrita );
+          port map (clk => CLOCK_50, Endereco => endereco, Dado_in => dadoEscrito, Dado_out => dadoLido, wr => habilitaEscrita, rd => habilitaLeitura );
 
   -- Waveforms
   OUTEndereco <= endereco;

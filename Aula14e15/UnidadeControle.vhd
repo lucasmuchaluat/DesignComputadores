@@ -57,6 +57,6 @@ architecture arch_name of UnidadeControle is
     BEQ <= '1' when opCode = 6x"4" else '0';
     habLeituraMEM <= '0' when opCode = "000000" AND opCode = 6x"23" AND opCode = 6x"2b" AND opCode = 6x"4" else '1';
     habEscritaMEM <= '0' when opCode = "000000" AND opCode = 6x"23" AND opCode = 6x"4" else '1';
-    JMP <= '1' when opCode = 6x"2";
+    JMP <= '1' when opCode = 6x"2" else '0';
 
 end architecture;

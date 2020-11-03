@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula14
-Fri Oct 30 20:52:06 2020
+Tue Nov 03 16:01:21 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -31,10 +31,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  23. Parameter Settings for User Entity Instance: RAMMIPS:RAM
  24. Port Connectivity Checks: "FluxoDados:FD|muxGenerico2x1:muxJMP"
  25. Port Connectivity Checks: "FluxoDados:FD|registradorGenerico:PC"
- 26. Port Connectivity Checks: "FluxoDados:FD"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -61,14 +60,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct 30 20:52:06 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 03 16:01:21 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula14                                      ;
 ; Top-level Entity Name           ; Aula14                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 2590                                        ;
-; Total pins                      ; 129                                         ;
+; Total pins                      ; 161                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -183,9 +182,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -200,10 +199,10 @@ https://fpgasoftware.intel.com/eula.
 ; ROMMIPS.vhd                      ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/ROMMIPS.vhd              ;         ;
 ; registradorGenerico.vhd          ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/registradorGenerico.vhd  ;         ;
 ; RAMMIPS.vhd                      ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd              ;         ;
-; FluxoDados.vhd                   ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd           ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/bancoRegistradores.vhd   ;         ;
 ; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/muxGenerico2x1.vhd       ;         ;
+; FluxoDados.vhd                   ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd           ;         ;
 ; estendeSinalGenerico.vhd         ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/estendeSinalGenerico.vhd ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/bancoRegistradores.vhd   ;         ;
 ; Aula14.vhd                       ; yes             ; User VHDL File  ; D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd               ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
 
@@ -213,25 +212,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1823           ;
+; Estimate of Logic utilization (ALMs needed) ; 1820           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1188           ;
+; Combinational ALUT usage for logic          ; 1185           ;
 ;     -- 7 input functions                    ; 64             ;
 ;     -- 6 input functions                    ; 901            ;
-;     -- 5 input functions                    ; 37             ;
-;     -- 4 input functions                    ; 29             ;
+;     -- 5 input functions                    ; 41             ;
+;     -- 4 input functions                    ; 22             ;
 ;     -- <=3 input functions                  ; 157            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 2590           ;
 ;                                             ;                ;
-; I/O pins                                    ; 129            ;
+; I/O pins                                    ; 161            ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 2590           ;
-; Total fan-out                               ; 14457          ;
-; Average fan-out                             ; 3.58           ;
+; Total fan-out                               ; 14528          ;
+; Average fan-out                             ; 3.55           ;
 +---------------------------------------------+----------------+
 
 
@@ -240,11 +239,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name         ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+---------------------+--------------+
-; |Aula14                             ; 1188 (0)            ; 2590 (0)                  ; 0                 ; 0          ; 129  ; 0            ; |Aula14                                           ; Aula14              ; work         ;
-;    |FluxoDados:FD|                  ; 388 (0)             ; 542 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD                             ; FluxoDados          ; work         ;
-;       |ROMMIPS:ROM|                 ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD|ROMMIPS:ROM                 ; ROMMIPS             ; work         ;
+; |Aula14                             ; 1185 (0)            ; 2590 (0)                  ; 0                 ; 0          ; 161  ; 0            ; |Aula14                                           ; Aula14              ; work         ;
+;    |FluxoDados:FD|                  ; 385 (0)             ; 542 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD                             ; FluxoDados          ; work         ;
+;       |ROMMIPS:ROM|                 ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD|ROMMIPS:ROM                 ; ROMMIPS             ; work         ;
 ;       |ULA:ULA|                     ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD|ULA:ULA                     ; ULA                 ; work         ;
-;       |UnidadeControle:UC|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD|UnidadeControle:UC          ; UnidadeControle     ; work         ;
+;       |UnidadeControle:UC|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD|UnidadeControle:UC          ; UnidadeControle     ; work         ;
 ;       |bancoRegistradores:bancoReg| ; 299 (299)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD|bancoRegistradores:bancoReg ; bancoRegistradores  ; work         ;
 ;       |muxGenerico2x1:muxRomBanco|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD|muxGenerico2x1:muxRomBanco  ; muxGenerico2x1      ; work         ;
 ;       |registradorGenerico:PC|      ; 0 (0)               ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula14|FluxoDados:FD|registradorGenerico:PC      ; registradorGenerico ; work         ;
@@ -783,8 +782,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 2590  ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Load   ; 14    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 2560  ;
@@ -964,15 +963,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+--------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FluxoDados:FD"                                                                            ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; hableitura ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -980,28 +970,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 2590                        ;
 ;     ENA               ; 2560                        ;
-;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 1189                        ;
+;     SCLR              ; 12                          ;
+;     SLD               ; 14                          ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 1186                        ;
 ;     arith             ; 62                          ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 3                           ;
+;         1 data inputs ; 30                          ;
 ;         5 data inputs ; 32                          ;
 ;     extend            ; 64                          ;
 ;         7 data inputs ; 64                          ;
-;     normal            ; 1063                        ;
+;     normal            ; 1060                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 64                          ;
-;         2 data inputs ; 62                          ;
+;         2 data inputs ; 59                          ;
 ;         3 data inputs ; 4                           ;
-;         4 data inputs ; 26                          ;
-;         5 data inputs ; 5                           ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 9                           ;
 ;         6 data inputs ; 901                         ;
-; boundary_port         ; 129                         ;
+; boundary_port         ; 161                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.50                        ;
-; Average LUT depth     ; 4.59                        ;
+; Average LUT depth     ; 4.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1010,7 +999,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1020,7 +1009,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct 30 20:51:46 2020
+    Info: Processing started: Tue Nov 03 16:01:08 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula14 -c Aula14
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file unidadecontrole.vhd
@@ -1039,61 +1028,123 @@ Info (12021): Found 2 design units, including 1 entities, in source file registr
     Info (12022): Found design unit 1: registradorGenerico-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/registradorGenerico.vhd Line: 15
     Info (12023): Found entity 1: registradorGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rammips.vhd
-    Info (12022): Found design unit 1: RAMMIPS-assincrona File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 18
+    Info (12022): Found design unit 1: RAMMIPS-assincrona File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 20
     Info (12023): Found entity 1: RAMMIPS File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file fluxodados.vhd
-    Info (12022): Found design unit 1: FluxoDados-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 31
-    Info (12023): Found entity 1: FluxoDados File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/bancoRegistradores.vhd Line: 30
-    Info (12023): Found entity 1: bancoRegistradores File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/bancoRegistradores.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
     Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/muxGenerico2x1.vhd Line: 14
     Info (12023): Found entity 1: muxGenerico2x1 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/muxGenerico2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file fluxodados.vhd
+    Info (12022): Found design unit 1: FluxoDados-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 31
+    Info (12023): Found entity 1: FluxoDados File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file estendesinalgenerico.vhd
     Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/estendeSinalGenerico.vhd Line: 19
     Info (12023): Found entity 1: estendeSinalGenerico File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/estendeSinalGenerico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/bancoRegistradores.vhd Line: 30
+    Info (12023): Found entity 1: bancoRegistradores File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/bancoRegistradores.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file aula14.vhd
-    Info (12022): Found design unit 1: Aula14-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 25
+    Info (12022): Found design unit 1: Aula14-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 26
     Info (12023): Found entity 1: Aula14 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 5
 Info (12127): Elaborating entity "Aula14" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Aula14.vhd(30): object "habilitaLeitura" assigned a value but never read File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 30
-Info (12128): Elaborating entity "FluxoDados" for hierarchy "FluxoDados:FD" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 37
-Info (12128): Elaborating entity "somaConstante" for hierarchy "FluxoDados:FD|somaConstante:PCIncremento" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 85
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "FluxoDados:FD|registradorGenerico:PC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 88
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "FluxoDados:FD|ROMMIPS:ROM" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 91
+Info (12128): Elaborating entity "FluxoDados" for hierarchy "FluxoDados:FD" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 39
+Info (12128): Elaborating entity "somaConstante" for hierarchy "FluxoDados:FD|somaConstante:PCIncremento" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 84
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "FluxoDados:FD|registradorGenerico:PC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 87
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "FluxoDados:FD|ROMMIPS:ROM" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 90
 Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(17): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/ROMMIPS.vhd Line: 17
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:muxRomBanco" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 94
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDados:FD|bancoRegistradores:bancoReg" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 97
-Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "FluxoDados:FD|estendeSinalGenerico:estendeSinal" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 107
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:muxBancoULA" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 110
-Info (12128): Elaborating entity "ULA" for hierarchy "FluxoDados:FD|ULA:ULA" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 113
-Info (12128): Elaborating entity "UnidadeControle" for hierarchy "FluxoDados:FD|UnidadeControle:UC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 134
-Info (10041): Inferred latch for "palavraControle[10]" at UnidadeControle.vhd(20) File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/UnidadeControle.vhd Line: 20
-Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 41
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:muxRomBanco" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 93
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDados:FD|bancoRegistradores:bancoReg" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 96
+Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "FluxoDados:FD|estendeSinalGenerico:estendeSinal" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 106
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:muxBancoULA" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 109
+Info (12128): Elaborating entity "ULA" for hierarchy "FluxoDados:FD|ULA:ULA" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 112
+Info (12128): Elaborating entity "UnidadeControle" for hierarchy "FluxoDados:FD|UnidadeControle:UC" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/FluxoDados.vhd Line: 133
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 43
 Info (276014): Found 3 instances of uninferred RAM logic
-    Info (276007): RAM logic "RAMMIPS:RAM|memRAM" is uninferred due to asynchronous read logic File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 21
+    Info (276007): RAM logic "RAMMIPS:RAM|memRAM" is uninferred due to asynchronous read logic File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 23
     Info (276007): RAM logic "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" is uninferred due to asynchronous read logic File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/bancoRegistradores.vhd Line: 36
     Info (276004): RAM logic "FluxoDados:FD|ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/ROMMIPS.vhd Line: 17
-Warning (113016): Width of data items in "RAMcontent.mif" is smaller than the memory width. Padding data items with 0 on MSB to fit in memory.  File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMcontent.mif Line: 20
-Warning (113028): 192 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMcontent.mif Line: 1
-    Warning (113027): Addresses ranging from 64 to 255 are not initialized File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMcontent.mif Line: 1
-Critical Warning (127004): Memory depth (64) in the design file differs from memory depth (256) in the Memory Initialization File "D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMcontent.mif" -- truncated remaining initial content value to fit RAM
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[0]" to the node "outDadoLido[0]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[1]" to the node "outDadoLido[1]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[2]" to the node "outDadoLido[2]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[3]" to the node "outDadoLido[3]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[4]" to the node "outDadoLido[4]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[5]" to the node "outDadoLido[5]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[6]" to the node "outDadoLido[6]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[7]" to the node "outDadoLido[7]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[8]" to the node "outDadoLido[8]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[9]" to the node "outDadoLido[9]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[10]" to the node "outDadoLido[10]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[11]" to the node "outDadoLido[11]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[12]" to the node "outDadoLido[12]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[13]" to the node "outDadoLido[13]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[14]" to the node "outDadoLido[14]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[15]" to the node "outDadoLido[15]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[16]" to the node "outDadoLido[16]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[17]" to the node "outDadoLido[17]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[18]" to the node "outDadoLido[18]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[19]" to the node "outDadoLido[19]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[20]" to the node "outDadoLido[20]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[21]" to the node "outDadoLido[21]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[22]" to the node "outDadoLido[22]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[23]" to the node "outDadoLido[23]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[24]" to the node "outDadoLido[24]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[25]" to the node "outDadoLido[25]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[26]" to the node "outDadoLido[26]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[27]" to the node "outDadoLido[27]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[28]" to the node "outDadoLido[28]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[29]" to the node "outDadoLido[29]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[30]" to the node "outDadoLido[30]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RAMMIPS:RAM|Dado_out[31]" to the node "outDadoLido[31]" into a wire File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[0]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[1]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[2]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[3]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[4]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[5]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[6]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[7]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[8]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[9]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[10]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[11]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[12]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[13]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[14]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[15]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[16]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[17]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[18]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[19]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[20]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[21]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[22]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[23]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[24]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[25]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[26]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[27]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[28]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[29]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[30]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAMMIPS:RAM|Dado_out[31]" to the node "FluxoDados:FD|bancoRegistradores:bancoReg|registrador" into an OR gate File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/RAMMIPS.vhd Line: 13
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "outPC[0]" is stuck at GND File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 19
     Warning (13410): Pin "outPC[1]" is stuck at GND File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 19
+    Warning (13410): Pin "testeSaidaMux[0]" is stuck at GND File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 22
+    Warning (13410): Pin "testeSaidaMux[1]" is stuck at GND File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula14/Aula14.vhd Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 512 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3813 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3872 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 128 output pins
-    Info (21061): Implemented 3684 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Fri Oct 30 20:52:06 2020
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:32
+    Info (21059): Implemented 160 output pins
+    Info (21061): Implemented 3711 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Tue Nov 03 16:01:21 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
 
 
