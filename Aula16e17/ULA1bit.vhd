@@ -11,7 +11,7 @@ entity ULA1bit is
 	entradaLess       :  in std_logic;
 	seletorInverteB   :  in std_logic;
 	vemUM             :  in std_logic;
-	seletorULA        :  in std_logic_vector(2 downto 0);
+	seletorULA        :  in std_logic_vector(1 downto 0);
 	-- Output ports
 	vaiUM             : out std_logic;
 	saidaOverflow     : out std_logic;
@@ -25,6 +25,8 @@ architecture arch_name of ULA1bit is
   signal  saidaInverteB     : std_logic;
   signal  signalSomaSubtrai : std_logic;
   signal  signalAND         : std_logic;
+  signal  signalOR          : std_logic;
+  signal  outResultado      : std_logic;
    
 begin
 
@@ -36,7 +38,15 @@ begin
 				  
   signalAND <= saidaInverteB AND  entradaA;
   signalOR <= saidaInverteB OR entradaA;
-  signalSomaSubtrai <= (saidaInverteB XOR entradaA) XOR vemUM;
+  
+  SomaSubtrai : entity work.SomadorCompleto1bit
+    port map( entradaA          => entradaA,
+	              entradaB          => entradaB,
+				  vemUM             => vemUM,
+				  vaiUM             => vaiUM,
+				  soma              => signalSomaSubtrai);
+				  
+  saidaSet <= signalSomaSubtrai;
 	 
   muxULA : entity work.muxGenerico4x1
     port map( entradaA_MUX => signalAND, 
@@ -44,6 +54,14 @@ begin
 				  entradaC_MUX => signalSomaSubtrai,
 				  entradaD_MUX => entradaLess,
 				  seletor_MUX => seletorULA, 
-				  saida_MUX => saidaResultado);
+				  saida_MUX => outResultado);
+
+  detectaOF : entity work.detectaOverflow
+	port map( entradaA => entradaA,
+			  entradaB => entradaB,
+			  resultado => outResultado,
+			  overflow => saidaOverflow);
+			  
+  saidaResultado <= outResultado;
   
 end architecture;

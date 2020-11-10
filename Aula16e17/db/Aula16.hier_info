@@ -1,0 +1,2325 @@
+|Aula16
+A[0] => ula32bits:ULA.entradaA[0]
+A[1] => ula32bits:ULA.entradaA[1]
+A[2] => ula32bits:ULA.entradaA[2]
+A[3] => ula32bits:ULA.entradaA[3]
+A[4] => ula32bits:ULA.entradaA[4]
+A[5] => ula32bits:ULA.entradaA[5]
+A[6] => ula32bits:ULA.entradaA[6]
+A[7] => ula32bits:ULA.entradaA[7]
+A[8] => ula32bits:ULA.entradaA[8]
+A[9] => ula32bits:ULA.entradaA[9]
+A[10] => ula32bits:ULA.entradaA[10]
+A[11] => ula32bits:ULA.entradaA[11]
+A[12] => ula32bits:ULA.entradaA[12]
+A[13] => ula32bits:ULA.entradaA[13]
+A[14] => ula32bits:ULA.entradaA[14]
+A[15] => ula32bits:ULA.entradaA[15]
+A[16] => ula32bits:ULA.entradaA[16]
+A[17] => ula32bits:ULA.entradaA[17]
+A[18] => ula32bits:ULA.entradaA[18]
+A[19] => ula32bits:ULA.entradaA[19]
+A[20] => ula32bits:ULA.entradaA[20]
+A[21] => ula32bits:ULA.entradaA[21]
+A[22] => ula32bits:ULA.entradaA[22]
+A[23] => ula32bits:ULA.entradaA[23]
+A[24] => ula32bits:ULA.entradaA[24]
+A[25] => ula32bits:ULA.entradaA[25]
+A[26] => ula32bits:ULA.entradaA[26]
+A[27] => ula32bits:ULA.entradaA[27]
+A[28] => ula32bits:ULA.entradaA[28]
+A[29] => ula32bits:ULA.entradaA[29]
+A[30] => ula32bits:ULA.entradaA[30]
+A[31] => ula32bits:ULA.entradaA[31]
+B[0] => ula32bits:ULA.entradaB[0]
+B[1] => ula32bits:ULA.entradaB[1]
+B[2] => ula32bits:ULA.entradaB[2]
+B[3] => ula32bits:ULA.entradaB[3]
+B[4] => ula32bits:ULA.entradaB[4]
+B[5] => ula32bits:ULA.entradaB[5]
+B[6] => ula32bits:ULA.entradaB[6]
+B[7] => ula32bits:ULA.entradaB[7]
+B[8] => ula32bits:ULA.entradaB[8]
+B[9] => ula32bits:ULA.entradaB[9]
+B[10] => ula32bits:ULA.entradaB[10]
+B[11] => ula32bits:ULA.entradaB[11]
+B[12] => ula32bits:ULA.entradaB[12]
+B[13] => ula32bits:ULA.entradaB[13]
+B[14] => ula32bits:ULA.entradaB[14]
+B[15] => ula32bits:ULA.entradaB[15]
+B[16] => ula32bits:ULA.entradaB[16]
+B[17] => ula32bits:ULA.entradaB[17]
+B[18] => ula32bits:ULA.entradaB[18]
+B[19] => ula32bits:ULA.entradaB[19]
+B[20] => ula32bits:ULA.entradaB[20]
+B[21] => ula32bits:ULA.entradaB[21]
+B[22] => ula32bits:ULA.entradaB[22]
+B[23] => ula32bits:ULA.entradaB[23]
+B[24] => ula32bits:ULA.entradaB[24]
+B[25] => ula32bits:ULA.entradaB[25]
+B[26] => ula32bits:ULA.entradaB[26]
+B[27] => ula32bits:ULA.entradaB[27]
+B[28] => ula32bits:ULA.entradaB[28]
+B[29] => ula32bits:ULA.entradaB[29]
+B[30] => ula32bits:ULA.entradaB[30]
+B[31] => ula32bits:ULA.entradaB[31]
+funct[0] => unidadecontroleula:ucULA.funct[0]
+funct[1] => unidadecontroleula:ucULA.funct[1]
+funct[2] => unidadecontroleula:ucULA.funct[2]
+funct[3] => unidadecontroleula:ucULA.funct[3]
+funct[4] => unidadecontroleula:ucULA.funct[4]
+funct[5] => unidadecontroleula:ucULA.funct[5]
+ULAop[0] => unidadecontroleula:ucULA.ulaOp[0]
+ULAop[1] => unidadecontroleula:ucULA.ulaOp[1]
+resultado[0] <= ula32bits:ULA.resultadoULA[0]
+resultado[1] <= ula32bits:ULA.resultadoULA[1]
+resultado[2] <= ula32bits:ULA.resultadoULA[2]
+resultado[3] <= ula32bits:ULA.resultadoULA[3]
+resultado[4] <= ula32bits:ULA.resultadoULA[4]
+resultado[5] <= ula32bits:ULA.resultadoULA[5]
+resultado[6] <= ula32bits:ULA.resultadoULA[6]
+resultado[7] <= ula32bits:ULA.resultadoULA[7]
+resultado[8] <= ula32bits:ULA.resultadoULA[8]
+resultado[9] <= ula32bits:ULA.resultadoULA[9]
+resultado[10] <= ula32bits:ULA.resultadoULA[10]
+resultado[11] <= ula32bits:ULA.resultadoULA[11]
+resultado[12] <= ula32bits:ULA.resultadoULA[12]
+resultado[13] <= ula32bits:ULA.resultadoULA[13]
+resultado[14] <= ula32bits:ULA.resultadoULA[14]
+resultado[15] <= ula32bits:ULA.resultadoULA[15]
+resultado[16] <= ula32bits:ULA.resultadoULA[16]
+resultado[17] <= ula32bits:ULA.resultadoULA[17]
+resultado[18] <= ula32bits:ULA.resultadoULA[18]
+resultado[19] <= ula32bits:ULA.resultadoULA[19]
+resultado[20] <= ula32bits:ULA.resultadoULA[20]
+resultado[21] <= ula32bits:ULA.resultadoULA[21]
+resultado[22] <= ula32bits:ULA.resultadoULA[22]
+resultado[23] <= ula32bits:ULA.resultadoULA[23]
+resultado[24] <= ula32bits:ULA.resultadoULA[24]
+resultado[25] <= ula32bits:ULA.resultadoULA[25]
+resultado[26] <= ula32bits:ULA.resultadoULA[26]
+resultado[27] <= ula32bits:ULA.resultadoULA[27]
+resultado[28] <= ula32bits:ULA.resultadoULA[28]
+resultado[29] <= ula32bits:ULA.resultadoULA[29]
+resultado[30] <= ula32bits:ULA.resultadoULA[30]
+resultado[31] <= ula32bits:ULA.resultadoULA[31]
+overflow <= ula32bits:ULA.overflow_final
+
+
+|Aula16|UnidadeControleULA:ucULA
+ulaOp[0] => Equal0.IN0
+ulaOp[0] => Equal5.IN1
+ulaOp[0] => Equal6.IN1
+ulaOp[1] => Equal0.IN1
+ulaOp[1] => Equal5.IN0
+ulaOp[1] => Equal6.IN0
+funct[0] => Equal1.IN2
+funct[0] => Equal2.IN3
+funct[0] => Equal3.IN5
+funct[0] => Equal4.IN4
+funct[1] => Equal1.IN5
+funct[1] => Equal2.IN5
+funct[1] => Equal3.IN2
+funct[1] => Equal4.IN3
+funct[2] => Equal1.IN1
+funct[2] => Equal2.IN2
+funct[2] => Equal3.IN4
+funct[2] => Equal4.IN2
+funct[3] => Equal1.IN4
+funct[3] => Equal2.IN1
+funct[3] => Equal3.IN1
+funct[3] => Equal4.IN1
+funct[4] => Equal1.IN0
+funct[4] => Equal2.IN0
+funct[4] => Equal3.IN0
+funct[4] => Equal4.IN0
+funct[5] => Equal1.IN3
+funct[5] => Equal2.IN4
+funct[5] => Equal3.IN3
+funct[5] => Equal4.IN5
+ulaCtrl[0] <= ulaCtrl.DB_MAX_OUTPUT_PORT_TYPE
+ulaCtrl[1] <= ulaCtrl.DB_MAX_OUTPUT_PORT_TYPE
+ulaCtrl[2] <= ulaCtrl.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA
+entradaA[0] => ula1bit:ula0.entradaA
+entradaA[1] => ula1bit:ula1.entradaA
+entradaA[2] => ula1bit:ula2.entradaA
+entradaA[3] => ula1bit:ula3.entradaA
+entradaA[4] => ula1bit:ula4.entradaA
+entradaA[5] => ula1bit:ula5.entradaA
+entradaA[6] => ula1bit:ula6.entradaA
+entradaA[7] => ula1bit:ula7.entradaA
+entradaA[8] => ula1bit:ula8.entradaA
+entradaA[9] => ula1bit:ula9.entradaA
+entradaA[10] => ula1bit:ula10.entradaA
+entradaA[11] => ula1bit:ula11.entradaA
+entradaA[12] => ula1bit:ula12.entradaA
+entradaA[13] => ula1bit:ula13.entradaA
+entradaA[14] => ula1bit:ula14.entradaA
+entradaA[15] => ula1bit:ula15.entradaA
+entradaA[16] => ula1bit:ula16.entradaA
+entradaA[17] => ula1bit:ula17.entradaA
+entradaA[18] => ula1bit:ula18.entradaA
+entradaA[19] => ula1bit:ula19.entradaA
+entradaA[20] => ula1bit:ula20.entradaA
+entradaA[21] => ula1bit:ula21.entradaA
+entradaA[22] => ula1bit:ula22.entradaA
+entradaA[23] => ula1bit:ula23.entradaA
+entradaA[24] => ula1bit:ula24.entradaA
+entradaA[25] => ula1bit:ula25.entradaA
+entradaA[26] => ula1bit:ula26.entradaA
+entradaA[27] => ula1bit:ula27.entradaA
+entradaA[28] => ula1bit:ula28.entradaA
+entradaA[29] => ula1bit:ula29.entradaA
+entradaA[30] => ula1bit:ula30.entradaA
+entradaA[31] => ula1bit:ula31.entradaA
+entradaB[0] => ula1bit:ula0.entradaB
+entradaB[1] => ula1bit:ula1.entradaB
+entradaB[2] => ula1bit:ula2.entradaB
+entradaB[3] => ula1bit:ula3.entradaB
+entradaB[4] => ula1bit:ula4.entradaB
+entradaB[5] => ula1bit:ula5.entradaB
+entradaB[6] => ula1bit:ula6.entradaB
+entradaB[7] => ula1bit:ula7.entradaB
+entradaB[8] => ula1bit:ula8.entradaB
+entradaB[9] => ula1bit:ula9.entradaB
+entradaB[10] => ula1bit:ula10.entradaB
+entradaB[11] => ula1bit:ula11.entradaB
+entradaB[12] => ula1bit:ula12.entradaB
+entradaB[13] => ula1bit:ula13.entradaB
+entradaB[14] => ula1bit:ula14.entradaB
+entradaB[15] => ula1bit:ula15.entradaB
+entradaB[16] => ula1bit:ula16.entradaB
+entradaB[17] => ula1bit:ula17.entradaB
+entradaB[18] => ula1bit:ula18.entradaB
+entradaB[19] => ula1bit:ula19.entradaB
+entradaB[20] => ula1bit:ula20.entradaB
+entradaB[21] => ula1bit:ula21.entradaB
+entradaB[22] => ula1bit:ula22.entradaB
+entradaB[23] => ula1bit:ula23.entradaB
+entradaB[24] => ula1bit:ula24.entradaB
+entradaB[25] => ula1bit:ula25.entradaB
+entradaB[26] => ula1bit:ula26.entradaB
+entradaB[27] => ula1bit:ula27.entradaB
+entradaB[28] => ula1bit:ula28.entradaB
+entradaB[29] => ula1bit:ula29.entradaB
+entradaB[30] => ula1bit:ula30.entradaB
+entradaB[31] => ula1bit:ula31.entradaB
+operacaoULA[0] => ula1bit:ula0.seletorULA[0]
+operacaoULA[0] => ula1bit:ula1.seletorULA[0]
+operacaoULA[0] => ula1bit:ula2.seletorULA[0]
+operacaoULA[0] => ula1bit:ula3.seletorULA[0]
+operacaoULA[0] => ula1bit:ula4.seletorULA[0]
+operacaoULA[0] => ula1bit:ula5.seletorULA[0]
+operacaoULA[0] => ula1bit:ula6.seletorULA[0]
+operacaoULA[0] => ula1bit:ula7.seletorULA[0]
+operacaoULA[0] => ula1bit:ula8.seletorULA[0]
+operacaoULA[0] => ula1bit:ula9.seletorULA[0]
+operacaoULA[0] => ula1bit:ula10.seletorULA[0]
+operacaoULA[0] => ula1bit:ula11.seletorULA[0]
+operacaoULA[0] => ula1bit:ula12.seletorULA[0]
+operacaoULA[0] => ula1bit:ula13.seletorULA[0]
+operacaoULA[0] => ula1bit:ula14.seletorULA[0]
+operacaoULA[0] => ula1bit:ula15.seletorULA[0]
+operacaoULA[0] => ula1bit:ula16.seletorULA[0]
+operacaoULA[0] => ula1bit:ula17.seletorULA[0]
+operacaoULA[0] => ula1bit:ula18.seletorULA[0]
+operacaoULA[0] => ula1bit:ula19.seletorULA[0]
+operacaoULA[0] => ula1bit:ula20.seletorULA[0]
+operacaoULA[0] => ula1bit:ula21.seletorULA[0]
+operacaoULA[0] => ula1bit:ula22.seletorULA[0]
+operacaoULA[0] => ula1bit:ula23.seletorULA[0]
+operacaoULA[0] => ula1bit:ula24.seletorULA[0]
+operacaoULA[0] => ula1bit:ula25.seletorULA[0]
+operacaoULA[0] => ula1bit:ula26.seletorULA[0]
+operacaoULA[0] => ula1bit:ula27.seletorULA[0]
+operacaoULA[0] => ula1bit:ula28.seletorULA[0]
+operacaoULA[0] => ula1bit:ula29.seletorULA[0]
+operacaoULA[0] => ula1bit:ula30.seletorULA[0]
+operacaoULA[0] => ula1bit:ula31.seletorULA[0]
+operacaoULA[1] => ula1bit:ula0.seletorULA[1]
+operacaoULA[1] => ula1bit:ula1.seletorULA[1]
+operacaoULA[1] => ula1bit:ula2.seletorULA[1]
+operacaoULA[1] => ula1bit:ula3.seletorULA[1]
+operacaoULA[1] => ula1bit:ula4.seletorULA[1]
+operacaoULA[1] => ula1bit:ula5.seletorULA[1]
+operacaoULA[1] => ula1bit:ula6.seletorULA[1]
+operacaoULA[1] => ula1bit:ula7.seletorULA[1]
+operacaoULA[1] => ula1bit:ula8.seletorULA[1]
+operacaoULA[1] => ula1bit:ula9.seletorULA[1]
+operacaoULA[1] => ula1bit:ula10.seletorULA[1]
+operacaoULA[1] => ula1bit:ula11.seletorULA[1]
+operacaoULA[1] => ula1bit:ula12.seletorULA[1]
+operacaoULA[1] => ula1bit:ula13.seletorULA[1]
+operacaoULA[1] => ula1bit:ula14.seletorULA[1]
+operacaoULA[1] => ula1bit:ula15.seletorULA[1]
+operacaoULA[1] => ula1bit:ula16.seletorULA[1]
+operacaoULA[1] => ula1bit:ula17.seletorULA[1]
+operacaoULA[1] => ula1bit:ula18.seletorULA[1]
+operacaoULA[1] => ula1bit:ula19.seletorULA[1]
+operacaoULA[1] => ula1bit:ula20.seletorULA[1]
+operacaoULA[1] => ula1bit:ula21.seletorULA[1]
+operacaoULA[1] => ula1bit:ula22.seletorULA[1]
+operacaoULA[1] => ula1bit:ula23.seletorULA[1]
+operacaoULA[1] => ula1bit:ula24.seletorULA[1]
+operacaoULA[1] => ula1bit:ula25.seletorULA[1]
+operacaoULA[1] => ula1bit:ula26.seletorULA[1]
+operacaoULA[1] => ula1bit:ula27.seletorULA[1]
+operacaoULA[1] => ula1bit:ula28.seletorULA[1]
+operacaoULA[1] => ula1bit:ula29.seletorULA[1]
+operacaoULA[1] => ula1bit:ula30.seletorULA[1]
+operacaoULA[1] => ula1bit:ula31.seletorULA[1]
+operacaoULA[2] => ula1bit:ula0.seletorInverteB
+operacaoULA[2] => ula1bit:ula0.vemUM
+operacaoULA[2] => ula1bit:ula1.seletorInverteB
+operacaoULA[2] => ula1bit:ula2.seletorInverteB
+operacaoULA[2] => ula1bit:ula3.seletorInverteB
+operacaoULA[2] => ula1bit:ula4.seletorInverteB
+operacaoULA[2] => ula1bit:ula5.seletorInverteB
+operacaoULA[2] => ula1bit:ula6.seletorInverteB
+operacaoULA[2] => ula1bit:ula7.seletorInverteB
+operacaoULA[2] => ula1bit:ula8.seletorInverteB
+operacaoULA[2] => ula1bit:ula9.seletorInverteB
+operacaoULA[2] => ula1bit:ula10.seletorInverteB
+operacaoULA[2] => ula1bit:ula11.seletorInverteB
+operacaoULA[2] => ula1bit:ula12.seletorInverteB
+operacaoULA[2] => ula1bit:ula13.seletorInverteB
+operacaoULA[2] => ula1bit:ula14.seletorInverteB
+operacaoULA[2] => ula1bit:ula15.seletorInverteB
+operacaoULA[2] => ula1bit:ula16.seletorInverteB
+operacaoULA[2] => ula1bit:ula17.seletorInverteB
+operacaoULA[2] => ula1bit:ula18.seletorInverteB
+operacaoULA[2] => ula1bit:ula19.seletorInverteB
+operacaoULA[2] => ula1bit:ula20.seletorInverteB
+operacaoULA[2] => ula1bit:ula21.seletorInverteB
+operacaoULA[2] => ula1bit:ula22.seletorInverteB
+operacaoULA[2] => ula1bit:ula23.seletorInverteB
+operacaoULA[2] => ula1bit:ula24.seletorInverteB
+operacaoULA[2] => ula1bit:ula25.seletorInverteB
+operacaoULA[2] => ula1bit:ula26.seletorInverteB
+operacaoULA[2] => ula1bit:ula27.seletorInverteB
+operacaoULA[2] => ula1bit:ula28.seletorInverteB
+operacaoULA[2] => ula1bit:ula29.seletorInverteB
+operacaoULA[2] => ula1bit:ula30.seletorInverteB
+operacaoULA[2] => ula1bit:ula31.seletorInverteB
+overflow_final <= ula1bit:ula31.saidaOverflow
+resultadoULA[0] <= ula1bit:ula0.saidaResultado
+resultadoULA[1] <= ula1bit:ula1.saidaResultado
+resultadoULA[2] <= ula1bit:ula2.saidaResultado
+resultadoULA[3] <= ula1bit:ula3.saidaResultado
+resultadoULA[4] <= ula1bit:ula4.saidaResultado
+resultadoULA[5] <= ula1bit:ula5.saidaResultado
+resultadoULA[6] <= ula1bit:ula6.saidaResultado
+resultadoULA[7] <= ula1bit:ula7.saidaResultado
+resultadoULA[8] <= ula1bit:ula8.saidaResultado
+resultadoULA[9] <= ula1bit:ula9.saidaResultado
+resultadoULA[10] <= ula1bit:ula10.saidaResultado
+resultadoULA[11] <= ula1bit:ula11.saidaResultado
+resultadoULA[12] <= ula1bit:ula12.saidaResultado
+resultadoULA[13] <= ula1bit:ula13.saidaResultado
+resultadoULA[14] <= ula1bit:ula14.saidaResultado
+resultadoULA[15] <= ula1bit:ula15.saidaResultado
+resultadoULA[16] <= ula1bit:ula16.saidaResultado
+resultadoULA[17] <= ula1bit:ula17.saidaResultado
+resultadoULA[18] <= ula1bit:ula18.saidaResultado
+resultadoULA[19] <= ula1bit:ula19.saidaResultado
+resultadoULA[20] <= ula1bit:ula20.saidaResultado
+resultadoULA[21] <= ula1bit:ula21.saidaResultado
+resultadoULA[22] <= ula1bit:ula22.saidaResultado
+resultadoULA[23] <= ula1bit:ula23.saidaResultado
+resultadoULA[24] <= ula1bit:ula24.saidaResultado
+resultadoULA[25] <= ula1bit:ula25.saidaResultado
+resultadoULA[26] <= ula1bit:ula26.saidaResultado
+resultadoULA[27] <= ula1bit:ula27.saidaResultado
+resultadoULA[28] <= ula1bit:ula28.saidaResultado
+resultadoULA[29] <= ula1bit:ula29.saidaResultado
+resultadoULA[30] <= ula1bit:ula30.saidaResultado
+resultadoULA[31] <= ula1bit:ula31.saidaResultado
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula0
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula0|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula0|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula0|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula0|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula1
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula1|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula1|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula1|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula1|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula2
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula2|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula2|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula2|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula2|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula3
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula3|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula3|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula3|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula3|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula4
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula4|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula4|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula4|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula4|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula5
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula5|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula5|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula5|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula5|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula6
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula6|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula6|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula6|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula6|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula7
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula7|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula7|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula7|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula7|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula8
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula8|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula8|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula8|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula8|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula9
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula9|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula9|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula9|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula9|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula10
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula10|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula10|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula10|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula10|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula11
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula11|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula11|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula11|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula11|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula12
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula12|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula12|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula12|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula12|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula13
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula13|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula13|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula13|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula13|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula14
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula14|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula14|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula14|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula14|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula15
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula15|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula15|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula15|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula15|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula16
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula16|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula16|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula16|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula16|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula17
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula17|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula17|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula17|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula17|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula18
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula18|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula18|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula18|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula18|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula19
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula19|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula19|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula19|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula19|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula20
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula20|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula20|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula20|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula20|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula21
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula21|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula21|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula21|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula21|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula22
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula22|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula22|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula22|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula22|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula23
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula23|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula23|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula23|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula23|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula24
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula24|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula24|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula24|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula24|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula25
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula25|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula25|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula25|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula25|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula26
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula26|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula26|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula26|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula26|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula27
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula27|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula27|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula27|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula27|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula28
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula28|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula28|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula28|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula28|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula29
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula29|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula29|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula29|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula29|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula30
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula30|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula30|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula30|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula30|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula31
+entradaA => signalAND.IN1
+entradaA => signalOR.IN1
+entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
+entradaA => detectaoverflow:detectaOF.entradaA
+entradaB => muxgenerico2x1:inverteB.entradaA_MUX
+entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
+entradaB => detectaoverflow:detectaOF.entradaB
+entradaB => muxgenerico2x1:inverteB.entradaB_MUX
+entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
+seletorInverteB => muxgenerico2x1:inverteB.seletor_MUX
+vemUM => somadorcompleto1bit:SomaSubtrai.vemUM
+seletorULA[0] => muxgenerico4x1:muxULA.seletor_MUX[0]
+seletorULA[1] => muxgenerico4x1:muxULA.seletor_MUX[1]
+vaiUM <= somadorcompleto1bit:SomaSubtrai.vaiUM
+saidaOverflow <= detectaoverflow:detectaOF.overflow
+saidaSet <= somadorcompleto1bit:SomaSubtrai.soma
+saidaResultado <= muxgenerico4x1:muxULA.saida_MUX
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula31|muxGenerico2x1:inverteB
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula31|SomadorCompleto1bit:SomaSubtrai
+entradaA => saidaXOR_AB.IN0
+entradaA => saidaAND_AB.IN0
+entradaB => saidaXOR_AB.IN1
+entradaB => saidaAND_AB.IN1
+vemUM => saidaAND_XOR.IN1
+vemUM => soma.IN1
+vaiUM <= vaiUM.DB_MAX_OUTPUT_PORT_TYPE
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula31|muxGenerico4x1:muxULA
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAB
+entradaC_MUX => saida_MUX.DATAB
+entradaD_MUX => saida_MUX.DATAA
+seletor_MUX[0] => Equal0.IN0
+seletor_MUX[0] => Equal1.IN1
+seletor_MUX[0] => Equal2.IN1
+seletor_MUX[1] => Equal0.IN1
+seletor_MUX[1] => Equal1.IN0
+seletor_MUX[1] => Equal2.IN0
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula16|ULA32bits:ULA|ULA1bit:ula31|detectaOverflow:detectaOF
+entradaA => saidaAND_ABR2.IN0
+entradaA => saidaAND_ABR1.IN0
+entradaB => saidaAND_ABR2.IN1
+entradaB => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR1.IN1
+resultado => saidaAND_ABR2.IN1
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
