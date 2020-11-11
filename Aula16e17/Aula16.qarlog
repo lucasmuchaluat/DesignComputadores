@@ -1,0 +1,25 @@
+Quartus Prime Archive log --	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/Aula16.qarlog
+
+Archive:	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/Aula16.qar
+Date:		Wed Nov 11 15:10:35 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/Aula16.qpf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/Aula16.qsf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/Aula16.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/SomadorCompleto1bit.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/ULA1bit.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/ULA32bits.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/UnidadeControleFD.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/UnidadeControleULA.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/Waveform.vwf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/constantesMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/detectaOverflow.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/muxGenerico2x1.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/muxGenerico4x1.vhd
+d:/mucha/documents/insper/6osemestre/designcomputadores/quartus/bin64/assignment_defaults.qdf
+	======= Total: 14 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

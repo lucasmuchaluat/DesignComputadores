@@ -71,39 +71,39 @@ funct[4] => unidadecontroleula:ucULA.funct[4]
 funct[5] => unidadecontroleula:ucULA.funct[5]
 ULAop[0] => unidadecontroleula:ucULA.ulaOp[0]
 ULAop[1] => unidadecontroleula:ucULA.ulaOp[1]
-resultado[0] <= ula32bits:ULA.resultadoULA[0]
-resultado[1] <= ula32bits:ULA.resultadoULA[1]
-resultado[2] <= ula32bits:ULA.resultadoULA[2]
-resultado[3] <= ula32bits:ULA.resultadoULA[3]
-resultado[4] <= ula32bits:ULA.resultadoULA[4]
-resultado[5] <= ula32bits:ULA.resultadoULA[5]
-resultado[6] <= ula32bits:ULA.resultadoULA[6]
-resultado[7] <= ula32bits:ULA.resultadoULA[7]
-resultado[8] <= ula32bits:ULA.resultadoULA[8]
-resultado[9] <= ula32bits:ULA.resultadoULA[9]
-resultado[10] <= ula32bits:ULA.resultadoULA[10]
-resultado[11] <= ula32bits:ULA.resultadoULA[11]
-resultado[12] <= ula32bits:ULA.resultadoULA[12]
-resultado[13] <= ula32bits:ULA.resultadoULA[13]
-resultado[14] <= ula32bits:ULA.resultadoULA[14]
-resultado[15] <= ula32bits:ULA.resultadoULA[15]
-resultado[16] <= ula32bits:ULA.resultadoULA[16]
-resultado[17] <= ula32bits:ULA.resultadoULA[17]
-resultado[18] <= ula32bits:ULA.resultadoULA[18]
-resultado[19] <= ula32bits:ULA.resultadoULA[19]
-resultado[20] <= ula32bits:ULA.resultadoULA[20]
-resultado[21] <= ula32bits:ULA.resultadoULA[21]
-resultado[22] <= ula32bits:ULA.resultadoULA[22]
-resultado[23] <= ula32bits:ULA.resultadoULA[23]
-resultado[24] <= ula32bits:ULA.resultadoULA[24]
-resultado[25] <= ula32bits:ULA.resultadoULA[25]
-resultado[26] <= ula32bits:ULA.resultadoULA[26]
-resultado[27] <= ula32bits:ULA.resultadoULA[27]
-resultado[28] <= ula32bits:ULA.resultadoULA[28]
-resultado[29] <= ula32bits:ULA.resultadoULA[29]
-resultado[30] <= ula32bits:ULA.resultadoULA[30]
-resultado[31] <= ula32bits:ULA.resultadoULA[31]
-overflow <= ula32bits:ULA.overflow_final
+resultado[0] << ula32bits:ULA.resultadoULA[0]
+resultado[1] << ula32bits:ULA.resultadoULA[1]
+resultado[2] << ula32bits:ULA.resultadoULA[2]
+resultado[3] << ula32bits:ULA.resultadoULA[3]
+resultado[4] << ula32bits:ULA.resultadoULA[4]
+resultado[5] << ula32bits:ULA.resultadoULA[5]
+resultado[6] << ula32bits:ULA.resultadoULA[6]
+resultado[7] << ula32bits:ULA.resultadoULA[7]
+resultado[8] << ula32bits:ULA.resultadoULA[8]
+resultado[9] << ula32bits:ULA.resultadoULA[9]
+resultado[10] << ula32bits:ULA.resultadoULA[10]
+resultado[11] << ula32bits:ULA.resultadoULA[11]
+resultado[12] << ula32bits:ULA.resultadoULA[12]
+resultado[13] << ula32bits:ULA.resultadoULA[13]
+resultado[14] << ula32bits:ULA.resultadoULA[14]
+resultado[15] << ula32bits:ULA.resultadoULA[15]
+resultado[16] << ula32bits:ULA.resultadoULA[16]
+resultado[17] << ula32bits:ULA.resultadoULA[17]
+resultado[18] << ula32bits:ULA.resultadoULA[18]
+resultado[19] << ula32bits:ULA.resultadoULA[19]
+resultado[20] << ula32bits:ULA.resultadoULA[20]
+resultado[21] << ula32bits:ULA.resultadoULA[21]
+resultado[22] << ula32bits:ULA.resultadoULA[22]
+resultado[23] << ula32bits:ULA.resultadoULA[23]
+resultado[24] << ula32bits:ULA.resultadoULA[24]
+resultado[25] << ula32bits:ULA.resultadoULA[25]
+resultado[26] << ula32bits:ULA.resultadoULA[26]
+resultado[27] << ula32bits:ULA.resultadoULA[27]
+resultado[28] << ula32bits:ULA.resultadoULA[28]
+resultado[29] << ula32bits:ULA.resultadoULA[29]
+resultado[30] << ula32bits:ULA.resultadoULA[30]
+resultado[31] << ula32bits:ULA.resultadoULA[31]
+overflow << ula32bits:ULA.overflow_final
 
 
 |Aula16|UnidadeControleULA:ucULA
@@ -345,7 +345,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -407,7 +406,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -469,7 +467,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -531,7 +528,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -593,7 +589,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -655,7 +650,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -717,7 +711,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -779,7 +772,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -841,7 +833,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -903,7 +894,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -965,7 +955,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1027,7 +1016,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1089,7 +1077,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1151,7 +1138,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1213,7 +1199,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1275,7 +1260,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1337,7 +1321,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1399,7 +1382,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1461,7 +1443,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1523,7 +1504,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1585,7 +1565,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1647,7 +1626,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1709,7 +1687,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1771,7 +1748,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1833,7 +1809,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1895,7 +1870,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -1957,7 +1931,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -2019,7 +1992,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -2081,7 +2053,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -2143,7 +2114,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -2205,7 +2175,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX
@@ -2267,7 +2236,6 @@ entradaA => signalOR.IN1
 entradaA => somadorcompleto1bit:SomaSubtrai.entradaA
 entradaA => detectaoverflow:detectaOF.entradaA
 entradaB => muxgenerico2x1:inverteB.entradaA_MUX
-entradaB => somadorcompleto1bit:SomaSubtrai.entradaB
 entradaB => detectaoverflow:detectaOF.entradaB
 entradaB => muxgenerico2x1:inverteB.entradaB_MUX
 entradaLess => muxgenerico4x1:muxULA.entradaD_MUX

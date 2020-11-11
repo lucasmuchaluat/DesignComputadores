@@ -41,7 +41,7 @@ begin
   
   SomaSubtrai : entity work.SomadorCompleto1bit
     port map( entradaA          => entradaA,
-	              entradaB          => entradaB,
+	           entradaB          => saidaInverteB,
 				  vemUM             => vemUM,
 				  vaiUM             => vaiUM,
 				  soma              => signalSomaSubtrai);

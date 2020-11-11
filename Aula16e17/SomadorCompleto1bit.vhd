@@ -25,7 +25,7 @@ begin
 				  
   saidaXOR_AB <= entradaA XOR entradaB;
   saidaAND_AB <= entradaA AND entradaB;
-  saidaAND_XOR <= saidaXOR_AB AND vemUM;
+  saidaAND_XOR <= vemUM AND saidaXOR_AB;
   
   soma <= vemUM XOR saidaXOR_AB;
   vaiUM <= saidaAND_XOR OR saidaAND_AB;

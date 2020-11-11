@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula16
-Tue Nov 10 16:38:45 2020
+Wed Nov 11 15:06:41 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 10 16:38:45 2020       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 11 15:06:41 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula16                                      ;
 ; Top-level Entity Name           ; Aula16                                      ;
@@ -222,14 +222,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------+
 ; Resource                                    ; Usage                                 ;
 +---------------------------------------------+---------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 70                                    ;
+; Estimate of Logic utilization (ALMs needed) ; 78                                    ;
 ;                                             ;                                       ;
-; Combinational ALUT usage for logic          ; 93                                    ;
-;     -- 7 input functions                    ; 2                                     ;
-;     -- 6 input functions                    ; 45                                    ;
-;     -- 5 input functions                    ; 7                                     ;
-;     -- 4 input functions                    ; 5                                     ;
-;     -- <=3 input functions                  ; 34                                    ;
+; Combinational ALUT usage for logic          ; 122                                   ;
+;     -- 7 input functions                    ; 0                                     ;
+;     -- 6 input functions                    ; 33                                    ;
+;     -- 5 input functions                    ; 22                                    ;
+;     -- 4 input functions                    ; 8                                     ;
+;     -- <=3 input functions                  ; 59                                    ;
 ;                                             ;                                       ;
 ; Dedicated logic registers                   ; 0                                     ;
 ;                                             ;                                       ;
@@ -237,10 +237,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                       ;
 ; Total DSP Blocks                            ; 0                                     ;
 ;                                             ;                                       ;
-; Maximum fan-out node                        ; UnidadeControleULA:ucULA|ulaCtrl[0]~3 ;
-; Maximum fan-out                             ; 33                                    ;
-; Total fan-out                               ; 558                                   ;
-; Average fan-out                             ; 1.84                                  ;
+; Maximum fan-out node                        ; UnidadeControleULA:ucULA|ulaCtrl[2]~1 ;
+; Maximum fan-out                             ; 55                                    ;
+; Total fan-out                               ; 634                                   ;
+; Average fan-out                             ; 1.91                                  ;
 +---------------------------------------------+---------------------------------------+
 
 
@@ -249,102 +249,118 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name         ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+---------------------+--------------+
-; |Aula16                                    ; 93 (0)              ; 0 (0)                     ; 0                 ; 0          ; 105  ; 0            ; |Aula16                                                             ; Aula16              ; work         ;
-;    |ULA32bits:ULA|                         ; 89 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA                                               ; ULA32bits           ; work         ;
-;       |ULA1bit:ula0|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula0                                  ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula0|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+; |Aula16                                    ; 122 (0)             ; 0 (0)                     ; 0                 ; 0          ; 105  ; 0            ; |Aula16                                                             ; Aula16              ; work         ;
+;    |ULA32bits:ULA|                         ; 118 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA                                               ; ULA32bits           ; work         ;
+;       |ULA1bit:ula0|                       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula0                                  ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula0|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula0|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
 ;       |ULA1bit:ula10|                      ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula10                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula10|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula10|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula11|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula11                                 ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula11|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula11|                      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula11                                 ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula11|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula11|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula12|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula12                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula12|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula12                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula12|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula12|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula12|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula13|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula13                                 ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula13|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula13|                      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula13                                 ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula13|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula13|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula14|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula14                                 ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula14|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula14|                      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula14                                 ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula14|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula14|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
 ;       |ULA1bit:ula15|                      ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula15                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula15|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula15|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula16|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula16                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula16|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula16                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula16|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula16|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula16|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula17|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula17                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula17|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula17                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula17|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula17|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula17|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula18|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula18                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula18|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula18                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula18|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula18|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula18|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula19|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula19                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula19|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula19                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula19|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula19|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula19|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula1|                       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula1                                  ; ULA1bit             ; work         ;
+;       |ULA1bit:ula1|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula1                                  ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula1|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula1|muxGenerico2x1:inverteB          ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula1|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
 ;       |ULA1bit:ula20|                      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula20                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula20|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula20|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula21|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula21                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula21|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula21                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula21|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula21|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula21|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula22|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula22                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula22|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula22                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula22|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula22|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula22|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula23|                      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula23                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula23|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula23                                 ; ULA1bit             ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula23|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula23|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula24|                      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula24                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula24|                      ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula24                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula24|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula24|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula24|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula25|                      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula25                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula25|                      ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula25                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula25|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula25|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula25|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula26|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula26                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula26|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula26                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula26|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula26|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula26|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula27|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula27                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula27|                      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula27                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula27|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula27|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula27|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula28|                      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula28                                 ; ULA1bit             ; work         ;
+;       |ULA1bit:ula28|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula28                                 ; ULA1bit             ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula28|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula28|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
 ;       |ULA1bit:ula29|                      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula29                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula29|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula29|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula2|                       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula2                                  ; ULA1bit             ; work         ;
+;       |ULA1bit:ula2|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula2                                  ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula2|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula2|muxGenerico2x1:inverteB          ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula2|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula30|                      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula30                                 ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula30|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula30|                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula30                                 ; ULA1bit             ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula30|muxGenerico2x1:inverteB         ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula30|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
 ;       |ULA1bit:ula31|                      ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula31                                 ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula31|SomadorCompleto1bit:SomaSubtrai ; SomadorCompleto1bit ; work         ;
 ;          |detectaOverflow:detectaOF|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula31|detectaOverflow:detectaOF       ; detectaOverflow     ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula31|muxGenerico4x1:muxULA           ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula3|                       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula3                                  ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula3|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula3|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula3                                  ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula3|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula3|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula4|                       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula4                                  ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula4|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula4|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula4                                  ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula4|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula4|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
 ;       |ULA1bit:ula5|                       ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula5                                  ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula5|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula5|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula6|                       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula6                                  ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula6|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula6|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula6                                  ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula6|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula6|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula7|                       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula7                                  ; ULA1bit             ; work         ;
+;       |ULA1bit:ula7|                       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula7                                  ; ULA1bit             ; work         ;
 ;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula7|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+;          |muxGenerico2x1:inverteB|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula7|muxGenerico2x1:inverteB          ; muxGenerico2x1      ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula7|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula8|                       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula8                                  ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula8|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula8|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula8                                  ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula8|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula8|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
-;       |ULA1bit:ula9|                       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula9                                  ; ULA1bit             ; work         ;
-;          |SomadorCompleto1bit:SomaSubtrai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula9|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
+;       |ULA1bit:ula9|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula9                                  ; ULA1bit             ; work         ;
+;          |SomadorCompleto1bit:SomaSubtrai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula9|SomadorCompleto1bit:SomaSubtrai  ; SomadorCompleto1bit ; work         ;
 ;          |muxGenerico4x1:muxULA|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|ULA32bits:ULA|ULA1bit:ula9|muxGenerico4x1:muxULA            ; muxGenerico4x1      ; work         ;
 ;    |UnidadeControleULA:ucULA|              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula16|UnidadeControleULA:ucULA                                    ; UnidadeControleULA  ; work         ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+---------------------+--------------+
@@ -731,20 +747,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 94                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 92                          ;
+; arriav_lcell_comb     ; 123                         ;
+;     normal            ; 123                         ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 21                          ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 5                           ;
-;         5 data inputs ; 7                           ;
-;         6 data inputs ; 45                          ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 8                           ;
+;         5 data inputs ; 22                          ;
+;         6 data inputs ; 33                          ;
 ; boundary_port         ; 105                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 9.70                        ;
+; Max LUT depth         ; 17.00                       ;
+; Average LUT depth     ; 11.18                       ;
 +-----------------------+-----------------------------+
 
 
@@ -753,7 +767,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -763,16 +777,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 10 16:38:32 2020
+    Info: Processing started: Wed Nov 11 15:06:11 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula16 -c Aula16
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file aula16.vhd
     Info (12022): Found design unit 1: Aula16-arch_name File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/Aula16.vhd Line: 19
     Info (12023): Found entity 1: Aula16 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/Aula16.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/ULA.vhd Line: 19
-    Info (12023): Found entity 1: ULA File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
     Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/muxGenerico2x1.vhd Line: 13
     Info (12023): Found entity 1: muxGenerico2x1 File: D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/muxGenerico2x1.vhd Line: 4
@@ -810,14 +821,14 @@ Info (12128): Elaborating entity "detectaOverflow" for hierarchy "ULA32bits:ULA|
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 198 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 227 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 72 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 93 logic cells
+    Info (21061): Implemented 122 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Tue Nov 10 16:38:45 2020
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Wed Nov 11 15:06:41 2020
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:52
 
 

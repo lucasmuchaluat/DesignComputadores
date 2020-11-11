@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/10/2020 16:37:55"
+-- Generated on "11/11/2020 15:08:31"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Aula16
 -- 
@@ -45,8 +45,8 @@ COMPONENT Aula16
 	A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-	overflow : OUT STD_LOGIC;
-	resultado : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	overflow : BUFFER STD_LOGIC;
+	resultado : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
 	ULAop : IN STD_LOGIC_VECTOR(1 DOWNTO 0)
 	);
 END COMPONENT;
@@ -226,13 +226,13 @@ END PROCESS t_prcs_A_5;
 -- A[4]
 t_prcs_A_4: PROCESS
 BEGIN
-	A(4) <= '0';
+	A(4) <= '1';
 WAIT;
 END PROCESS t_prcs_A_4;
 -- A[3]
 t_prcs_A_3: PROCESS
 BEGIN
-	A(3) <= '1';
+	A(3) <= '0';
 WAIT;
 END PROCESS t_prcs_A_3;
 -- A[2]
@@ -424,7 +424,7 @@ END PROCESS t_prcs_B_4;
 -- B[3]
 t_prcs_B_3: PROCESS
 BEGIN
-	B(3) <= '0';
+	B(3) <= '1';
 WAIT;
 END PROCESS t_prcs_B_3;
 -- B[2]
@@ -472,7 +472,7 @@ END PROCESS t_prcs_funct_2;
 -- funct[1]
 t_prcs_funct_1: PROCESS
 BEGIN
-	funct(1) <= '0';
+	funct(1) <= '1';
 WAIT;
 END PROCESS t_prcs_funct_1;
 -- funct[0]

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dD:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula16/simulation/qsim
 Eaula16
-Z1 w1605037077
+Z1 w1605118113
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -18,19 +18,19 @@ Z5 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
-!i122 26
+!i122 44
 R0
 Z9 8Aula16.vho
 Z10 FAula16.vho
 l0
 L37 1
-V3TdkAPlnU]n@K>>FlHBfc1
-!s100 4TE^;8Pm276@bEKSQB;MY2
+VkChKj:_FUHUJCQEmVhL6G3
+!s100 0<EdLKIh]KH3Fn1gB]Ka53
 Z11 OV;C;2020.1;71
 32
-Z12 !s110 1605037078
+Z12 !s110 1605118115
 !i10b 1
-Z13 !s108 1605037078.000000
+Z13 !s108 1605118115.000000
 Z14 !s90 -work|work|Aula16.vho|
 Z15 !s107 Aula16.vho|
 !i113 1
@@ -44,12 +44,12 @@ R5
 R6
 R7
 R8
-DEx4 work 6 aula16 0 22 3TdkAPlnU]n@K>>FlHBfc1
-!i122 26
-l366
-L48 3102
-V;i_D;DcoVclnDaF`2Ph=z3
-!s100 :z96A>0Tf=8;SaSg:QadV1
+DEx4 work 6 aula16 0 22 kChKj:_FUHUJCQEmVhL6G3
+!i122 44
+l455
+L48 3945
+VZiHhn0I2eMAh=6nTjf=Vg1
+!s100 OKo`8_?9][d6Zd:m?Wd<J2
 R11
 32
 R12
@@ -61,10 +61,10 @@ R15
 R16
 R17
 Eaula16_vhd_vec_tst
-Z18 w1605037075
+Z18 w1605118111
 R6
 R7
-!i122 27
+!i122 45
 R0
 Z19 8Waveform.vwf.vht
 Z20 FWaveform.vwf.vht
@@ -74,30 +74,30 @@ V6I@7lO@SXUK383BVKiZPz1
 !s100 2o7l<m_[zJ3A:TUkkgcnd0
 R11
 32
-Z21 !s110 1605037079
+R12
 !i10b 1
 R13
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
 !i113 1
 R16
 R17
 Aaula16_arch
 R6
 R7
-Z24 DEx4 work 18 aula16_vhd_vec_tst 0 22 6I@7lO@SXUK383BVKiZPz1
-!i122 27
+Z23 DEx4 work 18 aula16_vhd_vec_tst 0 22 6I@7lO@SXUK383BVKiZPz1
+!i122 45
 l53
-Z25 L34 463
-V^gKC;djhbQ6>dNP83C]HJ2
-!s100 [OLEnbg9S8jHm2GkaXc>n2
+Z24 L34 463
+VdPFbDOhg]8M@JZNd`B^J:0
+!s100 @[>VmQzQ@_96mBmndHWcC1
 R11
 32
-R21
+R12
 !i10b 1
 R13
+R21
 R22
-R23
 !i113 1
 R16
 R17
