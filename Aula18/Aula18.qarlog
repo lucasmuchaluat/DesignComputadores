@@ -1,0 +1,32 @@
+Quartus Prime Archive log --	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/Aula18.qarlog
+
+Archive:	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/Aula18.qar
+Date:		Tue Nov 17 16:16:29 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/Aula18.qpf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/Aula18.qsf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/Aula18.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/FluxoDados.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/RAMMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/RAMcontent.mif
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/ROMMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/ROMcontent.mif
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/SomadorCompleto1bit.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/ULA.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/UnidadeControle.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/UnidadeControleFD.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/UnidadeControleULA.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/Waveform.vwf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/bancoRegistradores.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/constantesMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/estendeSinalGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/muxGenerico2x1.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/registradorGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/Aula18/somaConstante.vhd
+d:/mucha/documents/insper/6osemestre/designcomputadores/quartus/bin64/assignment_defaults.qdf
+	======= Total: 21 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
