@@ -39,6 +39,7 @@ signal saidaMuxBancoULA : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal saidaMuxULABanco : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal saidaMuxBEQ : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal saidaMuxJMP : std_logic_vector(DATA_WIDTH-1 downto 0);
+signal saidaMuxLUI : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal saidaPC : std_logic_vector(ROM_ADDR_WIDTH-1 downto 0);
 signal imediatoExt : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal sigFlagZero : std_logic;
@@ -50,12 +51,16 @@ signal RB : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal RC : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal saidaULA : std_logic_vector(DATA_WIDTH-1 downto 0);
 
-signal palavraControle : std_logic_vector(7 downto 0);
+signal palavraControle : std_logic_vector(9 downto 0);
 signal ULAop : std_logic_vector(2 downto 0);
 
 signal ulaControle: std_logic_vector(2 downto 0);
 
+signal imediatoLUI : std_logic_vector(DATA_WIDTH-1 downto 0);
+
 -- aliases pontos de controle
+alias ZeroImed : std_logic is palavraControle(9);
+alias LUI : std_logic is palavraControle(8);
 alias JMP : std_logic is palavraControle(7);
 alias habEscritaMEM : std_logic is palavraControle(6);
 alias habLeituraMEM : std_logic is palavraControle(5);
@@ -108,10 +113,15 @@ begin
               saidaB  => RC);
 				  
 	estendeSinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
-          port map (estendeSinal_IN => imediato, estendeSinal_OUT =>  imediatoExt);
+          port map (estendeSinal_IN => imediato, seletorZeroImed => ZeroImed, estendeSinal_OUT =>  imediatoExt);
+			 
+	imediatoLUI <= imediato & b"0000000000000000";
+			 
+	muxLUI : entity work.muxGenerico2x1  generic map (larguraDados => DATA_WIDTH)
+        port map( entradaA_MUX => imediatoExt, entradaB_MUX => imediatoLUI, seletor_MUX => LUI, saida_MUX => saidaMuxLUI);
 				  
 	muxBancoULA :  entity work.muxGenerico2x1  generic map (larguraDados => DATA_WIDTH)
-        port map( entradaA_MUX => RC, entradaB_MUX => imediatoExt, seletor_MUX => muxRtImed, saida_MUX => saidaMuxBancoULA);
+        port map( entradaA_MUX => RC, entradaB_MUX => saidaMuxLUI, seletor_MUX => muxRtImed, saida_MUX => saidaMuxBancoULA);
 					  
 	
 	muxULABanco :  entity work.muxGenerico2x1  generic map (larguraDados => DATA_WIDTH)
@@ -119,7 +129,7 @@ begin
 		  
 	andE <= sigFlagZero AND BEQ;
 	
-	shiftBEQ <= imediatoExt(29 DOWNTO 0) & b"00";
+	shiftBEQ <= saidaMuxLUI(29 DOWNTO 0) & b"00";
 	
 	saidaSomaCteShift <= std_logic_vector(unsigned(shiftBEQ) + unsigned(saidaSomaCtePC));
 	

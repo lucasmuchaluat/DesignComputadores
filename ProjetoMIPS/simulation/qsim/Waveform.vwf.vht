@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/21/2020 23:02:20"
+-- Generated on "11/24/2020 15:36:31"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          MIPS
 -- 
@@ -45,13 +45,13 @@ SIGNAL testeSaidaMux : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT MIPS
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	inULAA : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	inULAB : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outDadoEscrito : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outDadoLido : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	OUTEndereco : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outPC : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	testeSaidaMux : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
+	inULAA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	inULAB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	outDadoEscrito : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	outDadoLido : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	OUTEndereco : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	outPC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	testeSaidaMux : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN

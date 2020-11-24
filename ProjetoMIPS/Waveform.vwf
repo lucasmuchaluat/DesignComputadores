@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -5099,7 +5101,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 67;
 	TREE_LEVEL = 0;
 	CHILDREN = 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99;
@@ -5109,7 +5111,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[31]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 68;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5119,7 +5121,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[30]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 69;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5129,7 +5131,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[29]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 70;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5139,7 +5141,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[28]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 71;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5149,7 +5151,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[27]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 72;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5159,7 +5161,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[26]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 73;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5169,7 +5171,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[25]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 74;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5179,7 +5181,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[24]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 75;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5189,7 +5191,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[23]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 76;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5199,7 +5201,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[22]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 77;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5209,7 +5211,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[21]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 78;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5219,7 +5221,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[20]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 79;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5229,7 +5231,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[19]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 80;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5239,7 +5241,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[18]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 81;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5249,7 +5251,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[17]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 82;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5259,7 +5261,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[16]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 83;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5269,7 +5271,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 84;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5279,7 +5281,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 85;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5289,7 +5291,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 86;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5299,7 +5301,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 87;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5309,7 +5311,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 88;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5319,7 +5321,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 89;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5329,7 +5331,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 90;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5339,7 +5341,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 91;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5349,7 +5351,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 92;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5359,7 +5361,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 93;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5369,7 +5371,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 94;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5379,7 +5381,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 95;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5389,7 +5391,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 96;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5399,7 +5401,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 97;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5409,7 +5411,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 98;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5419,7 +5421,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoEscrito[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 99;
 	TREE_LEVEL = 1;
 	PARENT = 67;
@@ -5429,7 +5431,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 100;
 	TREE_LEVEL = 0;
 	CHILDREN = 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132;
@@ -5439,7 +5441,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[31]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 101;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5449,7 +5451,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[30]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 102;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5459,7 +5461,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[29]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 103;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5469,7 +5471,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[28]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 104;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5479,7 +5481,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[27]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 105;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5489,7 +5491,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[26]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 106;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5499,7 +5501,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[25]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 107;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5509,7 +5511,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[24]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 108;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5519,7 +5521,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[23]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 109;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5529,7 +5531,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[22]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 110;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5539,7 +5541,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[21]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 111;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5549,7 +5551,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[20]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 112;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5559,7 +5561,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[19]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 113;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5569,7 +5571,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[18]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 114;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5579,7 +5581,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[17]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 115;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5589,7 +5591,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[16]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 116;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5599,7 +5601,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 117;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5609,7 +5611,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 118;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5619,7 +5621,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 119;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5629,7 +5631,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 120;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5639,7 +5641,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 121;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5649,7 +5651,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 122;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5659,7 +5661,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 123;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5669,7 +5671,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 124;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5679,7 +5681,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 125;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5689,7 +5691,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 126;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5699,7 +5701,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 127;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5709,7 +5711,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 128;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5719,7 +5721,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 129;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5729,7 +5731,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 130;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5739,7 +5741,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 131;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -5749,7 +5751,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "outDadoLido[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 132;
 	TREE_LEVEL = 1;
 	PARENT = 100;
@@ -6419,7 +6421,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 199;
 	TREE_LEVEL = 0;
 	CHILDREN = 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231;
@@ -6429,7 +6431,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[31]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 200;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6439,7 +6441,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[30]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 201;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6449,7 +6451,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[29]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 202;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6459,7 +6461,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[28]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 203;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6469,7 +6471,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[27]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 204;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6479,7 +6481,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[26]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 205;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6489,7 +6491,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[25]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 206;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6499,7 +6501,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[24]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 207;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6509,7 +6511,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[23]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 208;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6519,7 +6521,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[22]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 209;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6529,7 +6531,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[21]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 210;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6539,7 +6541,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[20]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 211;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6549,7 +6551,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[19]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 212;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6559,7 +6561,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[18]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 213;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6569,7 +6571,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[17]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 214;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6579,7 +6581,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[16]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 215;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6589,7 +6591,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 216;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6599,7 +6601,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 217;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6609,7 +6611,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 218;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6619,7 +6621,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 219;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6629,7 +6631,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 220;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6639,7 +6641,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 221;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6649,7 +6651,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 222;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6659,7 +6661,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 223;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6669,7 +6671,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 224;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6679,7 +6681,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 225;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6689,7 +6691,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 226;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6699,7 +6701,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 227;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6709,7 +6711,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 228;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6719,7 +6721,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 229;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6729,7 +6731,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 230;
 	TREE_LEVEL = 1;
 	PARENT = 199;
@@ -6739,7 +6741,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "testeSaidaMux[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 231;
 	TREE_LEVEL = 1;
 	PARENT = 199;

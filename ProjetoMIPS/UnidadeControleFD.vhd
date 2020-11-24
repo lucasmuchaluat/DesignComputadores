@@ -9,7 +9,7 @@ entity UnidadeControleFD is
     clk  :  in  std_logic;
 	 opCode  :  in  std_logic_vector(5 downto 0);
     -- Output ports
-    palavraControle  :  out std_logic_vector(7 downto 0);
+    palavraControle  :  out std_logic_vector(9 downto 0);
 	 ULAop : out std_logic_vector(2 downto 0)
   );
 end entity;
@@ -18,6 +18,8 @@ end entity;
 architecture arch_name of UnidadeControleFD is
 
 -- aliases para saida
+  alias ZeroImed : std_logic is palavraControle(9);
+  alias LUI : std_logic is palavraControle(8);
   alias JMP : std_logic is palavraControle(7);
   alias habEscritaMEM : std_logic is palavraControle(6);
   alias habLeituraMEM : std_logic is palavraControle(5);
@@ -38,15 +40,15 @@ architecture arch_name of UnidadeControleFD is
 
   
   
-    --               muxRtRd      escritaReg3   muxRtImed    muxULAMem  BEQ   habLeituraMEM   habEscritaMEM    JMP
-    -- Tipo R            1              1           0            0       0         0               0            0
-    -- LW                0              1           1            1       0         1               0            0
-    -- SW                0              0           1            0       0         0               1            0
-    -- BEQ               0              0           0            0       1         0               0            0
-	 -- JMP               0              0           0            0       0         0               0            1
-	 -- ORI               0              1           1            0       0         0               0            0
-	 -- LUI               0              1           1            0       0         0               0            0
-	 -- ANDI              0              1           1            0       0         0               0            0
+    --               muxRtRd      escritaReg3   muxRtImed    muxULAMem  BEQ   habLeituraMEM   habEscritaMEM    JMP  LUI ZeroImed
+    -- Tipo R            1              1           0            0       0         0               0            0    0    0
+    -- LW                0              1           1            1       0         1               0            0    0    0
+    -- SW                0              0           1            0       0         0               1            0    0    0
+    -- BEQ               0              0           0            0       1         0               0            0    0    0
+	 -- JMP               0              0           0            0       0         0               0            1    0    0
+	 -- ORI               0              1           1            0       0         0               0            0    0    1
+	 -- LUI               0              1           1            0       0         0               0            0    1    0
+	 -- ANDI              0              1           1            0       0         0               0            0    0    1
 		
   begin
     muxRtRd <= '1' when opCode = opCodeTipoR else '0';
@@ -57,6 +59,8 @@ architecture arch_name of UnidadeControleFD is
     habLeituraMEM <= '1' when opCode = opCodeLW else '0';
     habEscritaMEM <= '1' when opCode = opCodeSW else '0';
     JMP <= '1' when opCode = opCodeTipoJ else '0';
+	 LUI <= '1' when opCode = opCodeLUI else '0';
+	 ZeroImed <= '1' when opCode = opCodeORI OR opCode = opCodeANDI else '0';
 	 
 	 ULAop <= ADD when opCode = opCodeLW else
         ADD when opCode = opCodeSW else
