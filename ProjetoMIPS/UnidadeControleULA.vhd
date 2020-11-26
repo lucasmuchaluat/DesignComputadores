@@ -25,6 +25,7 @@ architecture arch_name of UnidadeControleULA is
     constant opOR : std_logic_vector(2 downto 0) := "011";
     constant opAND : std_logic_vector(2 downto 0) := "111";
 	 constant opLUI : std_logic_vector(2 downto 0) := "101";
+	 constant opSLT : std_logic_vector(2 downto 0) := "100";
   	 
 
   begin		 
@@ -34,8 +35,9 @@ architecture arch_name of UnidadeControleULA is
 					     execOrULA  when ulaOp = opOR else
 						  execAndULA when ulaOp = opAND else
 						  execLuiULA when ulaOp = opLUI else
+						  execSltULA when ulaOp = opSLT else
                     execAddULA when ulaOp = opFUNCT and funct = functADD else
-                    execOrULA when ulaOp = opFUNCT and funct = functOR else
+                    execOrULA  when ulaOp = opFUNCT and funct = functOR else
                     execSubULA when ulaOp = opFUNCT and funct = functSUB else
                     execSltULA when ulaOp = opFUNCT and funct = functSLT else
 					"000";                                   

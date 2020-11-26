@@ -9,7 +9,7 @@ entity UnidadeControleFD is
     clk  :  in  std_logic;
 	 opCode  :  in  std_logic_vector(5 downto 0);
     -- Output ports
-    palavraControle  :  out std_logic_vector(9 downto 0);
+    palavraControle  :  out std_logic_vector(13 downto 0);
 	 ULAop : out std_logic_vector(2 downto 0)
   );
 end entity;
@@ -18,16 +18,17 @@ end entity;
 architecture arch_name of UnidadeControleFD is
 
 -- aliases para saida
-  alias ZeroImed : std_logic is palavraControle(9);
-  alias LUI : std_logic is palavraControle(8);
-  alias JMP : std_logic is palavraControle(7);
-  alias habEscritaMEM : std_logic is palavraControle(6);
-  alias habLeituraMEM : std_logic is palavraControle(5);
-  alias BEQ : std_logic is palavraControle(4);
-  alias muxULAMem : std_logic is palavraControle(3);
-  alias muxRtImed : std_logic is palavraControle(2);
-  alias escritaReg3 : std_logic is palavraControle(1);
-  alias muxRtRd : std_logic is palavraControle(0);
+  alias BNE : std_logic is palavraControle(13);
+  alias ZeroImed : std_logic is palavraControle(12);
+  alias LUI : std_logic is palavraControle(11);
+  alias JMP : std_logic_vector(1 DOWNTO 0) is palavraControle(10 downto 9);
+  alias habEscritaMEM : std_logic is palavraControle(8);
+  alias habLeituraMEM : std_logic is palavraControle(7);
+  alias BEQ : std_logic is palavraControle(6);
+  alias muxULAMem : std_logic_vector(1 DOWNTO 0) is palavraControle(5 downto 4);
+  alias muxRtImed : std_logic is palavraControle(3);
+  alias escritaReg3 : std_logic is palavraControle(2);
+  alias muxRtRd : std_logic_vector(1 DOWNTO 0) is palavraControle(1 downto 0);
 
 -- operacoes ULA disponiveis
   constant ADD : std_logic_vector(2 downto 0) := "000";
@@ -37,37 +38,52 @@ architecture arch_name of UnidadeControleFD is
   constant opOR : std_logic_vector(2 downto 0) := "011";
   constant opAND : std_logic_vector(2 downto 0) := "111";
   constant opLUI : std_logic_vector(2 downto 0) := "101";
+  constant opSLT : std_logic_vector(2 downto 0) := "100";
 
   
   
-    --               muxRtRd      escritaReg3   muxRtImed    muxULAMem  BEQ   habLeituraMEM   habEscritaMEM    JMP  LUI ZeroImed
-    -- Tipo R            1              1           0            0       0         0               0            0    0    0
-    -- LW                0              1           1            1       0         1               0            0    0    0
-    -- SW                0              0           1            0       0         0               1            0    0    0
-    -- BEQ               0              0           0            0       1         0               0            0    0    0
-	 -- JMP               0              0           0            0       0         0               0            1    0    0
-	 -- ORI               0              1           1            0       0         0               0            0    0    1
-	 -- LUI               0              1           1            0       0         0               0            0    1    0
-	 -- ANDI              0              1           1            0       0         0               0            0    0    1
-		
+    --               muxRtRd      escritaReg3   muxRtImed    muxULAMem  BEQ   habLeituraMEM   habEscritaMEM   JMP   LUI ZeroImed
+    -- Tipo R           01              1           0           00       0         0               0           00    0    0
+    -- LW               00              1           1           01       0         1               0           00    0    0
+    -- SW               00              0           1           00       0         0               1           00    0    0
+    -- BEQ              00              0           0           00       1         0               0           00    0    0
+	 -- JMP              00              0           0           00       0         0               0           01    0    0
+	 -- ORI              00              1           1           00       0         0               0           00    0    1
+	 -- LUI              00              1           1           00       0         0               0           00    1    0
+	 -- ANDI             00              1           1           00       0         0               0           00    0    1
+	 -- ADDI             00              1           1           00       0         0               0           00    0    0	
+	 -- SLTI             00              1           1           00       0         0               0           00    0    0   
+	 -- JAL              10              1           X           10       0         0               0           01    0    0 
+  
   begin
-    muxRtRd <= '1' when opCode = opCodeTipoR else '0';
-    escritaReg3 <= '1' when opCode = opCodeTipoR OR opCode = opCodeLW OR opCode = opCodeORI OR opCode = opCodeLUI OR opCode = opCodeANDI else '0';
+    muxRtRd <= "01" when opCode = opCodeTipoR else 
+					"10" when opCode = opCodeJAL else 
+				   "00";
+    escritaReg3 <= '0' when opCode = opCodeSW OR opCode = opCodeBEQ  OR opCode = opCodeTipoJ else '1';
     muxRtImed <= '0' when opCode = opCodeTipoR OR opCode = opCodeBEQ  OR opCode = opCodeTipoJ else '1';            
-    muxULAMem <= '1' when opCode = opCodeLW else '0';
+    muxULAMem <= "01" when opCode = opCodeLW else 
+					  "10" when opCode = opCodeJAL else
+					  "00";
     BEQ <= '1' when opCode = opCodeBEQ else '0';
     habLeituraMEM <= '1' when opCode = opCodeLW else '0';
     habEscritaMEM <= '1' when opCode = opCodeSW else '0';
-    JMP <= '1' when opCode = opCodeTipoJ else '0';
+    JMP <= "01" when opCode = opCodeTipoJ OR opCode = opCodeJAL else
+	        -- "10" when opCode = opCodeJR else
+			  "00";
 	 LUI <= '1' when opCode = opCodeLUI else '0';
 	 ZeroImed <= '1' when opCode = opCodeORI OR opCode = opCodeANDI else '0';
+	 BNE <= '1' when opCode = opCodeBNE else '0';
+	 
 	 
 	 ULAop <= ADD when opCode = opCodeLW else
         ADD when opCode = opCodeSW else
         SUB when opCode = opCodeBEQ else
+		  SUB when opCode = opCodeBNE else
 		  opOR when opCode = opCodeORI else
 		  opLUI when opCode = opCodeLUI else
 		  opAND when opCode = opCodeANDI else
+		  ADD when opCode = opCodeADDI else
+		  opSLT when opCode = opCodeSLTI else
         opFUNCT when opCode = opCodeTipoR else
         "000"; 
 

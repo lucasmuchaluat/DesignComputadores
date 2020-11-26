@@ -35,6 +35,7 @@ package constantesMIPS is
     constant functAND   : funct_t := "100100";
     constant functOR    : funct_t := "100101";
     constant functSLT   : funct_t := "101010";
+	 constant functJR    : funct_t := 6x"08";
 
     constant opCodeTipoR  : opCode_t := "000000";
 --
@@ -44,8 +45,12 @@ package constantesMIPS is
 	 constant opCodeORI    : opCode_t := 6x"d";
 	 constant opCodeLUI    : opCode_t := 6x"f";
 	 constant opCodeANDI   : opCode_t := 6x"c";
+	 constant opCodeADDI   : opCode_t := 6x"8";
+	 constant opCodeSLTI   : opCode_t := 6x"a";
+	 constant opCodeBNE    : opCode_t := 6x"5";
 --
     constant opCodeTipoJ  : opCode_t := "000010";
+	 constant opCodeJAL    : opCode_t := 6x"3";
 
 --
 -- Codigos da palavra de controle:

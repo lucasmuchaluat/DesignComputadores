@@ -51,24 +51,27 @@ signal RB : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal RC : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal saidaULA : std_logic_vector(DATA_WIDTH-1 downto 0);
 
-signal palavraControle : std_logic_vector(9 downto 0);
+signal palavraControle : std_logic_vector(13 downto 0);
 signal ULAop : std_logic_vector(2 downto 0);
 
 signal ulaControle: std_logic_vector(2 downto 0);
 
 signal imediatoLUI : std_logic_vector(DATA_WIDTH-1 downto 0);
 
+signal entradaMORTA : std_logic_vector(DATA_WIDTH-1 downto 0) := b"00000000000000000000000000000000";
+
 -- aliases pontos de controle
-alias ZeroImed : std_logic is palavraControle(9);
-alias LUI : std_logic is palavraControle(8);
-alias JMP : std_logic is palavraControle(7);
-alias habEscritaMEM : std_logic is palavraControle(6);
-alias habLeituraMEM : std_logic is palavraControle(5);
-alias BEQ : std_logic is palavraControle(4);
-alias muxULAMem : std_logic is palavraControle(3);
-alias muxRtImed : std_logic is palavraControle(2);
-alias escritaReg3 : std_logic is palavraControle(1);
-alias muxRtRd : std_logic is palavraControle(0);
+alias BNE : std_logic is palavraControle(13);
+alias ZeroImed : std_logic is palavraControle(12);
+alias LUI : std_logic is palavraControle(11);
+alias JMP : std_logic_vector(1 DOWNTO 0) is palavraControle(10 downto 9);
+alias habEscritaMEM : std_logic is palavraControle(8);
+alias habLeituraMEM : std_logic is palavraControle(7);
+alias BEQ : std_logic is palavraControle(6);
+alias muxULAMem : std_logic_vector(1 DOWNTO 0) is palavraControle(5 downto 4);
+alias muxRtImed : std_logic is palavraControle(3);
+alias escritaReg3 : std_logic is palavraControle(2);
+alias muxRtRd : std_logic_vector(1 DOWNTO 0) is palavraControle(1 downto 0);
 
 
 -- OPCODE
@@ -99,8 +102,8 @@ begin
 	ROM : entity work.ROMMIPS   generic map (dataWidth => ROM_DATA_WIDTH, addrWidth => ROM_ADDR_WIDTH, memoryAddrWidth => 6)
           port map (Endereco => saidaPC, Dado => instrucao);
 			 
-	muxRomBanco :  entity work.muxGenerico2x1  generic map (larguraDados => 5)
-        port map( entradaA_MUX => enderecoRt, entradaB_MUX => enderecoRd, seletor_MUX => muxRtRd, saida_MUX => saidaMuxRomBanco);
+	muxRomBanco :  entity work.muxGenerico4x1  generic map (larguraDados => 5)
+        port map( entradaA_MUX => enderecoRt, entradaB_MUX => enderecoRd, entradaC_MUX => b"11111", entradaD_MUX => entradaMORTA(31 downto 27), seletor_MUX => muxRtRd, saida_MUX => saidaMuxRomBanco);
 	
 	bancoReg : entity work.bancoRegistradores   generic map (larguraDados => DATA_WIDTH, larguraEndBancoRegs => 5)
           port map ( clk => clk,
@@ -124,10 +127,10 @@ begin
         port map( entradaA_MUX => RC, entradaB_MUX => saidaMuxLUI, seletor_MUX => muxRtImed, saida_MUX => saidaMuxBancoULA);
 					  
 	
-	muxULABanco :  entity work.muxGenerico2x1  generic map (larguraDados => DATA_WIDTH)
-        port map( entradaA_MUX => saidaULA, entradaB_MUX => DadoLido, seletor_MUX => muxULAMem, saida_MUX => saidaMuxULABanco);
+	muxULABanco :  entity work.muxGenerico4x1  generic map (larguraDados => DATA_WIDTH)
+        port map( entradaA_MUX => saidaULA, entradaB_MUX => DadoLido, entradaC_MUX => saidaSomaCtePC, entradaD_MUX => entradaMORTA, seletor_MUX => muxULAMem, saida_MUX => saidaMuxULABanco);
 		  
-	andE <= sigFlagZero AND BEQ;
+	andE <= (sigFlagZero AND BEQ) OR (BNE AND NOT(sigFlagZero));
 	
 	shiftBEQ <= saidaMuxLUI(29 DOWNTO 0) & b"00";
 	
@@ -138,8 +141,8 @@ begin
 	
 	concatJMP <= saidaSomaCtePC(31 downto 28) & addressJMP & b"00";
 	
-	muxJMP :  entity work.muxGenerico2x1  generic map (larguraDados => DATA_WIDTH)
-        port map( entradaA_MUX => saidaMuxBEQ, entradaB_MUX => concatJMP, seletor_MUX => JMP, saida_MUX => saidaMuxJMP);
+	muxJMP :  entity work.muxGenerico4x1  generic map (larguraDados => DATA_WIDTH)
+        port map( entradaA_MUX => saidaMuxBEQ, entradaB_MUX => concatJMP, entradaC_MUX => RB, entradaD_MUX => entradaMORTA, seletor_MUX => JMP, saida_MUX => saidaMuxJMP);
 			 
 	UC_FD : entity work.UnidadeControleFD port map( clk => clk, opCode => opCode, palavraControle => palavraControle, ULAop => ULAop);
  	
