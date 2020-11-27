@@ -58,7 +58,9 @@ signal ulaControle: std_logic_vector(2 downto 0);
 
 signal imediatoLUI : std_logic_vector(DATA_WIDTH-1 downto 0);
 
-signal entradaMORTA : std_logic_vector(DATA_WIDTH-1 downto 0) := b"00000000000000000000000000000000";
+constant entradaMORTA : std_logic_vector(DATA_WIDTH-1 downto 0) := b"00000000000000000000000000000000";
+
+signal seletorJR : std_logic;
 
 -- aliases pontos de controle
 alias BNE : std_logic is palavraControle(13);
@@ -144,12 +146,13 @@ begin
 	muxJMP :  entity work.muxGenerico4x1  generic map (larguraDados => DATA_WIDTH)
         port map( entradaA_MUX => saidaMuxBEQ, entradaB_MUX => concatJMP, entradaC_MUX => RB, entradaD_MUX => entradaMORTA, seletor_MUX => JMP, saida_MUX => saidaMuxJMP);
 			 
-	UC_FD : entity work.UnidadeControleFD port map( clk => clk, opCode => opCode, palavraControle => palavraControle, ULAop => ULAop);
+	UC_FD : entity work.UnidadeControleFD port map( clk => clk, opCode => opCode, entradaJR => seletorJR, palavraControle => palavraControle, ULAop => ULAop);
  	
 	ucULA : entity work.UnidadeControleULA
 		port map( ulaOp   => ULAop, 
                 funct   => funct,
-                ulaCtrl => ulaControle);
+                ulaCtrl => ulaControle,
+					 saidaJR => seletorJR);
 					 
 	ULA : entity work.ULA  generic map(larguraDados => DATA_WIDTH)
           port map (entradaA => RB, entradaB => saidaMuxBancoULA, seletor => ulaControle, saida => saidaULA, flagZero => sigFlagZero);

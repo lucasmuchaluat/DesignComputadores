@@ -10,7 +10,8 @@ entity UnidadeControleULA is
    ulaOp  :  in  std_logic_vector(2 downto 0);
 	funct  :  in  std_logic_vector(5 downto 0);
    -- Output ports
-   ulaCtrl  :  out std_logic_vector(2 downto 0)
+   ulaCtrl  :  out std_logic_vector(2 downto 0);
+	saidaJR  :  out std_logic
   );
 end entity;
 
@@ -40,7 +41,9 @@ architecture arch_name of UnidadeControleULA is
                     execOrULA  when ulaOp = opFUNCT and funct = functOR else
                     execSubULA when ulaOp = opFUNCT and funct = functSUB else
                     execSltULA when ulaOp = opFUNCT and funct = functSLT else
-					"000";                                   
+					"000";
+
+			saidaJR <= '1' when ulaOp = opFUNCT and funct = functJR else '0';
 
 
 end architecture;

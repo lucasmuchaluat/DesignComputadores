@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/26/2020 14:43:08"
+-- Generated on "11/27/2020 13:47:43"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          MIPS
 -- 
@@ -45,13 +45,13 @@ SIGNAL testeSaidaMux : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT MIPS
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	inULAA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	inULAB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outDadoEscrito : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outDadoLido : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	OUTEndereco : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outPC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	testeSaidaMux : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	inULAA : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	inULAB : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	outDadoEscrito : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	outDadoLido : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	OUTEndereco : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	outPC : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	testeSaidaMux : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -71,12 +71,16 @@ BEGIN
 -- CLOCK_50
 t_prcs_CLOCK_50: PROCESS
 BEGIN
-LOOP
-	CLOCK_50 <= '0';
-	WAIT FOR 5000 ps;
 	CLOCK_50 <= '1';
 	WAIT FOR 5000 ps;
-	IF (NOW >= 240000 ps) THEN WAIT; END IF;
-END LOOP;
+	FOR i IN 1 TO 23
+	LOOP
+		CLOCK_50 <= '0';
+		WAIT FOR 5000 ps;
+		CLOCK_50 <= '1';
+		WAIT FOR 5000 ps;
+	END LOOP;
+	CLOCK_50 <= '0';
+WAIT;
 END PROCESS t_prcs_CLOCK_50;
 END MIPS_arch;

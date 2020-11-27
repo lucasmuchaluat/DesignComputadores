@@ -8,6 +8,7 @@ entity UnidadeControleFD is
     -- Input ports
     clk  :  in  std_logic;
 	 opCode  :  in  std_logic_vector(5 downto 0);
+	 entradaJR : in std_logic;
     -- Output ports
     palavraControle  :  out std_logic_vector(13 downto 0);
 	 ULAop : out std_logic_vector(2 downto 0)
@@ -59,8 +60,8 @@ architecture arch_name of UnidadeControleFD is
     muxRtRd <= "01" when opCode = opCodeTipoR else 
 					"10" when opCode = opCodeJAL else 
 				   "00";
-    escritaReg3 <= '0' when opCode = opCodeSW OR opCode = opCodeBEQ  OR opCode = opCodeTipoJ else '1';
-    muxRtImed <= '0' when opCode = opCodeTipoR OR opCode = opCodeBEQ  OR opCode = opCodeTipoJ else '1';            
+    escritaReg3 <= '0' when opCode = opCodeSW OR opCode = opCodeBEQ  OR opCode = opCodeTipoJ OR opCode = opCodeBNE else '1';
+    muxRtImed <= '0' when opCode = opCodeTipoR OR opCode = opCodeBEQ  OR opCode = opCodeTipoJ OR opCode = opCodeBNE else '1';            
     muxULAMem <= "01" when opCode = opCodeLW else 
 					  "10" when opCode = opCodeJAL else
 					  "00";
@@ -68,7 +69,7 @@ architecture arch_name of UnidadeControleFD is
     habLeituraMEM <= '1' when opCode = opCodeLW else '0';
     habEscritaMEM <= '1' when opCode = opCodeSW else '0';
     JMP <= "01" when opCode = opCodeTipoJ OR opCode = opCodeJAL else
-	        -- "10" when opCode = opCodeJR else
+	        "10" when opCode = opCodeTipoR AND entradaJR = '1' else
 			  "00";
 	 LUI <= '1' when opCode = opCodeLUI else '0';
 	 ZeroImed <= '1' when opCode = opCodeORI OR opCode = opCodeANDI else '0';

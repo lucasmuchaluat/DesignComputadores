@@ -1,7 +1,7 @@
 # do MIPS.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:43:16 on Nov 26,2020
+# Start time: 13:47:51 on Nov 27,2020
 # vcom -work work MIPS.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -15,20 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity MIPS
 # -- Compiling architecture structure of MIPS
-# End time: 14:43:21 on Nov 26,2020, Elapsed time: 0:00:05
+# End time: 13:47:58 on Nov 27,2020, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:43:21 on Nov 26,2020
+# Start time: 13:47:58 on Nov 27,2020
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MIPS_vhd_vec_tst
 # -- Compiling architecture MIPS_arch of MIPS_vhd_vec_tst
-# End time: 14:43:21 on Nov 26,2020, Elapsed time: 0:00:00
+# End time: 13:47:59 on Nov 27,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MIPS_vhd_vec_tst 
-# Start time: 14:43:21 on Nov 26,2020
+# Start time: 13:47:59 on Nov 27,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -46,11 +46,13 @@
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 865871 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 876135 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
 # Simulation time: 0 ps
 # Simulation time: 0 ps
 # Simulation time: 0 ps
-# End time: 14:43:35 on Nov 26,2020, Elapsed time: 0:00:14
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# End time: 13:48:20 on Nov 27,2020, Elapsed time: 0:00:21
 # Errors: 0, Warnings: 1

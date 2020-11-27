@@ -132,6 +132,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "outPC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outPC[1]",
+					"strict" : false
+				},
+				{
 					"name" : "outPC[2]",
 					"strict" : false
 				},

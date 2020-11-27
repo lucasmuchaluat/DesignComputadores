@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dD:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/simulation/qsim
 Emips
-Z1 w1606412591
+Z1 w1606495668
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,19 +20,19 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 14
+!i122 28
 R0
 Z11 8MIPS.vho
 Z12 FMIPS.vho
 l0
 L39 1
-VROAUHRVQojZgW73JG`kf31
-!s100 P_P0VX^gZNGmmoagAM1:S2
+VUeng@cdG5BlmV2k=9_mVR0
+!s100 Adbk70iBboI6c8mQh[nYG2
 Z13 OV;C;2020.1;71
 32
-!s110 1606412598
+!s110 1606495672
 !i10b 1
-Z14 !s108 1606412596.000000
+Z14 !s108 1606495671.000000
 Z15 !s90 -work|work|MIPS.vho|
 Z16 !s107 MIPS.vho|
 !i113 1
@@ -48,15 +48,15 @@ R7
 R8
 R9
 R10
-DEx4 work 4 mips 0 22 ROAUHRVQojZgW73JG`kf31
-!i122 14
-l9620
-L52 93250
-Vd?ecX]DC8M7R3L[BIJOOc0
-!s100 OC;H;@53@nY:n741@XMM?1
+DEx4 work 4 mips 0 22 Ueng@cdG5BlmV2k=9_mVR0
+!i122 28
+l9680
+L52 94206
+VaZlnG3iamXR:d?=H=Sen92
+!s100 JDf^SDn_DKG1JW^]J1Kfz3
 R13
 32
-!s110 1606412599
+!s110 1606495674
 !i10b 1
 R14
 R15
@@ -65,10 +65,10 @@ R16
 R17
 R18
 Emips_vhd_vec_tst
-Z19 w1606412588
+Z19 w1606495663
 R8
 R9
-!i122 15
+!i122 29
 R0
 Z20 8Waveform.vwf.vht
 Z21 FWaveform.vwf.vht
@@ -78,9 +78,9 @@ V^1o__g;YWkg:5i`P8mICm3
 !s100 <M8I65P>A0UMgF43I31;A1
 R13
 32
-Z22 !s110 1606412601
+Z22 !s110 1606495679
 !i10b 1
-Z23 !s108 1606412601.000000
+Z23 !s108 1606495678.000000
 Z24 !s90 -work|work|Waveform.vwf.vht|
 Z25 !s107 Waveform.vwf.vht|
 !i113 1
@@ -90,11 +90,11 @@ Amips_arch
 R8
 R9
 Z26 DEx4 work 16 mips_vhd_vec_tst 0 22 ^1o__g;YWkg:5i`P8mICm3
-!i122 15
+!i122 29
 l57
-Z27 L34 49
-Z28 VQ<5^91Mc>@_?ZIe>L`4IX2
-Z29 !s100 f]]CG26[[@fd3aR2mgIJc2
+Z27 L34 53
+VFJBBG_o]dNFM?`_8Dz];z1
+!s100 TnMDVLhj;ShekPJ<IRKBl3
 R13
 32
 R22

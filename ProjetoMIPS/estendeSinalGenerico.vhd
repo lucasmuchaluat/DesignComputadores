@@ -19,7 +19,7 @@ end entity;
 
 architecture comportamento of estendeSinalGenerico is
 begin
-    process (estendeSinal_IN) is
+    process (all) is
     begin
 			if (seletorZeroImed = '0') then
             if (estendeSinal_IN(larguraDadoEntrada-1) = '1') then
