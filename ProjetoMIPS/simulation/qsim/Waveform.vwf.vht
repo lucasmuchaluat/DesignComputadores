@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/27/2020 13:47:43"
+-- Generated on "12/05/2020 21:43:52"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          MIPS
 -- 
@@ -35,23 +35,27 @@ ARCHITECTURE MIPS_arch OF MIPS_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLOCK_50 : STD_LOGIC;
+SIGNAL enderecoRAM_MEM : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL habilitaEscritaRAM : STD_LOGIC;
 SIGNAL inULAA : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL inULAB : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL outDadoEscrito : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL outDadoLido : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL OUTEndereco : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL outPC : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL testeSaidaMux : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL ulaop_out : STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL valorEscritoRAM_MEM : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT MIPS
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	inULAA : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	inULAB : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outDadoEscrito : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outDadoLido : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	OUTEndereco : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	outPC : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	testeSaidaMux : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
+	enderecoRAM_MEM : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	habilitaEscritaRAM : OUT STD_LOGIC;
+	inULAA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	inULAB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	OUTEndereco : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	outPC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	testeSaidaMux : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ulaop_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	valorEscritoRAM_MEM : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -59,28 +63,26 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	CLOCK_50 => CLOCK_50,
+	enderecoRAM_MEM => enderecoRAM_MEM,
+	habilitaEscritaRAM => habilitaEscritaRAM,
 	inULAA => inULAA,
 	inULAB => inULAB,
-	outDadoEscrito => outDadoEscrito,
-	outDadoLido => outDadoLido,
 	OUTEndereco => OUTEndereco,
 	outPC => outPC,
-	testeSaidaMux => testeSaidaMux
+	testeSaidaMux => testeSaidaMux,
+	ulaop_out => ulaop_out,
+	valorEscritoRAM_MEM => valorEscritoRAM_MEM
 	);
 
 -- CLOCK_50
 t_prcs_CLOCK_50: PROCESS
 BEGIN
+LOOP
+	CLOCK_50 <= '0';
+	WAIT FOR 5000 ps;
 	CLOCK_50 <= '1';
 	WAIT FOR 5000 ps;
-	FOR i IN 1 TO 23
-	LOOP
-		CLOCK_50 <= '0';
-		WAIT FOR 5000 ps;
-		CLOCK_50 <= '1';
-		WAIT FOR 5000 ps;
-	END LOOP;
-	CLOCK_50 <= '0';
-WAIT;
+	IF (NOW >= 1500000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_CLOCK_50;
 END MIPS_arch;

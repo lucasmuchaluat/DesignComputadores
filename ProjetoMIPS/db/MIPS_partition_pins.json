@@ -260,262 +260,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "outDadoLido[0]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[1]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[2]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[3]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[4]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[5]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[6]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[7]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[8]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[9]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[10]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[11]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[12]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[13]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[14]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[15]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[16]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[17]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[18]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[19]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[20]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[21]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[22]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[23]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[24]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[25]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[26]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[27]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[28]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[29]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[30]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoLido[31]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[0]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[1]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[2]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[3]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[4]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[5]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[6]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[7]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[8]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[9]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[10]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[11]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[12]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[13]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[14]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[15]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[16]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[17]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[18]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[19]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[20]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[21]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[22]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[23]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[24]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[25]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[26]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[27]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[28]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[29]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[30]",
-					"strict" : false
-				},
-				{
-					"name" : "outDadoEscrito[31]",
-					"strict" : false
-				},
-				{
 					"name" : "testeSaidaMux[0]",
 					"strict" : false
 				},
@@ -897,6 +641,278 @@
 				},
 				{
 					"name" : "inULAB[31]",
+					"strict" : false
+				},
+				{
+					"name" : "ulaop_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ulaop_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ulaop_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[16]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[17]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[18]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[19]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[20]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[21]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[22]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[23]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[24]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[25]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[26]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[27]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[28]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[29]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[30]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoRAM_MEM[31]",
+					"strict" : false
+				},
+				{
+					"name" : "habilitaEscritaRAM",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[16]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[17]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[18]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[19]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[20]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[21]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[22]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[23]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[24]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[25]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[26]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[27]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[28]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[29]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[30]",
+					"strict" : false
+				},
+				{
+					"name" : "valorEscritoRAM_MEM[31]",
 					"strict" : false
 				},
 				{

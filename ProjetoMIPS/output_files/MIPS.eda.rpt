@@ -1,5 +1,5 @@
 EDA Netlist Writer report for MIPS
-Fri Nov 27 13:47:48 2020
+Sat Dec 05 21:43:55 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Nov 27 13:47:48 2020 ;
+; EDA Netlist Writer Status ; Successful - Sat Dec 05 21:43:55 2020 ;
 ; Revision Name             ; MIPS                                  ;
 ; Top-level Entity Name     ; MIPS                                  ;
 ; Family                    ; Cyclone V                             ;
@@ -95,14 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Nov 27 13:47:44 2020
+    Info: Processing started: Sat Dec 05 21:43:53 2020
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/simulation/qsim/ MIPS -c MIPS
 Info (119006): Selected device 5CEBA4F23C7 for design "MIPS"
 Info (204019): Generated file MIPS.vho in folder "D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4736 megabytes
-    Info: Processing ended: Fri Nov 27 13:47:48 2020
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4734 megabytes
+    Info: Processing ended: Sat Dec 05 21:43:55 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

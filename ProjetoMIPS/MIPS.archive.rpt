@@ -1,5 +1,5 @@
 Archive Project report for MIPS
-Fri Nov 27 13:51:02 2020
+Sat Dec 05 21:49:08 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Fri Nov 27 13:51:02 2020 ;
+; Archive Project Status ; Successful - Sat Dec 05 21:49:08 2020 ;
 ; Revision Name          ; MIPS                                  ;
 ; Top-level Entity Name  ; MIPS                                  ;
 ; Family                 ; Cyclone V                             ;
@@ -54,16 +54,16 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/MIPSrubricaCmais.qar'
+Info: Generated archive 'D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/MIPSrubricaAmais.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'MIPS.archive.rpt'
 Info (23030): Evaluation of Tcl script d:/mucha/documents/insper/6osemestre/designcomputadores/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Fri Nov 27 13:51:02 2020
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Sat Dec 05 21:49:08 2020
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +-----------------------------------------------------------------------------------------------+

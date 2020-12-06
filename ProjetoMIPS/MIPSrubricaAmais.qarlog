@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/MIPSrubricaAmais.qarlog
+
+Archive:	D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/MIPSrubricaAmais.qar
+Date:		Sat Dec 05 21:49:08 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/FluxoDados.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/MIPS.qpf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/MIPS.qsf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/MIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/RAMMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/RAMcontent.mif
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/ROMMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/ROMcontent.mif
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/SomadorCompleto1bit.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/ULA.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/UnidadeControle.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/UnidadeControleFD.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/UnidadeControleULA.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/Waveform.vwf
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/bancoRegistradores.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/constantesMIPS.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/estendeSinalGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/muxGenerico2x1.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/muxGenerico4x1.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/registradorGenerico.vhd
+D:/mucha/Documents/Insper/6oSemestre/DesignComputadores/ProjetoMIPS/somaConstante.vhd
+d:/mucha/documents/insper/6osemestre/designcomputadores/quartus/bin64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

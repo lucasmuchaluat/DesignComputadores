@@ -19,16 +19,16 @@ end entity;
 architecture arch_name of UnidadeControleFD is
 
 -- aliases para saida
-  alias BNE : std_logic is palavraControle(13);
-  alias ZeroImed : std_logic is palavraControle(12);
-  alias LUI : std_logic is palavraControle(11);
-  alias JMP : std_logic_vector(1 DOWNTO 0) is palavraControle(10 downto 9);
-  alias habEscritaMEM : std_logic is palavraControle(8);
-  alias habLeituraMEM : std_logic is palavraControle(7);
-  alias BEQ : std_logic is palavraControle(6);
-  alias muxULAMem : std_logic_vector(1 DOWNTO 0) is palavraControle(5 downto 4);
-  alias muxRtImed : std_logic is palavraControle(3);
-  alias escritaReg3 : std_logic is palavraControle(2);
+  alias JMP : std_logic_vector(1 DOWNTO 0) is palavraControle(13 downto 12);
+  alias ZeroImed : std_logic is palavraControle(11);
+  alias LUI : std_logic is palavraControle(10);
+  alias muxULAMem : std_logic_vector(1 DOWNTO 0) is palavraControle(9 downto 8);
+  alias escritaReg3 : std_logic is palavraControle(7);
+  alias habEscritaMEM : std_logic is palavraControle(6);
+  alias habLeituraMEM : std_logic is palavraControle(5);
+  alias BNE : std_logic is palavraControle(4);
+  alias BEQ : std_logic is palavraControle(3);
+  alias muxRtImed : std_logic is palavraControle(2);
   alias muxRtRd : std_logic_vector(1 DOWNTO 0) is palavraControle(1 downto 0);
 
 -- operacoes ULA disponiveis
