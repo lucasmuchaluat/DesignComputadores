@@ -39,7 +39,7 @@ Para testar o projeto, basta colocar um código em assembly na ROM:
 
  - https://github.com/lucasmuchaluat/DesignComputadores/blob/master/ProjetoMIPS/ROMMIPS.vhd.
  
-Depois compile o projeto na FPGA. Para passar uma unidade de clock, aperte o `KEY 0`, os displays irão mostrar os sinais de saida do programa, de acordo com as seguintes combinações de `SW0` e `SW1`:
+Depois compile o projeto na FPGA. Para passar uma unidade de clock, aperte o `KEY 0`, os displays irão mostrar os sinais de saída do programa, de acordo com as seguintes combinações de `SW0` e `SW1`:
 
 - `00` -> PC
 - `10` -> Endereço saída ULA
